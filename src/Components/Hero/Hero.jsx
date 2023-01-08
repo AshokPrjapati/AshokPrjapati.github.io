@@ -70,6 +70,7 @@ function Hero() {
           <Link
             href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
             isExternal
+            textDecorationLine="none"
           >
             <Button
               width={"50%"}
@@ -106,6 +107,7 @@ function Hero() {
           /> */}
           <Box
             // position={"relative"}
+            p={"20px"}
             height={"100%"}
             rounded={"2xl"}
             width={"100%"}

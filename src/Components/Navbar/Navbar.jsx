@@ -72,9 +72,10 @@ function Navbar() {
       <Collapse in={isOpen} animateOpacity>
         <Box
           position={"absolute"}
+          top="60px"
           left={"5%"}
           width={"90%"}
-          m={"70px auto"}
+          m={"auto"}
           borderRadius={"10px"}
           bg={"bg.1"}
           color={"text.2"}

@@ -35,8 +35,9 @@ function TabOpt({ isOpen, toggle }) {
       textAlign={"center"}
       p={"10px 0"}
     >
-      {links.map((link) => (
+      {links.map((link, i) => (
         <NavLink
+          key={i}
           to={link.path}
           className={({ isActive }) =>
             isActive ? styles.active : styles.default
