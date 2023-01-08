@@ -1,9 +1,8 @@
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Collapse,
   Flex,
-  Heading,
   IconButton,
   useDisclosure,
   Text,
@@ -17,18 +16,20 @@ function Navbar() {
   return (
     <Box>
       <Flex
-        position={"sticky"}
+        position={"fixed"}
+        top={0}
         justify={"space-around"}
         align={"center"}
-        p={"0 10px"}
+        p={"0 15px"}
         height={"50px"}
         width={"100%"}
         shadow={"lg"}
         bg={"bg.1"}
+        zIndex={10}
       >
         <NavLink to={"/"}>
           <Flex
-            fontSize={"23px"}
+            fontSize={"3xl"}
             fontFamily={"Roboto"}
             fontWeight={500}
             color={"text.1"}
@@ -52,6 +53,8 @@ function Navbar() {
           >
             <IconButton
               color={"text.1"}
+              bg={"none"}
+              _hover={{ bg: "none" }}
               onClick={onToggle}
               icon={
                 isOpen ? (
@@ -68,11 +71,14 @@ function Navbar() {
       </Flex>
       <Collapse in={isOpen} animateOpacity>
         <Box
+          position={"absolute"}
+          left={"5%"}
           width={"90%"}
-          m={"10px auto"}
+          m={"70px auto"}
           borderRadius={"10px"}
-          bg={"bg.2"}
+          bg={"bg.1"}
           color={"text.2"}
+          zIndex={10}
         >
           <TabOpt isOpen={isOpen} toggle={onToggle} />
         </Box>
