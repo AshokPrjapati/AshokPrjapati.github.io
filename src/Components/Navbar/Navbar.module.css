@@ -1,0 +1,16 @@
+:root {
+    --red: #e11d48;
+    --green: rgb(3, 102, 3);
+    --grey: #a0a0a0
+}
+
+.active {
+    background-color: var(--green);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.default {
+    background-color: none;
+    color: var(--grey)
+}
