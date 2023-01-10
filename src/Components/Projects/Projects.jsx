@@ -83,7 +83,7 @@ const Projects = () => {
                 mb={6}
                 // pos={"relative"}
               >
-                <Image src={p.image} layout={"fill"} />
+                <Image src={p.image} layout={"fill"} alt={"project-preview"} />
               </Box>
               <Stack>
                 <Heading color={clr} fontSize={"2xl"} fontFamily={"body"}>
