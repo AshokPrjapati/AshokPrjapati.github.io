@@ -1,27 +1,26 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Collapse,
   Flex,
   IconButton,
   useDisclosure,
   Text,
+  Slide,
 } from "@chakra-ui/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import TabOpt from "./TabOpt";
+import styles from "./Navbar.module.css";
 
 function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   return (
-    <Box>
+    <Box className={styles.sticky}>
       <Flex
-        position={"fixed"}
-        top={0}
         justify={"space-around"}
         align={"center"}
         p={"0 15px"}
-        height={"50px"}
+        height={"60px"}
         width={"100%"}
         shadow={"lg"}
         bg={"bg.1"}
@@ -69,21 +68,15 @@ function Navbar() {
           </Flex>
         </Box>
       </Flex>
-      <Collapse in={isOpen} animateOpacity>
-        <Box
-          position={"absolute"}
-          top="60px"
-          left={"5%"}
-          width={"90%"}
-          m={"auto"}
-          borderRadius={"10px"}
-          bg={"bg.1"}
-          color={"text.2"}
-          zIndex={10}
-        >
-          <TabOpt isOpen={isOpen} toggle={onToggle} />
-        </Box>
-      </Collapse>
+
+      <Slide
+        pos={"absolute"}
+        direction="bottom"
+        in={isOpen}
+        style={{ zIndex: 10 }}
+      >
+        <TabOpt isOpen={isOpen} toggle={onToggle} />
+      </Slide>
     </Box>
   );
 }

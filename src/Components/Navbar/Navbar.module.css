@@ -14,3 +14,8 @@
     background-color: none;
     color: var(--grey)
 }
+
+.sticky {
+    position: sticky;
+    top: 0;
+}

@@ -34,6 +34,11 @@ function TabOpt({ isOpen, toggle }) {
       dir="column"
       textAlign={"center"}
       p={"10px 0"}
+      width={"90%"}
+      m={"auto"}
+      borderRadius={"10px"}
+      bg={"bg.1"}
+      color={"text.2"}
     >
       {links.map((link, i) => (
         <NavLink
@@ -52,30 +57,12 @@ function TabOpt({ isOpen, toggle }) {
               shadow: "0px 0px 10px #e11d48",
             }}
             onClick={toggle}
+            z-index={99}
           >
             {link.text}
           </Button>
         </NavLink>
       ))}
-      {/* <Button
-                bg="none"
-                onClick={toggleColorMode}
-                _hover={{
-                  bg: "blue.800",
-                  shadow: "0px 0px 10px #2a4365",
-                }}
-              >
-                {colorMode === "light" ? (
-                  <MoonIcon />
-                ) : (
-                  <SunIcon
-                    _hover={{
-                      bg: "#fff",
-                      shadow: "0px 0px 10px #2a4365",
-                    }}
-                  />
-                )}
-              </Button> */}
     </Flex>
   );
 }

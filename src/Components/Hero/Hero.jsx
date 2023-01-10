@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Hero.module.css";
 import {
   Container,
   Stack,
@@ -6,7 +7,6 @@ import {
   Box,
   Heading,
   Text,
-  Button,
   Image,
   Link,
 } from "@chakra-ui/react";
@@ -21,30 +21,20 @@ function Hero() {
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        py={{ base: 18, md: 25 }}
         direction={{ base: "column-reverse", md: "row" }}
       >
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+        <Stack
+          flex={1}
+          spacing={{ base: 5, md: 10 }}
+          textAlign={{ base: "center", md: "left" }}
+        >
           <Heading
             lineHeight={1.1}
             fontWeight={600}
             fontSize={{ base: "2xl", sm: "3xl", lg: "4xl" }}
           >
-            <Text
-              color={"text.1"}
-              as={"span"}
-              // position={"relative"}
-              _after={{
-                content: "''",
-                width: "full",
-                height: "30%",
-                // position: "absolute",
-                bottom: 1,
-                left: 0,
-                bg: "text.3",
-                zIndex: -1,
-              }}
-            >
+            <Text color={"text.1"} as={"span"}>
               Hi, I am Ashok Kumar
             </Text>
             <br />
@@ -70,21 +60,11 @@ function Hero() {
           <Link
             href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
             isExternal
-            textDecorationLine="none"
+            _hover={{ textDecor: "none" }}
           >
-            <Button
-              width={"50%"}
-              leftIcon={<ArrowForwardIcon />}
-              rounded={"full"}
-              size={"lg"}
-              fontWeight={"normal"}
-              px={6}
-              colorScheme={"red"}
-              bg={"text.3"}
-              _hover={{ bg: "rgb(3, 102, 3)" }}
-            >
-              Resume
-            </Button>
+            <button className={styles.button}>
+              {<ArrowForwardIcon />} Resume
+            </button>
           </Link>
 
           <SIcons />
@@ -96,15 +76,6 @@ function Hero() {
           // position={"relative"}
           w={"full"}
         >
-          {/* <Blob
-            w={"150%"}
-            h={"150%"}
-            position={"absolute"}
-            top={"-20%"}
-            left={0}
-            zIndex={1}
-            color={useColorModeValue("text.3", "text.2")}
-          /> */}
           <Box
             // position={"relative"}
             p={"20px"}

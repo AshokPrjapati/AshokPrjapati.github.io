@@ -1,0 +1,22 @@
+.button {
+    width: 50%;
+    border-radius: 25px;
+    color: #fff;
+    padding: 10px 8px;
+    font-weight: 400;
+    font-size: large;
+    background-color: #e11d48;
+
+}
+
+
+.button:hover {
+    background-color: rgb(3, 102, 3);
+}
+
+.lineClamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
