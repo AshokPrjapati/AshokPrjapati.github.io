@@ -22,7 +22,7 @@ function SIcons() {
           size={"lg"}
           fontWeight={"normal"}
           px={6}
-          icon={<FaGithub HiMail />}
+          icon={<FaGithub />}
         />
       </Link>
       <Link href="ap271449@gmail.com" isExternal>

@@ -1,32 +1,33 @@
-import { Button, Flex } from "@chakra-ui/react";
-import React from "react";
+import { Button, Flex, Link } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const links = [
   {
-    path: "/",
+    path: "#home",
     text: "Home",
   },
   {
-    path: "/about",
+    path: "#about",
     text: "About",
   },
   {
-    path: "/skills",
+    path: "#skills",
     text: "Skills",
   },
   {
-    path: "/projects",
+    path: "#projects",
     text: "Project",
   },
   {
-    path: "/contact",
+    path: "#contact",
     text: "Contact & Resume",
   },
 ];
 
 function TabOpt({ isOpen, toggle }) {
+  const [active, setActive] = useState("home");
   return (
     <Flex
       direction={{ base: "column", md: "row", lg: "row" }}
@@ -41,12 +42,12 @@ function TabOpt({ isOpen, toggle }) {
       color={"text.2"}
     >
       {links.map((link, i) => (
-        <NavLink
+        <Link
           key={i}
-          to={link.path}
-          className={({ isActive }) =>
-            isActive ? styles.active : styles.default
-          }
+          className={active === link.path ? styles.active : styles.default}
+          href={link.path}
+          onClick={() => setActive(link.path)}
+          scrollBehavior={"smooth"}
         >
           <Button
             w={{ base: "100%", md: "auto", lg: "auto" }}
@@ -61,7 +62,7 @@ function TabOpt({ isOpen, toggle }) {
           >
             {link.text}
           </Button>
-        </NavLink>
+        </Link>
       ))}
     </Flex>
   );

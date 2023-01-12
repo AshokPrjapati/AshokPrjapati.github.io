@@ -11,6 +11,7 @@ import {
   Divider,
   Button,
   Link,
+  Grid,
 } from "@chakra-ui/react";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
@@ -20,25 +21,36 @@ const projectData = [
   {
     id: 1,
     name: "Capsule- Tata 1mg (clone)",
-    image: "./images/capsule.png",
+    src: `./images/capsule.png`,
     discription:
-      "Capsule (Tata 1mg) provides services, including e-pharmacy, diagnostics, e-consultation and health content. Get your allopathic, ayurvedic, homeopathic medicines, vitamins & nutrition supplements and other health-related products delivered at home.",
+      "Capsule (Tata 1mg) provides services, including e-pharmacy, diagnostics, e-consultation and health content. You can buy your allopathic, ayurvedic, homeopathic medicines, vitamins & nutrition supplements and other health-related.",
     techStack:
       "Tech Stack : React.js | Chakra UI | HTML5 | CSS3 | Javascript | Render Deployed JSON Server",
     detail: "A Solo project, built in 6 days.",
     sourceCode: "https://github.com/AshokPrjapati/Capsule-1mg_clone",
-    liveLink: "capsule-six.vercel.app",
+    liveLink: "https://capsule-six.vercel.app",
   },
   {
     id: 2,
     name: "MiddleMan- Buffer (clone)",
-    image: "./images/middle-man.png",
+    src: `./images/middle-man.png`,
     discription:
       "Buffer provides services, including social-media management, content publishing and make online presence. Provides multiple packages for yearly, monthly ads weekly basis. Make Social Media handling easy and saves a lot a time.",
     techStack: "Tech Stack : HTML5 | CSS3 | Javascript | Mock API Server",
     detail: "A Collaborative project, built in 6 days by 4 member",
     sourceCode: "https://github.com/AshokPrjapati/MiddleMan_Buffer-Clone",
     liveLink: "https://cozy-banoffee-f5b339.netlify.app/",
+  },
+  {
+    id: 3,
+    name: "Urban(clone)",
+    src: `./images/urban.png`,
+    discription:
+      "Urban Comapny provides variess servics like salon, painting, cleaning etc.This project is static website where objective is to implement the basic knowledge of HTML,CSS and Javascript.",
+    techStack: "Tech Stack : HTML5 | CSS3 | Javascript",
+    detail: "A Solo project, built in 5 days.",
+    sourceCode: "https://github.com/AshokPrjapati/Urban-Company",
+    liveLink: "https://mellifluous-sprinkles-3ec6e3.netlify.app",
   },
 ];
 
@@ -49,18 +61,20 @@ const Projects = () => {
     <Container maxW={"5xl"}>
       <Heading
         textAlign={"center"}
-        py={"40px"}
+        pt={"60px"}
+        pb={"15px"}
         color={"text.1"}
         fontWeight={500}
         borderBottom="2px solid #e11d48"
       >
         Projects
       </Heading>
-      <Stack
-        justify={"center"}
-        align={"center"}
+      <Grid
+        templateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
+        justify={"space-between"}
+        // align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        py={{ base: 18, md: 25 }}
         direction={{ base: "column", md: "row" }}
       >
         {projectData.map((p) => (
@@ -75,15 +89,8 @@ const Projects = () => {
               p={6}
               overflow={"hidden"}
             >
-              <Box
-                h={"210px"}
-                bg={"gray.100"}
-                mt={-6}
-                mx={-6}
-                mb={6}
-                // pos={"relative"}
-              >
-                <Image src={p.image} layout={"fill"} alt={"project-preview"} />
+              <Box h={"210px"} bg={"gray.100"} mt={-6} mx={-6} mb={6}>
+                <Image src={p.src} layout={"fill"} alt={"project-preview"} />
               </Box>
               <Stack>
                 <Heading color={clr} fontSize={"2xl"} fontFamily={"body"}>
@@ -154,7 +161,7 @@ const Projects = () => {
             </Box>
           </Center>
         ))}
-      </Stack>
+      </Grid>
     </Container>
   );
 };
