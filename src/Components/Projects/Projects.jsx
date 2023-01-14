@@ -81,7 +81,6 @@ const Projects = () => {
         // align={"center"}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 25 }}
-        // direction={{ base: "column", md: "row" }}
       >
         {projectData.map((p) => (
           <Center py={6} key={p.id}>
