@@ -8,10 +8,10 @@ import { extendTheme } from '@chakra-ui/react'
 
 
 const theme = extendTheme({
-    config: {
-        initialColorMode: 'dark',
-        useSystemColorMode: false,
-    },
+    // config: {
+    //     initialColorMode: 'dark',
+    //     useSystemColorMode: false,
+    // },
     colors: {
         text: {
             1: "#fff",

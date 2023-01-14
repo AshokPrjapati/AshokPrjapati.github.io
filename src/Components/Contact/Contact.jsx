@@ -54,7 +54,7 @@ export default function Contact() {
 
   return (
     <Flex
-      bg={useColorModeValue("gray.900", "gray.100")}
+      bg={"gray.900"}
       align="center"
       justify="center"
       css={{
@@ -177,10 +177,10 @@ export default function Contact() {
               </Stack>
 
               <Box
-                bg={useColorModeValue("gray.700", "white")}
+                bg={"gray.700"}
                 borderRadius="lg"
                 p={8}
-                color={useColorModeValue("whiteAlpha.900", "gray.700")}
+                color={"whiteAlpha.900"}
                 shadow="base"
               >
                 <form
