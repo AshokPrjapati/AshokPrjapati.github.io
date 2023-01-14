@@ -5,14 +5,20 @@ import Hero from './Components/Hero/Hero';
 import Navbar from './Components/Navbar/Navbar';
 import Projects from './Components/Projects/Projects';
 import GitState from "./Components/GitState/GitState"
+import TechStacks from './Components/TechStacks/TechStacks';
+// import About from "./Components/About/About"
+import Contact from "./Components/Contact/Contact"
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Box id="home" bg={"bg.2"}><Hero /></Box>
+      {/* <Box id="about" bg={"bg.3"}><About /></Box> */}
+      <Box id="skills" bg={"bg.2"}><TechStacks /></Box>
       <Box id="projects" bg={"bg.3"}><Projects /></Box>
-      <Box id="gitStates" bg={"bg.2"}><GitState /></Box>
+      <Box id="gitState" bg={"bg.2"}><GitState /></Box>
+      <Contact />
     </div>
   );
 }

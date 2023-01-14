@@ -1,6 +1,5 @@
 import { Button, Flex, Link } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const links = [
@@ -20,6 +19,11 @@ const links = [
     path: "#projects",
     text: "Project",
   },
+  {
+    path: "#gitState",
+    text: "Git Stats",
+  },
+
   {
     path: "#contact",
     text: "Contact & Resume",
@@ -47,7 +51,6 @@ function TabOpt({ isOpen, toggle }) {
           className={active === link.path ? styles.active : styles.default}
           href={link.path}
           onClick={() => setActive(link.path)}
-          scrollBehavior={"smooth"}
         >
           <Button
             w={{ base: "100%", md: "auto", lg: "auto" }}

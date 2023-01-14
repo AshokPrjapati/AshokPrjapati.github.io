@@ -17,7 +17,7 @@ import SIcons from "./SIcons";
 
 function Hero() {
   return (
-    <Container maxW={"5xl"}>
+    <Container pt="40px" maxW={"5xl"}>
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
@@ -58,7 +58,7 @@ function Hero() {
             creating useful and interactive web applications.
           </Text>
           <Link
-            href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
+            href="./assets/Ashok-Kumar-Resume.pdf"
             isExternal
             _hover={{ textDecor: "none" }}
           >
