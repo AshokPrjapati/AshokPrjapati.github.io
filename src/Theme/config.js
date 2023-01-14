@@ -60,7 +60,7 @@ export const tools = [
     },
     {
         icon: "./images/cypress.svg",
-        name: "Express.js",
+        name: "Cypress",
     },
     {
         icon: "./images/github.svg",
