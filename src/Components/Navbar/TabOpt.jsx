@@ -26,7 +26,11 @@ const links = [
 
   {
     path: "#contact",
-    text: "Contact & Resume",
+    text: "Contact",
+  },
+  {
+    path: "/assets/Ashok-Kumar-Resume.pdf",
+    text: "Resume",
   },
 ];
 
@@ -50,6 +54,7 @@ function TabOpt({ isOpen, toggle }) {
           key={i}
           className={active === link.path ? styles.active : styles.default}
           href={link.path}
+          isExternal={link.text === "Resume"}
           onClick={() => setActive(link.path)}
         >
           <Button
