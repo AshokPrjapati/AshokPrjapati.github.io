@@ -13,6 +13,7 @@ import {
   InputLeftElement,
   Link,
   Stack,
+  Text,
   Textarea,
   Tooltip,
   useClipboard,
@@ -107,7 +108,6 @@ export default function Contact() {
                     isRound
                   />
                 </Tooltip>
-
                 <Link href="https://github.com/AshokPrjapati" isExternal>
                   <IconButton
                     color={"text.1"}
@@ -139,20 +139,23 @@ export default function Contact() {
                   />
                 </Link>
 
-                <Link href="tel:+91 9799191449">
-                  <IconButton
-                    color={"text.1"}
-                    aria-label="twitter"
-                    variant="ghost"
-                    size="lg"
-                    icon={<PhoneIcon size="28px" />}
-                    _hover={{
-                      bg: "blue.500",
-                      color: useColorModeValue("gray.700", "white"),
-                    }}
-                    isRound
-                  />
-                </Link>
+                <Tooltip label={"+91 9799191449"} closeOnClick={false} hasArrow>
+                  <Link href="tel:+91 9799191449">
+                    <IconButton
+                      color={"text.1"}
+                      aria-label="twitter"
+                      variant="ghost"
+                      size="lg"
+                      icon={<PhoneIcon size="28px" />}
+                      _hover={{
+                        bg: "blue.500",
+                        color: useColorModeValue("gray.700", "white"),
+                      }}
+                      isRound
+                    />
+                  </Link>
+                </Tooltip>
+
                 <Tooltip
                   label={"Download Resume"}
                   closeOnClick={false}

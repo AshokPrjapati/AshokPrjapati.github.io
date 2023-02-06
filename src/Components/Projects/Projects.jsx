@@ -27,7 +27,7 @@ const projectData = [
     discription:
       "Capsule (Tata 1mg) provides services, including e-pharmacy, diagnostics, e-consultation and health content. You can buy your allopathic, ayurvedic, homeopathic medicines, vitamins & nutrition supplements and other health-related.",
     techStack:
-      "Tech Stack : React.js | Chakra UI | HTML5 | CSS3 | Javascript | Render Deployed JSON Server",
+      "Tech Stack : React.js | Chakra UI | HTML5 | CSS3 | Javascript | JSON Server",
     detail: "A Solo project, built in 6 days.",
     sourceCode: "https://github.com/AshokPrjapati/Capsule-1mg_clone",
     liveLink: "https://capsule-six.vercel.app",
@@ -53,6 +53,18 @@ const projectData = [
     detail: "A Solo project, built in 5 days.",
     sourceCode: "https://github.com/AshokPrjapati/Urban-Company",
     liveLink: "https://mellifluous-sprinkles-3ec6e3.netlify.app",
+  },
+  {
+    id: 4,
+    name: "Apni Dukan - meesho (clone)",
+    src: `./images/apni_dukan.png`,
+    discription:
+      "Apni Dukan is an e-commarce website which provides products realted to clothing, beauty and home care. Here user can view the products, see the detail of product, can add to cart and buy product",
+    techStack:
+      "Tech Stack : Next.js | Redux | Chakra-UI | JavaScript | Json-Server",
+    detail: "A Collaborative project, built in 5 days by 5 member",
+    sourceCode: "https://github.com/AshokPrjapati/Meesho-clone",
+    liveLink: "https://meesho-clone-ashokprjapati.vercel.app",
   },
 ];
 

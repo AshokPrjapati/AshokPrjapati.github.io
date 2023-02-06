@@ -55,7 +55,16 @@ function TabOpt({ isOpen, toggle }) {
           className={active === link.path ? styles.active : styles.default}
           href={link.path}
           isExternal={link.text === "Resume"}
-          onClick={() => setActive(link.path)}
+          onClick={() => {
+            setActive(link.path);
+            if (link.text === "Resume") {
+              const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
+              const downloadLink = document.createElement("a");
+              downloadLink.href = pdfUrl;
+              downloadLink.download = "Ashok-kumar-Reume.pdf";
+              downloadLink.click();
+            }
+          }}
         >
           <Button
             w={{ base: "100%", md: "auto", lg: "auto" }}
