@@ -61,7 +61,7 @@ function TabOpt({ isOpen, toggle }) {
               const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
               const downloadLink = document.createElement("a");
               downloadLink.href = pdfUrl;
-              downloadLink.download = "Ashok-kumar-Reume.pdf";
+              downloadLink.download = "Ashok-kumar-Resume.pdf";
               downloadLink.click();
             }
           }}

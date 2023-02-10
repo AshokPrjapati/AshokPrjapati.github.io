@@ -13,7 +13,6 @@ import {
   InputLeftElement,
   Link,
   Stack,
-  Text,
   Textarea,
   Tooltip,
   useClipboard,
