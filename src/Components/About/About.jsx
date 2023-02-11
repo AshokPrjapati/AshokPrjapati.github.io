@@ -61,10 +61,11 @@ const TechStacks = () => {
         </CardHeader>
         <CardBody textAlign={"left"} data-aos="fade-up-right">
           <Text>
-            Analytical and detail-oriented aspiring Full Stack Developer capable
-            of writing production-ready code and building singlepage
-            applications. Passionate about coding having 1000+ hrs of coding
-            experience and 300+ hrs of data structure and algorithms experience.
+            Analytical and detail-oriented aspiring Full Stack Developer, with a
+            b.tech degree in Mechanical Engineering. Capable of writing
+            production-ready code and building singlepage applications.
+            Passionate about coding having 1200+ hrs of coding experience and
+            solved 700+ DSA problems.
           </Text>
         </CardBody>
         <Image

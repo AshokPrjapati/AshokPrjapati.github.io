@@ -38,11 +38,11 @@ function TabOpt({ isOpen, toggle }) {
   const [active, setActive] = useState("home");
   return (
     <Flex
-      direction={{ base: "column", md: "row", lg: "row" }}
+      direction={{ base: "column", lg: "row" }}
       gap="2"
       dir="column"
       textAlign={"center"}
-      p={"10px 0"}
+      p={"10px 15px"}
       width={"90%"}
       m={"auto"}
       borderRadius={"10px"}

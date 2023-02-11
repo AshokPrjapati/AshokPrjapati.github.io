@@ -157,9 +157,10 @@ const Projects = () => {
               <Stack
                 mt={6}
                 direction={"row"}
+                justify={"space-between"}
+                className={styles.pc}
                 spacing={4}
                 align={"center"}
-                justify={"space-between"}
                 zIndex={1}
                 data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom"
@@ -182,7 +183,9 @@ const Projects = () => {
                     Source Code
                   </Button>
                 </Link>
-
+                <Box color="black" className={styles.dis}>
+                  -
+                </Box>
                 <Link
                   href={p.liveLink}
                   isExternal
