@@ -123,7 +123,10 @@ export default function Contact() {
                   />
                 </Link>
 
-                <Link href="https://www.linkedin.com/in/ashok-kumar-1778b213b/">
+                <Link
+                  href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
+                  isExternal
+                >
                   <IconButton
                     color={"text.1"}
                     aria-label="linkedin"
