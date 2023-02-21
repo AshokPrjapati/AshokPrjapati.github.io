@@ -20,10 +20,9 @@ function GitState() {
         fontWeight={500}
         borderBottom="3px solid #e11d48"
       >
-        Git States
+        Git Stats
       </Heading>
       <Box data-aos="zoom-out">
-        {" "}
         <GitHubCalendar
           style={{
             width: "97%",

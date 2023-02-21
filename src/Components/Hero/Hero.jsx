@@ -58,7 +58,7 @@ function Hero() {
             creating useful and interactive web applications.
           </Text>
           <Link
-            href="./assets/Ashok-Kumar-Resume.pdf"
+            href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
             isExternal
             _hover={{ textDecor: "none" }}
           >

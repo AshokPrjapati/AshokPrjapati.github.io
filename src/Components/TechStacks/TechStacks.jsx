@@ -134,13 +134,14 @@ const TechStacks = () => {
         </Flex>
         <Box>
           <Heading
+            w={"max-content"}
+            m="auto"
             textAlign={"center"}
-            mb={"15px"}
-            pt={"40px"}
-            pb={"15px"}
+            p={"60px 10px 10px 10px"}
             color={"text.1"}
-            fontSize={"24px"}
             fontWeight={500}
+            borderBottom="3px solid #e11d48"
+            mb="40px"
           >
             Tools
           </Heading>

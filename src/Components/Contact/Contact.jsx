@@ -13,6 +13,7 @@ import {
   InputLeftElement,
   Link,
   Stack,
+  Text,
   Textarea,
   Tooltip,
   useClipboard,
@@ -24,7 +25,7 @@ import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import { PhoneIcon } from "@chakra-ui/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaCopyright, FaFilePdf } from "react-icons/fa";
+import { FaFilePdf } from "react-icons/fa";
 import { CONFETTI_DARK, CONFETTI_LIGHT } from "../../Theme/config";
 
 const initialData = {
@@ -87,26 +88,31 @@ export default function Contact() {
                 justify="space-around"
                 direction={{ base: "row", md: "column" }}
               >
-                <Tooltip
-                  label={hasCopied ? "Email Copied!" : "Copy Email"}
-                  closeOnClick={false}
-                  hasArrow
-                >
-                  <IconButton
-                    color={"text.1"}
-                    aria-label="email"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<MdEmail />}
-                    _hover={{
-                      bg: "blue.500",
-                      color: useColorModeValue("gray.700", "white"),
-                    }}
-                    onClick={onCopy}
-                    isRound
-                  />
-                </Tooltip>
+                <Box align="center">
+                  <Tooltip
+                    label={hasCopied ? "Email Copied!" : "Copy Email"}
+                    closeOnClick={false}
+                    hasArrow
+                  >
+                    <IconButton
+                      color={"text.1"}
+                      aria-label="email"
+                      variant="ghost"
+                      size="lg"
+                      fontSize="3xl"
+                      icon={<MdEmail />}
+                      _hover={{
+                        bg: "blue.500",
+                        color: useColorModeValue("gray.700", "white"),
+                      }}
+                      onClick={onCopy}
+                      isRound
+                    />
+                  </Tooltip>
+                  <Text color="blue.400" display={{ base: "none", md: "flex" }}>
+                    ap271449@gmail.com
+                  </Text>
+                </Box>
                 <Link href="https://github.com/AshokPrjapati" isExternal>
                   <IconButton
                     color={"text.1"}
@@ -140,30 +146,37 @@ export default function Contact() {
                     isRound
                   />
                 </Link>
+                <Box align="center">
+                  <Tooltip
+                    label={"+91 9799191449"}
+                    closeOnClick={false}
+                    hasArrow
+                  >
+                    <Link href="tel:+91 9799191449">
+                      <IconButton
+                        color={"text.1"}
+                        aria-label="twitter"
+                        variant="ghost"
+                        size="lg"
+                        icon={<PhoneIcon size="28px" />}
+                        _hover={{
+                          bg: "blue.500",
+                          color: useColorModeValue("gray.700", "white"),
+                        }}
+                        isRound
+                      />
+                    </Link>
+                  </Tooltip>
+                  <Text color="blue.400" display={{ base: "none", md: "flex" }}>
+                    +91 9799191449
+                  </Text>
+                </Box>
 
-                <Tooltip label={"+91 9799191449"} closeOnClick={false} hasArrow>
-                  <Link href="tel:+91 9799191449">
-                    <IconButton
-                      color={"text.1"}
-                      aria-label="twitter"
-                      variant="ghost"
-                      size="lg"
-                      icon={<PhoneIcon size="28px" />}
-                      _hover={{
-                        bg: "blue.500",
-                        color: useColorModeValue("gray.700", "white"),
-                      }}
-                      isRound
-                    />
-                  </Link>
-                </Tooltip>
-
-                <Tooltip
-                  label={"Download Resume"}
-                  closeOnClick={false}
-                  hasArrow
-                >
-                  <Link href="./assets/Ashok-Kumar-Resume.pdf" isExternal>
+                <Tooltip label={"Resume"} closeOnClick={false} hasArrow>
+                  <Link
+                    href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
+                    isExternal
+                  >
                     <IconButton
                       color={"text.1"}
                       aria-label="email"
@@ -255,14 +268,14 @@ export default function Contact() {
                 </form>
               </Box>
             </Stack>
-            <Flex align={"center"} color={"text.1"}>
+            {/* <Flex align={"center"} color={"text.1"}>
               Designed and build by{" "}
               <span style={{ margin: "0 5px", color: "#e11d48" }}>
                 {" "}
                 Ashok Kumar{" "}
               </span>{" "}
               <FaCopyright /> 2023
-            </Flex>
+            </Flex> */}
           </VStack>
         </Box>
       </Box>
