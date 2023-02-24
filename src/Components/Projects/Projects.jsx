@@ -99,7 +99,6 @@ const Projects = () => {
             <Box
               key={p.id}
               maxW={"445px"}
-              w={"full"}
               bg={bg}
               boxShadow={"2xl"}
               rounded={"md"}
@@ -154,13 +153,9 @@ const Projects = () => {
                 </Text>
               </Stack>
               <Divider />
-              <Stack
+              <Box
                 mt={6}
-                direction={"row"}
-                justify={"space-between"}
                 className={styles.pc}
-                spacing={4}
-                align={"center"}
                 zIndex={1}
                 data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom"
@@ -183,9 +178,6 @@ const Projects = () => {
                     Source Code
                   </Button>
                 </Link>
-                <Box color="black" className={styles.dis}>
-                  -
-                </Box>
                 <Link
                   href={p.liveLink}
                   isExternal
@@ -204,7 +196,7 @@ const Projects = () => {
                     Live
                   </Button>
                 </Link>
-              </Stack>
+              </Box>
             </Box>
           </Center>
         ))}

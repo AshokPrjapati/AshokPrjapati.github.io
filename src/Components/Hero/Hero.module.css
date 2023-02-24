@@ -22,22 +22,17 @@
 }
 
 
-/* .pc {
+.pc {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-} */
-
-.dis {
-    display: none;
+    align-items: center;
+    gap: 10px 10px
 }
+
 
 @media screen and (max-width: 350px) {
     .pc {
         flex-direction: column;
-    }
-
-    .dis {
-        display: flex;
     }
 }
