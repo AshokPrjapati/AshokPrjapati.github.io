@@ -17,7 +17,7 @@ import SIcons from "./SIcons";
 
 function Hero() {
   return (
-    <Container maxW={"5xl"}>
+    <Container pt={{ base: "40px", md: "none" }} maxW={"5xl"}>
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}

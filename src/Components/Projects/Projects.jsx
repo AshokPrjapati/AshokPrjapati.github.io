@@ -59,7 +59,6 @@ const Projects = () => {
             >
               <Box h={"210px"} bg={"gray.100"} align="center" mt={-6} mx={-6} mb={6}>
                 <Image
-
                   h={"210px"}
                   src={p.src}
                   layout={"fill"}

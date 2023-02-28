@@ -172,16 +172,17 @@ export default function Contact() {
                   </Text>
                 </Box>
 
-                <Tooltip label={"Resume"} closeOnClick={false} hasArrow onClick={() => {
-                  const pdfUrl = "/assets/fw21_0784-Ashok-Kumar-Resume.pdf";
-                  const downloadLink = document.createElement("a");
-                  downloadLink.href = pdfUrl;
-                  downloadLink.download = "fw21_0784-Ashok-kumar-Resume.pdf";
-                  downloadLink.click();
-                }}>
+                <Tooltip label={"Resume"} closeOnClick={false} hasArrow>
                   <Link
                     href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
                     isExternal
+                    onClick={() => {
+                      const pdfUrl = "/assets/fw21_0784-Ashok-Kumar-Resume.pdf";
+                      const downloadLink = document.createElement("a");
+                      downloadLink.href = pdfUrl;
+                      downloadLink.download = "fw21_0784-Ashok-kumar-Resume.pdf";
+                      downloadLink.click();
+                    }}
                   >
                     <IconButton
                       color={"text.1"}
