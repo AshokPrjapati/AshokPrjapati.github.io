@@ -39,7 +39,7 @@ const projectData = [
         name: "Apni Dukan - meesho (clone)",
         src: `./images/apni_dukan.png`,
         discription:
-            "Apni Dukan is an e-commarce website which provides products realted to clothing, beauty and home care. Here user can view the products, see the detail of product, can add to cart and buy product. This projecty also include admin panel where admin can see all the data of products and user and also can make change",
+            "Apni Dukan is an e-commarce website which provides products realted to clothing, beauty and home care. Here user can view the products, see the detail of product, can add to cart and buy product. This project also include admin panel where admin can see all the data of products and user and also can make change",
         techStack:
             "Tech Stack : Next.js | Redux | Chakra-UI | JavaScript | Json-Server",
         detail: "A Collaborative project, built in 5 days by 5 member",
