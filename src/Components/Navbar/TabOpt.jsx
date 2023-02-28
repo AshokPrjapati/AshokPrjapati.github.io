@@ -29,7 +29,7 @@ const links = [
     text: "Contact",
   },
   {
-    path: "/assets/Ashok-Kumar-Resume.pdf",
+    path: "/assets/fw21_0784-Ashok-Kumar-Resume.pdf",
     text: "Resume",
   },
 ];
@@ -58,10 +58,10 @@ function TabOpt({ isOpen, toggle }) {
           onClick={() => {
             setActive(link.path);
             if (link.text === "Resume") {
-              const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
+              const pdfUrl = "/assets/fw21_0784-Ashok-Kumar-Resume.pdf";
               const downloadLink = document.createElement("a");
               downloadLink.href = pdfUrl;
-              downloadLink.download = "Ashok-kumar-Resume.pdf";
+              downloadLink.download = "fw21_0784-Ashok-kumar-Resume.pdf";
               downloadLink.click();
             }
           }}

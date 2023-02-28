@@ -21,6 +21,13 @@
     overflow: hidden;
 }
 
+.lineClampDesc {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 
 .pc {
     display: flex;
