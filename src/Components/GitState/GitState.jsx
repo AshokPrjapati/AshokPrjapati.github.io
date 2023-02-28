@@ -6,6 +6,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function GitState() {
+  const accessToken = 'your_access_token_here';
+  const username = 'your_github_username_here';
   useEffect(() => {
     AOS.init();
   }, []);
@@ -35,6 +37,8 @@ function GitState() {
           fontSize={16}
           blockRadius={5}
           blockMargin={6}
+          tooltips={true}
+          access_token="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"
         >
           <ReactTooltip delayShow={20} html />
         </GitHubCalendar>

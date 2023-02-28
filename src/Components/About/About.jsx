@@ -63,7 +63,7 @@ const TechStacks = () => {
           <Text>
             Analytical and detail-oriented aspiring Full Stack Developer, with a
             b.tech degree in Mechanical Engineering. Capable of writing
-            production-ready code and building singlepage applications.
+            production-ready code and building single page applications.
             Passionate about coding having 1200+ hrs of coding experience and
             solved 700+ DSA problems.
           </Text>

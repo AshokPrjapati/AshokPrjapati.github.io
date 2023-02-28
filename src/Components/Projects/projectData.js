@@ -21,7 +21,7 @@ const projectData = [
             "Tech Stack : React.js | Typescript | Redux | Chakra UI | Node | Express",
         detail: "A Collaborative project, built in 5 days by 3 member",
         sourceCode: "https://github.com/Vishwa9011/Forum_App",
-        liveLink: "forumapp-120fb.web.app",
+        liveLink: "https://forumapp-120fb.web.app",
     },
     {
         id: 3,
