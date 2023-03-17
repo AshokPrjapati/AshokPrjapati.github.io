@@ -50,7 +50,7 @@ const TechStacks = () => {
               alignItems="center"
               flexWrap="wrap"
             >
-              <Avatar name="Ashok Kumar" src="./PicsArt_10-09-01.21.25.png" />
+              <Avatar name="Ashok Kumar" src="./profile.png" />
 
               <Box>
                 <Heading size="sm">Ashok Kumar</Heading>

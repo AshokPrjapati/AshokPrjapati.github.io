@@ -62,7 +62,7 @@ function Hero() {
             isExternal
             _hover={{ textDecor: "none" }}
             onClick={() => {
-              const pdfUrl = "/assets/fw21_0784-Ashok-Kumar-Resume.pdf";
+              const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
               const downloadLink = document.createElement("a");
               downloadLink.href = pdfUrl;
               downloadLink.download = "fw21_0784-Ashok-kumar-Resume.pdf";
@@ -98,7 +98,7 @@ function Hero() {
               align={"center"}
               w={"100%"}
               h={"100%"}
-              src={"./PicsArt_10-09-01.21.25.png"}
+              src={"./profile.png"}
             />
           </Box>
         </Flex>
