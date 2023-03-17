@@ -33,7 +33,7 @@ export const frontendSkills = [
         skillName: "Chakra-ui",
     },
     {
-        icon: "./images/react-40.png",
+        icon: "./images/react-router-dom.svg",
         skillName: "React Router Dom",
     },
 ];
@@ -51,6 +51,15 @@ export const backendSkills = [
         icon: "./images/node-js.svg",
         skillName: "Node.js",
     },
+    {
+        icon: "https://mongoosejs.com/docs/images/favicon/favicon-32x32.png",
+        skillName: "Mongoose",
+    },
+    {
+        icon: "./images/jwt.svg",
+        skillName: "JWT Auth",
+    },
+
 ];
 
 export const tools = [
