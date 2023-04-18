@@ -10,7 +10,7 @@ import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function SIcons() {
-  const { hasCopied, onCopy } = useClipboard("ap271449@gmail.com");
+  const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
   return (
     <Flex gap={{ base: 4, sm: 6 }} justify={{ base: "center", md: "left" }}>
       <Link

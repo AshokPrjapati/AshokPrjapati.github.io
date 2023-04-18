@@ -51,7 +51,7 @@ export default function Contact() {
   useEffect(() => {
     AOS.init();
   }, []);
-  const { hasCopied, onCopy } = useClipboard("ap271449@gmail.com");
+  const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
 
   return (
     <Flex
@@ -110,7 +110,7 @@ export default function Contact() {
                     />
                   </Tooltip>
                   <Text color="blue.400" display={{ base: "none", md: "flex" }}>
-                    ap271449@gmail.com
+                    ashok.prjapati97@gmail.com
                   </Text>
                 </Box>
                 <Link href="https://github.com/AshokPrjapati" isExternal>

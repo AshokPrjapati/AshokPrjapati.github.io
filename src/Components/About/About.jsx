@@ -25,7 +25,7 @@ const TechStacks = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-  const { hasCopied, onCopy } = useClipboard("ap271449@gmail.com");
+  const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
   return (
     <Container maxW={"5xl"} align="center" p={"60px 0"}>
       <Heading
