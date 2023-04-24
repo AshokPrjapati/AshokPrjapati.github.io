@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
+  Divider,
   Flex,
   FormControl,
   FormLabel,
@@ -78,51 +79,155 @@ export default function Contact() {
             >
               Contact Me
             </Heading>
-
-            <Stack
-              spacing={{ base: 4, md: 8, lg: 20 }}
-              direction={{ base: "column", md: "row" }}
+            <Box
+              bg={"gray.700"}
+              borderRadius="lg"
+              p={8}
+              color={"whiteAlpha.900"}
+              shadow="base"
             >
-              <Stack
+              <Flex
                 align="center"
                 justify="space-around"
+                alignItems={"center"}
                 direction={{ base: "row", md: "column" }}
               >
-                <Box align="center">
+                <Flex fontWeight={"medium"} w="100%" justifyContent="flex-start" alignItems={"center"}>
                   <Tooltip
                     label={hasCopied ? "Email Copied!" : "Copy Email"}
                     closeOnClick={false}
                     hasArrow
                   >
                     <IconButton
-                      color={"text.1"}
+                      color={"blue.300"}
                       aria-label="email"
                       variant="ghost"
-                      size="lg"
+                      size="md"
                       fontSize="3xl"
                       icon={<MdEmail />}
                       _hover={{
-                        bg: "blue.500",
+                        bg: "#fff",
                         color: useColorModeValue("gray.700", "white"),
                       }}
                       onClick={onCopy}
                       isRound
+                      mr="1rem"
                     />
                   </Tooltip>
-                  <Text color="blue.400" display={{ base: "none", md: "flex" }}>
+                  <Text color="#fff" display={{ base: "none", md: "flex" }}>
                     ashok.prjapati97@gmail.com
                   </Text>
-                </Box>
+                </Flex>
+                <Flex fontWeight={"medium"} w="100%" justifyContent={{ base: "flex-end", md: "flex-start" }} alignItems={"center"}>
+                  <Tooltip
+                    label={"+91 9799191449"}
+                    closeOnClick={false}
+                    hasArrow
+                  >
+                    <Link href="tel:+91 9799191449">
+                      <IconButton
+                        color={"blue.300"}
+                        aria-label="twitter"
+                        variant="ghost"
+                        size="md"
+                        mr="1rem"
+                        icon={<PhoneIcon size="28px" />}
+                        _hover={{
+                          bg: "#fff",
+                          color: useColorModeValue("gray.700", "white"),
+                        }}
+                        isRound
+                      />
+                    </Link>
+                  </Tooltip>
+                  <Text color="#fff" display={{ base: "none", md: "flex" }}>
+                    +91 9799191449
+                  </Text>
+                </Flex>
+
+              </Flex>
+              <Divider my={"1rem"} />
+              <form
+                //   action="https://script.google.com/macros/s/AKfycbz5WemVKBSKCBIfm8kbVATI-qxLPCOuMuwGeC748b5kGAaa6EIUnfjr4UjY6KIQ0bIM/exec"
+                id="gform"
+                method="POST"
+              >
+                {" "}
+                <VStack spacing={5}>
+                  <FormControl isRequired>
+                    <FormLabel>Name</FormLabel>
+
+                    <InputGroup>
+                      <InputLeftElement children={<BsPerson />} />
+                      <Input
+                        type="text"
+                        name="name"
+                        value={name}
+                        placeholder="Your Name"
+                        onChange={handleChange}
+                      />
+                    </InputGroup>
+                  </FormControl>
+
+                  <FormControl isRequired>
+                    <FormLabel>Email</FormLabel>
+
+                    <InputGroup>
+                      <InputLeftElement children={<MdOutlineEmail />} />
+                      <Input
+                        type="email"
+                        name="email"
+                        value={email}
+                        placeholder="Your Email"
+                        onChange={handleChange}
+                      />
+                    </InputGroup>
+                  </FormControl>
+
+                  <FormControl isRequired>
+                    <FormLabel>Message</FormLabel>
+
+                    <Textarea
+                      name="message"
+                      placeholder="Your Message"
+                      rows={6}
+                      value={message}
+                      resize="none"
+                      onChange={handleChange}
+                    />
+                  </FormControl>
+
+                  <Button
+                    type="submit"
+                    colorScheme="blue"
+                    bg="blue.400"
+                    color="white"
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    isFullWidth
+                    onClick={sendEmail}
+                  >
+                    Send Message
+                  </Button>
+                </VStack>
+              </form>
+              <Divider my="1rem" />
+              <Flex
+                align="center"
+                justify="space-around"
+                alignItems={"center"}
+              >
                 <Link href="https://github.com/AshokPrjapati" isExternal>
                   <IconButton
-                    color={"text.1"}
+                    color={"blue.300"}
                     aria-label="github"
                     variant="ghost"
-                    size="lg"
+                    size="md"
                     fontSize="3xl"
                     icon={<BsGithub />}
                     _hover={{
-                      bg: "blue.500",
+                      bg: "#fff",
                       color: useColorModeValue("gray.700", "white"),
                     }}
                     isRound
@@ -134,43 +239,19 @@ export default function Contact() {
                   isExternal
                 >
                   <IconButton
-                    color={"text.1"}
+                    color={"blue.300"}
                     aria-label="linkedin"
                     variant="ghost"
-                    size="lg"
+                    size="md"
                     icon={<BsLinkedin size="28px" />}
                     _hover={{
-                      bg: "blue.500",
+                      bg: "#fff",
                       color: useColorModeValue("gray.700", "white"),
                     }}
                     isRound
                   />
                 </Link>
-                <Box align="center">
-                  <Tooltip
-                    label={"+91 9799191449"}
-                    closeOnClick={false}
-                    hasArrow
-                  >
-                    <Link href="tel:+91 9799191449">
-                      <IconButton
-                        color={"text.1"}
-                        aria-label="twitter"
-                        variant="ghost"
-                        size="lg"
-                        icon={<PhoneIcon size="28px" />}
-                        _hover={{
-                          bg: "blue.500",
-                          color: useColorModeValue("gray.700", "white"),
-                        }}
-                        isRound
-                      />
-                    </Link>
-                  </Tooltip>
-                  <Text color="blue.400" display={{ base: "none", md: "flex" }}>
-                    +91 9799191449
-                  </Text>
-                </Box>
+
 
                 <Tooltip label={"Resume"} closeOnClick={false} hasArrow>
                   <Link
@@ -185,96 +266,23 @@ export default function Contact() {
                     }}
                   >
                     <IconButton
-                      color={"text.1"}
+                      color={"blue.300"}
                       aria-label="email"
                       variant="ghost"
-                      size="lg"
+                      size="md"
                       fontSize="3xl"
                       icon={<FaFilePdf />}
                       _hover={{
-                        bg: "blue.500",
+                        bg: "#fff",
                         color: useColorModeValue("gray.700", "white"),
                       }}
                       isRound
                     />
                   </Link>
                 </Tooltip>
-              </Stack>
+              </Flex>
+            </Box>
 
-              <Box
-                bg={"gray.700"}
-                borderRadius="lg"
-                p={8}
-                color={"whiteAlpha.900"}
-                shadow="base"
-              >
-                <form
-                  //   action="https://script.google.com/macros/s/AKfycbz5WemVKBSKCBIfm8kbVATI-qxLPCOuMuwGeC748b5kGAaa6EIUnfjr4UjY6KIQ0bIM/exec"
-                  id="gform"
-                  method="POST"
-                >
-                  {" "}
-                  <VStack spacing={5}>
-                    <FormControl isRequired>
-                      <FormLabel>Name</FormLabel>
-
-                      <InputGroup>
-                        <InputLeftElement children={<BsPerson />} />
-                        <Input
-                          type="text"
-                          name="name"
-                          value={name}
-                          placeholder="Your Name"
-                          onChange={handleChange}
-                        />
-                      </InputGroup>
-                    </FormControl>
-
-                    <FormControl isRequired>
-                      <FormLabel>Email</FormLabel>
-
-                      <InputGroup>
-                        <InputLeftElement children={<MdOutlineEmail />} />
-                        <Input
-                          type="email"
-                          name="email"
-                          value={email}
-                          placeholder="Your Email"
-                          onChange={handleChange}
-                        />
-                      </InputGroup>
-                    </FormControl>
-
-                    <FormControl isRequired>
-                      <FormLabel>Message</FormLabel>
-
-                      <Textarea
-                        name="message"
-                        placeholder="Your Message"
-                        rows={6}
-                        value={message}
-                        resize="none"
-                        onChange={handleChange}
-                      />
-                    </FormControl>
-
-                    <Button
-                      type="submit"
-                      colorScheme="blue"
-                      bg="blue.400"
-                      color="white"
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      isFullWidth
-                      onClick={sendEmail}
-                    >
-                      Send Message
-                    </Button>
-                  </VStack>
-                </form>
-              </Box>
-            </Stack>
             {/* <Flex align={"center"} color={"text.1"}>
               Designed and build by{" "}
               <span style={{ margin: "0 5px", color: "#e11d48" }}>
@@ -285,7 +293,7 @@ export default function Contact() {
             </Flex> */}
           </VStack>
         </Box>
-      </Box>
-    </Flex>
+      </Box >
+    </Flex >
   );
 }
