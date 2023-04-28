@@ -5,9 +5,14 @@
 }
 
 .active {
-    background-color: var(--green);
+    border: 1px solid var(--red);
+    color: var(--red) !important;
     color: #fff;
     border-radius: 5px;
+}
+
+.active:hover {
+    color: #fff !important;
 }
 
 .default {
@@ -16,9 +21,10 @@
 }
 
 .sticky {
-
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 999;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(100px);
 }

@@ -35,7 +35,7 @@ const links = [
 ];
 
 function TabOpt({ isOpen, toggle }) {
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState("#home");
   return (
     <Flex
       direction={{ base: "column", lg: "row" }}
@@ -46,13 +46,10 @@ function TabOpt({ isOpen, toggle }) {
       width={"90%"}
       m={"auto"}
       borderRadius={"10px"}
-      bg={"bg.1"}
-      color={"text.2"}
     >
       {links.map((link, i) => (
         <Link
           key={i}
-          className={active === link.path ? styles.active : styles.default}
           href={link.path}
           isExternal={link.text === "Resume"}
           onClick={() => {
@@ -68,7 +65,8 @@ function TabOpt({ isOpen, toggle }) {
         >
           <Button
             w={{ base: "100%", md: "auto", lg: "auto" }}
-            bg="none"
+            className={active === link.path ? styles.active : styles.default}
+            colorScheme="none"
             _hover={{
               bg: "text.3",
               color: "text.1",
@@ -76,6 +74,7 @@ function TabOpt({ isOpen, toggle }) {
             }}
             onClick={toggle}
             z-index={99}
+            color="text.2"
           >
             {link.text}
           </Button>
