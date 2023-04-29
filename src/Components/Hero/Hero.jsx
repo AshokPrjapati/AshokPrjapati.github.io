@@ -9,6 +9,7 @@ import {
   Text,
   Image,
   Link,
+  calc,
 } from "@chakra-ui/react";
 
 import Typewriter from "typewriter-effect";
@@ -19,10 +20,12 @@ function Hero() {
   return (
     <Container pt={{ base: "40px", md: "none" }} maxW={"5xl"}>
       <Stack
-        align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 18, md: 28 }}
+        py={"1rem"}
         direction={{ base: "column-reverse", md: "row" }}
+        minH="100vh"
+        justifyContent={"center"}
+        alignItems={"center"}
       >
         <Stack
           flex={1}
@@ -80,18 +83,17 @@ function Hero() {
           flex={1}
           justify={"center"}
           align={"center"}
-          // position={"relative"}
-          w={"full"}
         >
           <Box
-            // position={"relative"}
             p={"20px"}
-            height={"100%"}
+            maxH={"20rem"}
+            maxW="20rem"
             rounded={"2xl"}
-            width={"100%"}
             m={"auto"}
             overflow={"hidden"}
+            position={"relative"}
           >
+            <Box position={"absolute"} top="1.5rem" align="center" bg={"text.3"} width="90%" height={"90%"} borderRadius={"50%"}></Box>
             <Image
               alt={"Hero Image"}
               fit={"cover"}
@@ -99,7 +101,10 @@ function Hero() {
               w={"100%"}
               h={"100%"}
               src={"./profile.png"}
+              position={"relative"}
+              zIndex={8}
             />
+
           </Box>
         </Flex>
       </Stack>
