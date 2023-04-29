@@ -8,8 +8,7 @@ import {
   Heading,
   Text,
   Image,
-  Link,
-  calc,
+  Link
 } from "@chakra-ui/react";
 
 import Typewriter from "typewriter-effect";
@@ -31,6 +30,7 @@ function Hero() {
           flex={1}
           spacing={{ base: 5, md: 10 }}
           textAlign={{ base: "center", md: "left" }}
+          gap="1rem"
         >
           <Heading
             lineHeight={1.1}
@@ -60,22 +60,27 @@ function Hero() {
             technical as well as non-technical skills and a dedication towards
             creating useful and interactive web applications.
           </Text>
-          <Link
-            href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
-            isExternal
-            _hover={{ textDecor: "none" }}
-            onClick={() => {
-              const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
-              const downloadLink = document.createElement("a");
-              downloadLink.href = pdfUrl;
-              downloadLink.download = "fw21_0784-Ashok-kumar-Resume.pdf";
-              downloadLink.click();
-            }}
-          >
-            <button className={styles.button} >
+          <Box textAlign={{ base: "center", md: "left" }}>
+            <Box
+              as={Link}
+              className={styles.button}
+              href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
+              isExternal
+              _hover={{ textDecor: "none", bg: "text.3", color: "#fff" }}
+              onClick={() => {
+                const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
+                const downloadLink = document.createElement("a");
+                downloadLink.href = pdfUrl;
+                downloadLink.download = "fw21_0784-Ashok-kumar-Resume.pdf";
+                downloadLink.click();
+              }}
+              color="text.3"
+            >
               {<ArrowForwardIcon />} Resume
-            </button>
-          </Link>
+            </Box>
+          </Box>
+
+
 
           <SIcons />
         </Stack>
@@ -104,7 +109,6 @@ function Hero() {
               position={"relative"}
               zIndex={8}
             />
-
           </Box>
         </Flex>
       </Stack>

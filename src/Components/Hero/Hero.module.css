@@ -1,17 +1,13 @@
 .button {
-    width: 50%;
+    width: max-content;
     border-radius: 25px;
     color: #fff;
-    padding: 10px 8px;
+    padding: 12px 2rem;
     font-weight: 400;
     font-size: large;
-    background-color: #e11d48;
-
-}
-
-
-.button:hover {
-    background-color: rgb(3, 102, 3);
+    background-color: inherit;
+    border: 2px solid #e11d48;
+    color: #e11d48;
 }
 
 .lineClamp {

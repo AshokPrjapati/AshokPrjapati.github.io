@@ -18,18 +18,38 @@ function SIcons() {
         isExternal
       >
         <IconButton
+          bg="inherit"
+          color="text.3"
+          border="1px solid"
+          borderColor="text.3"
           size={"lg"}
           fontWeight={"normal"}
           px={6}
           icon={<FaLinkedinIn />}
+          _hover={
+            {
+              bg: "text.3",
+              color: "#fff"
+            }
+          }
         />
       </Link>
       <Link href="https://github.com/AshokPrjapati" isExternal>
         <IconButton
+          bg="inherit"
+          color="text.3"
+          border="1px solid"
+          borderColor="text.3"
           size={"lg"}
           fontWeight={"normal"}
           px={6}
           icon={<FaGithub />}
+          _hover={
+            {
+              bg: "text.3",
+              color: "#fff"
+            }
+          }
         />
       </Link>
       <Tooltip
@@ -38,11 +58,21 @@ function SIcons() {
         hasArrow
       >
         <IconButton
+          bg="inherit"
+          color="text.3"
+          border="1px solid"
+          borderColor="text.3"
           size={"lg"}
           fontWeight={"normal"}
           px={6}
           icon={<EmailIcon />}
           onClick={onCopy}
+          _hover={
+            {
+              bg: "text.3",
+              color: "#fff"
+            }
+          }
         />
       </Tooltip>
     </Flex>
