@@ -1,16 +1,6 @@
 import React, { useEffect } from "react";
-import {
-  Container,
-  Text,
-  Image,
-  Heading,
-  Flex,
-  Stack,
-  Box,
-  Grid,
-  VStack,
-} from "@chakra-ui/react";
-
+import { Container, Text, Image, Heading, Flex, Stack, Box, Grid, VStack } from "@chakra-ui/react";
+import styles from "./TechStacks.module.css"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -21,7 +11,7 @@ const TechStacks = () => {
     AOS.init();
   }, []);
   return (
-    <Container maxW={"5xl"} pb={"60px"}>
+    <Container maxW={"5xl"} pb={"60px"} userSelect={"none"}>
       <Heading
         w={"max-content"}
         m="auto"
@@ -41,12 +31,14 @@ const TechStacks = () => {
           <Stack w={{ base: "100%", md: "35%" }}>
             <Heading
               textAlign={"center"}
-              mb={"15px"}
-              pt={"40px"}
-              pb={"15px"}
-              color={"text.1"}
-              fontSize={"24px"}
+              mt={"3rem"}
+              mb="1rem"
+              p=".5rem"
+              fontSize={"1.3rem"}
               fontWeight={500}
+              borderRadius={"5px 50px"}
+              bg="text.3"
+              boxShadow={"0 0 10px rgba(0,0,0,0.5)"}
             >
               Frontend
             </Heading>
@@ -55,21 +47,20 @@ const TechStacks = () => {
               {frontendSkills.map((skill, i) => (
                 <Flex
                   key={i}
-                  bg="bg.4"
                   w="90%"
                   m="auto"
                   p="5px 15px"
                   borderRadius={"5px"}
                   align={"center"}
+                  className={styles.skills}
                   data-aos="fade-right"
                   data-aos-offset="150"
                   data-aos-easing="ease-in-sine"
                 >
                   <Image
                     src={skill.icon}
-                    bg="black"
                     p="3px"
-                    h="45px"
+                    h="40px"
                     borderRadius={"5px"}
                   />
                   <Box ml="3">
@@ -88,12 +79,14 @@ const TechStacks = () => {
           <Stack w={{ base: "100%", md: "35%" }}>
             <Heading
               textAlign={"center"}
-              mb={"15px"}
-              pt={"40px"}
-              pb={"15px"}
-              color={"text.1"}
-              fontSize={"24px"}
+              mt={"3rem"}
+              mb="1rem"
+              p=".5rem"
+              fontSize={"1.3rem"}
               fontWeight={500}
+              borderRadius={"5px 50px"}
+              bg="text.3"
+              boxShadow={"0 0 10px rgba(0,0,0,0.5)"}
             >
               Backend
             </Heading>
@@ -101,21 +94,20 @@ const TechStacks = () => {
               {backendSkills.map((skill, i) => (
                 <Flex
                   key={i}
-                  bg="bg.4"
                   w="90%"
                   m="auto"
                   p="5px 15px"
                   borderRadius={"5px"}
                   align={"center"}
-                  data-aos="fade-left"
+                  className={styles.skills}
+                  data-aos="fade-right"
                   data-aos-offset="150"
                   data-aos-easing="ease-in-sine"
                 >
                   <Image
                     src={skill.icon}
-                    bg="black"
                     p="3px"
-                    h="45px"
+                    h="40px"
                     borderRadius={"5px"}
                   />
                   <Box ml="3">
@@ -134,14 +126,15 @@ const TechStacks = () => {
         </Flex>
         <Box>
           <Heading
-            w={"max-content"}
-            m="auto"
             textAlign={"center"}
-            p={"60px 10px 10px 10px"}
-            color={"text.1"}
+            p=".5rem"
+            fontSize={"1.3rem"}
             fontWeight={500}
-            borderBottom="3px solid #e11d48"
-            mb="40px"
+            borderRadius={"5px 50px"}
+            bg="text.3"
+            w={{ base: "100%", md: "35%" }}
+            m="3rem auto 2rem auto"
+            boxShadow={"0 0 10px rgba(0,0,0,0.5)"}
           >
             Tools
           </Heading>
@@ -156,10 +149,10 @@ const TechStacks = () => {
             {tools.map((skill, i) => (
               <Stack
                 key={i}
-                bg="bg.4"
-                w="75%"
+                w="100%"
                 m="auto"
-                p="5px 15px"
+                className={styles.skills}
+                p="1rem"
                 borderRadius={"5px"}
                 align={"center"}
                 data-aos="fade-up"

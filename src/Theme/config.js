@@ -1,35 +1,35 @@
 export const frontendSkills = [
     {
-        icon: "./images/react-40.png",
+        icon: "./images/react.svg",
         skillName: "React.js",
     },
     {
-        icon: "./images/next.js-48.png",
+        icon: "./images/next.svg",
         skillName: "Next.js",
     },
 
     {
-        icon: "./images/javascript-48.png",
+        icon: "./images/js.svg",
         skillName: "JavaScript",
     },
     {
-        icon: "./images/css3-48.png",
+        icon: "./images/css.svg",
         skillName: "CSS3",
     },
     {
-        icon: "./images/html-5.png",
+        icon: "./images/html.svg",
         skillName: "HTML",
     },
     {
-        icon: "./images/typescript-48.png",
+        icon: "./images/typescript.svg",
         skillName: "TypeScript",
     },
     {
-        icon: "./images/redux-48.png",
+        icon: "./images/redux.svg",
         skillName: "Redux",
     },
     {
-        icon: "./images/chakra-ui-48.png",
+        icon: "./images/chakra.svg",
         skillName: "Chakra-ui",
     },
     {
@@ -40,11 +40,11 @@ export const frontendSkills = [
 
 export const backendSkills = [
     {
-        icon: "./images/mongodb-48.png",
+        icon: "./images/mongo.svg",
         skillName: "MongoDB",
     },
     {
-        icon: "./images/express-js-50.png",
+        icon: "./images/express.svg",
         skillName: "Express.js",
     },
     {
@@ -64,19 +64,24 @@ export const backendSkills = [
 
 export const tools = [
     {
-        icon: "./images/git-48.png",
+        icon: "./images/git.svg",
         name: "Git",
-    },
-    {
-        icon: "./images/cypress.svg",
-        name: "Cypress",
     },
     {
         icon: "./images/github.svg",
         name: "Github",
     },
     {
-        icon: "./images/netlify-48.png",
+        icon: "./images/vs-code.svg",
+        name: "VS-Code",
+    },
+    {
+        icon: "./images/cypress.svg",
+        name: "Cypress",
+    },
+
+    {
+        icon: "./images/netlify.svg",
         name: "Netlify",
     },
     {
@@ -86,10 +91,6 @@ export const tools = [
     {
         icon: "./images/npm-48.png",
         name: "NPM",
-    },
-    {
-        icon: "./images/vs-code.svg",
-        name: "VS-Code",
     },
     {
         icon: "./images/vercel.svg",
