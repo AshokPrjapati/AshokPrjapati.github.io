@@ -46,6 +46,7 @@ const TechStacks = () => {
             <VStack w={"100%"} gap="20px 20px">
               {frontendSkills.map((skill, i) => (
                 <Flex
+                  bg="bg.card"
                   key={i}
                   w="90%"
                   m="auto"
@@ -93,6 +94,7 @@ const TechStacks = () => {
             <VStack w={"100%"} gap="20px 20px">
               {backendSkills.map((skill, i) => (
                 <Flex
+                  bg="bg.card"
                   key={i}
                   w="90%"
                   m="auto"
@@ -148,6 +150,7 @@ const TechStacks = () => {
           >
             {tools.map((skill, i) => (
               <Stack
+                bg="bg.card"
                 key={i}
                 w="100%"
                 m="auto"
