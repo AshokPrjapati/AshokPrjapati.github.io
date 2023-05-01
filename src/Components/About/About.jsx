@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import {
-  Avatar,
   Box,
   Card,
   CardBody,
-  CardHeader,
   Container,
   Flex,
   Heading,
@@ -15,11 +13,14 @@ import {
   useClipboard,
   Tooltip,
   IconButton,
+  Grid,
+  Stack,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import styles from "./about.module.css";
 
 const TechStacks = () => {
   useEffect(() => {
@@ -27,7 +28,7 @@ const TechStacks = () => {
   }, []);
   const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
   return (
-    <Container maxW={"5xl"} align="center" p={"60px 0"}>
+    <Container maxW={"5xl"} p={"60px 10px"}>
       <Heading
         w={"max-content"}
         m="auto"
@@ -40,99 +41,174 @@ const TechStacks = () => {
       >
         About
       </Heading>
-      <Card maxW="md" bg={"bg.2"} color={"text.1"} w="95%" m="auto">
-        <CardHeader data-aos="fade-up-left">
-          <Flex spacing="4">
-            <Flex
-              flex="1"
-              gap="4"
-              textAlign={"left"}
-              alignItems="center"
-              flexWrap="wrap"
-            >
-              <Avatar name="Ashok Kumar" src="./profile.png" />
-
-              <Box>
-                <Heading size="sm">Ashok Kumar</Heading>
-                <Text>Full Stack Web Developer</Text>
+      <Flex direction={{ base: "column", lg: "row" }} justifyContent={{ base: "center", lg: "space-between" }} alignItems={"center"} gap="2rem">
+        <Stack spacing="1rem" data-aos="fade-up-right">
+          <Heading
+            lineHeight={1.2}
+            fontWeight={600}
+          >
+            <Text color={"text.1"} as={"span"} fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}>
+              FULL STACK
+            </Text>
+            <br />
+            <Text as={"span"} color={"text.3"} fontSize={{ base: "2xl", sm: "3xl", lg: "4xl" }}>
+              WEB DEVELOPER
+            </Text>
+          </Heading>
+          <Grid templateColumns={"repeat(2, 1fr)"} gap="1rem" color={"text.1"}>
+            <Box className={styles.exp}>
+              <Image src="/images/coding.svg" />
+              <Box fontWeight={"medium"}>
+                <Text>Coding</Text>
+                <Text> <span>1400+</span>  Hours</Text>
               </Box>
-            </Flex>
-          </Flex>
-        </CardHeader>
-        <CardBody textAlign={"left"} data-aos="fade-up-right">
-          <Text>
-            Analytical and detail-oriented aspiring Full Stack Developer, with a
-            b.tech degree in Mechanical Engineering. Capable of writing
-            production-ready code and building single page applications.
-            Passionate about coding having 1200+ hrs of coding experience and
-            solved 700+ DSA problems.
-          </Text>
-        </CardBody>
-        <Image
-          objectFit="cover"
-          src="./images/MERN-Stacks.png"
-          alt=""
-          data-aos="fade-up-left"
-        />
 
-        <CardFooter
-          data-aos="fade-up-right"
-          justify="space-between"
-          flexWrap="wrap"
-          sx={{
-            "& > button": {
-              minW: "136px",
-            },
-          }}
-        >
-          <Link
-            _hover={{ textDecor: "none" }}
-            href="https://github.com/AshokPrjapati"
-            isExternal
-          >
-            <IconButton
-              bg={"bg.2"}
-              icon={<FaGithub />}
-              _hover={{ bg: "text.3" }}
-            />
-          </Link>
+            </Box>
+            <Box className={styles.exp}>
+              <Image src="/images/dsa.svg" />
+              <Box fontWeight={"medium"}>
+                <Text>DSA</Text>
+                <Text fontWeight={"medium"}><span>700+</span> Question Solved</Text>
+              </Box>
+            </Box>
+            <Box className={styles.exp}>
+              <Image src="/images/project.svg" />
+              <Box fontWeight={"medium"}>
+                <Text>Projects</Text>
+                <Text ><span>5+</span> Completed</Text>
+              </Box>
+            </Box>
+            <Box className={styles.exp}>
+              <Image src="/images/github1.svg" />
+              <Box fontWeight={"medium"}>
+                <Text>Github</Text>
+                <Text fontWeight={"medium"}><span>1000+</span> Contributions</Text>
+              </Box>
+            </Box>
+          </Grid>
+        </Stack>
+        <Card className={styles.about} maxW="md" color={"text.1"} data-aos="fade-up-left" border="1px solid #fff">
+          <CardBody textAlign={"left"}>
+            <Text>
+              Analytical and detail-oriented aspiring Full Stack Developer, with a
+              <span className={styles.degree}> B.tech degree</span> in Mechanical Engineering. Capable of writing
+              production-ready code and building single page applications.
+            </Text>
+          </CardBody>
+          <Image
+            objectFit="cover"
+            src="./images/MERN-Stacks.png"
+            alt=""
+            data-aos="fade-up-left"
+          />
 
-          <Link
-            _hover={{ textDecor: "none" }}
-            href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
-            isExternal
+          <CardFooter
+            justify="space-between"
+            flexWrap="wrap"
+            sx={{
+              "& > button": {
+                minW: "136px",
+              },
+            }}
           >
-            <IconButton
-              bg={"bg.2"}
-              icon={<FaLinkedin />}
-              _hover={{ bg: "text.3" }}
-            />
-          </Link>
-          <Link>
-            <Tooltip
-              label={hasCopied ? "Email Copied!" : "Copy Email"}
-              closeOnClick={false}
-              hasArrow
-              with={"33.3%"}
+            <Link
+              _hover={{ textDecor: "none" }}
+              href="https://github.com/AshokPrjapati"
+              isExternal
             >
               <IconButton
-                bg={"bg.2"}
-                icon={<EmailIcon />}
-                _hover={{ bg: "text.3" }}
-                onClick={onCopy}
+                className={styles.icon}
+                colorScheme="none"
+                icon={<FaGithub />}
+                bg="inherit"
+                color="text.3"
+                border="1px solid"
+                borderColor="text.3"
+                size={"lg"}
+                fontWeight={"normal"}
+                px={6}
+                boxShadow={"lg"}
+                _hover={
+                  {
+                    bg: "text.3",
+                    color: "#fff"
+                  }
+                }
               />
-            </Tooltip>
-          </Link>
-          <Link _hover={{ textDecor: "none" }} href="tel:+919799191449">
-            <IconButton
-              bg={"bg.2"}
-              icon={<PhoneIcon />}
-              _hover={{ bg: "text.3" }}
-            />
-          </Link>
-        </CardFooter>
-      </Card>
-    </Container>
+            </Link>
+
+            <Link
+              _hover={{ textDecor: "none" }}
+              href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
+              isExternal
+            >
+              <IconButton
+                icon={<FaLinkedin />}
+                bg="inherit"
+                color="text.3"
+                border="1px solid"
+                borderColor="text.3"
+                size={"lg"}
+                fontWeight={"normal"}
+                px={6}
+                _hover={
+                  {
+                    bg: "text.3",
+                    color: "#fff"
+                  }
+                }
+              />
+            </Link>
+            <Link>
+              <Tooltip
+                label={hasCopied ? "Email Copied!" : "Copy Email"}
+                closeOnClick={false}
+                hasArrow
+                with={"33.3%"}
+              >
+                <IconButton
+
+                  icon={<EmailIcon />}
+                  bg="inherit"
+                  color="text.3"
+                  border="1px solid"
+                  borderColor="text.3"
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                  _hover={
+                    {
+                      bg: "text.3",
+                      color: "#fff"
+                    }
+                  }
+                  onClick={onCopy}
+                />
+              </Tooltip>
+            </Link>
+            <Link _hover={{ textDecor: "none" }} href="tel:+919799191449">
+              <IconButton
+
+                icon={<PhoneIcon />}
+                bg="inherit"
+                color="text.3"
+                border="1px solid"
+                borderColor="text.3"
+                size={"lg"}
+                fontWeight={"normal"}
+                px={6}
+                _hover={
+                  {
+                    bg: "text.3",
+                    color: "#fff"
+                  }
+                }
+              />
+            </Link>
+          </CardFooter>
+        </Card>
+      </Flex>
+    </Container >
   );
 };
 
