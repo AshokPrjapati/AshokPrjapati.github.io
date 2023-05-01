@@ -6,8 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function GitState() {
-  const accessToken = 'your_access_token_here';
-  const username = 'your_github_username_here';
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -38,6 +37,7 @@ function GitState() {
           blockRadius={5}
           blockMargin={6}
           tooltips={true}
+          color={"#e11d48"}
           access_token="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"
         >
           <ReactTooltip delayShow={20} html />
@@ -67,7 +67,7 @@ function GitState() {
           href="https://github.com/AshokPrjapati"
           isExternal
         >
-          <Image src="https://github-readme-streak-stats.herokuapp.com?user=AshokPrjapati&theme=radical&border_radius=5.8&mode=weekly" />
+          <Image src="https://github-readme-streak-stats.herokuapp.com?user=AshokPrjapati&theme=radical&border_radius=5.8&mode=daily" />
         </Link>
       </Flex>
     </Container>
