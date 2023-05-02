@@ -14,7 +14,6 @@
 }
 
 .skillsCatContainer {
-    margin-top: 3rem;
     margin-bottom: 1rem;
     border-radius: 1.5rem;
     border: 1px solid #fff;
@@ -27,7 +26,6 @@
     text-align: center;
     margin: 1rem auto;
     padding: .5rem 3rem;
-    font-size: 1.1rem;
     font-weight: 500;
     border-radius: 5px 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

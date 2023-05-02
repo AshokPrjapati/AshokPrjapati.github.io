@@ -23,15 +23,17 @@ const TechStacks = () => {
       >
         Skills
       </Heading>
-      <Stack>
+      <Stack spacing="1rem" mt="3rem">
         <Flex
           direction={{ base: "column", md: "row" }}
           justify={"space-between"}
+          gap={"1rem"}
         >
-          <Stack className={styles.skillsCatContainer} w={{ base: "100%", md: "48%" }}>
+          <Stack className={styles.skillsCatContainer} w={{ base: "100%", md: "50%" }}>
             <Heading
               className={styles.skillCatHeading}
               bg="text.3"
+              fontSize={"1.3rem"}
             >
               Frontend
             </Heading>
@@ -58,8 +60,6 @@ const TechStacks = () => {
                   />
                   <Box ml="3">
                     <Text
-                      fontSize={"1rem"}
-                      fontWeight="normal"
                       color={"text.1"}
                     >
                       {skill.skillName}
@@ -69,9 +69,10 @@ const TechStacks = () => {
               ))}
             </Grid>
           </Stack>
-          <Stack className={styles.skillsCatContainer} w={{ base: "100%", md: "48%" }}>
+          <Stack className={styles.skillsCatContainer} w={{ base: "100%", md: "50%" }}>
             <Heading
               className={styles.skillCatHeading}
+              fontSize={"1.3rem"}
               bg="text.3"
             >
               Backend
@@ -98,7 +99,6 @@ const TechStacks = () => {
                   />
                   <Box ml="3">
                     <Text
-                      fontWeight="normal"
                       color={"text.1"}
                     >
                       {skill.skillName}
@@ -112,6 +112,7 @@ const TechStacks = () => {
         <Stack className={styles.skillsCatContainer}>
           <Heading
             className={styles.skillCatHeading}
+            fontSize={"1.3rem"}
             bg="text.3"
           >
             Tools
@@ -139,7 +140,7 @@ const TechStacks = () => {
                   m={"0 auto"}
                 />
                 <Box ml="3">
-                  <Text fontWeight="normal" color={"text.1"}>
+                  <Text color={"text.1"}>
                     {skill.name}
                   </Text>
                 </Box>
