@@ -30,7 +30,7 @@ export const frontendSkills = [
     },
     {
         icon: "./images/chakra.svg",
-        skillName: "Chakra-ui",
+        skillName: "Chakra-UI",
     },
     {
         icon: "./images/react-router-dom.svg",

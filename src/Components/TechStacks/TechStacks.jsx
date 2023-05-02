@@ -28,117 +28,93 @@ const TechStacks = () => {
           direction={{ base: "column", md: "row" }}
           justify={"space-between"}
         >
-          <Stack w={{ base: "100%", md: "35%" }}>
+          <Stack className={styles.skillsCatContainer} w={{ base: "100%", md: "48%" }}>
             <Heading
-              textAlign={"center"}
-              mt={"3rem"}
-              mb="1rem"
-              p=".5rem"
-              fontSize={"1.3rem"}
-              fontWeight={500}
-              borderRadius={"5px 50px"}
+              className={styles.skillCatHeading}
               bg="text.3"
-              boxShadow={"0 0 10px rgba(0,0,0,0.5)"}
             >
-              Frontend
+              Frontend Developement
             </Heading>
 
-            <VStack w={"100%"} gap="20px 20px">
+            <Grid gridTemplateColumns={{
+              base: "repeat(2,1fr)",
+              lg: "repeat(3,1fr)",
+            }}
+              gap="1rem">
               {frontendSkills.map((skill, i) => (
-                <Flex
-                  bg="bg.card"
+                <Stack
+                  bg="bg.3"
                   key={i}
-                  w="90%"
-                  m="auto"
-                  p="5px 15px"
-                  borderRadius={"5px"}
-                  align={"center"}
-                  className={styles.skills}
+                  className={styles.skillsCard}
                   data-aos="fade-right"
                   data-aos-offset="150"
                   data-aos-easing="ease-in-sine"
                 >
                   <Image
                     src={skill.icon}
-                    p="3px"
-                    h="40px"
-                    borderRadius={"5px"}
+                    w="30px"
+                    h="30px"
+                    m={"0 auto"}
                   />
                   <Box ml="3">
                     <Text
-                      fontSize={"20px"}
+                      fontSize={"1rem"}
                       fontWeight="normal"
                       color={"text.1"}
                     >
                       {skill.skillName}
                     </Text>
                   </Box>
-                </Flex>
+                </Stack>
               ))}
-            </VStack>
+            </Grid>
           </Stack>
-          <Stack w={{ base: "100%", md: "35%" }}>
+          <Stack className={styles.skillsCatContainer} w={{ base: "100%", md: "48%" }}>
             <Heading
-              textAlign={"center"}
-              mt={"3rem"}
-              mb="1rem"
-              p=".5rem"
-              fontSize={"1.3rem"}
-              fontWeight={500}
-              borderRadius={"5px 50px"}
+              className={styles.skillCatHeading}
               bg="text.3"
-              boxShadow={"0 0 10px rgba(0,0,0,0.5)"}
             >
-              Backend
+              Backend Developement
             </Heading>
-            <VStack w={"100%"} gap="20px 20px">
+            <Grid gridTemplateColumns={{
+              base: "repeat(2,1fr)",
+              lg: "repeat(3,1fr)",
+            }}
+              gap="1rem">
               {backendSkills.map((skill, i) => (
-                <Flex
-                  bg="bg.card"
+                <Stack
+                  bg="bg.3"
                   key={i}
-                  w="90%"
-                  m="auto"
-                  p="5px 15px"
-                  borderRadius={"5px"}
-                  align={"center"}
-                  className={styles.skills}
-                  data-aos="fade-right"
+                  className={styles.skillsCard}
+                  data-aos="fade-left"
                   data-aos-offset="150"
                   data-aos-easing="ease-in-sine"
                 >
                   <Image
                     src={skill.icon}
-                    p="3px"
-                    h="40px"
-                    borderRadius={"5px"}
+                    w="30px"
+                    h="30px"
+                    m={"0 auto"}
                   />
                   <Box ml="3">
                     <Text
-                      fontSize={"20px"}
                       fontWeight="normal"
                       color={"text.1"}
                     >
                       {skill.skillName}
                     </Text>
                   </Box>
-                </Flex>
+                </Stack>
               ))}
-            </VStack>
+            </Grid>
           </Stack>
         </Flex>
-        <Box>
+        <Stack className={styles.skillsCatContainer}>
           <Heading
-            textAlign={"center"}
-            p=".5rem"
-            fontSize={"1.3rem"}
-            fontWeight={500}
-            borderRadius={"5px 50px"}
+            className={styles.skillCatHeading}
             bg="text.3"
-            w={{ base: "100%", md: "35%" }}
-            m="3rem auto 2rem auto"
-            boxShadow={"0 0 10px rgba(0,0,0,0.5)"}
           >
-            Tools
+            Developement Tools
           </Heading>
           <Grid
             gridTemplateColumns={{
@@ -150,33 +126,27 @@ const TechStacks = () => {
           >
             {tools.map((skill, i) => (
               <Stack
-                bg="bg.card"
+                bg="bg.3"
                 key={i}
-                w="100%"
-                m="auto"
-                className={styles.skills}
-                p="1rem"
-                borderRadius={"5px"}
-                align={"center"}
+                className={styles.skillsCard}
                 data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom"
               >
                 <Image
                   src={skill.icon}
-                  // bg="black"
-                  p="3px"
-                  h="50px"
-                  borderRadius={"5px"}
+                  w="30px"
+                  h="30px"
+                  m={"0 auto"}
                 />
                 <Box ml="3">
-                  <Text fontSize={"20px"} fontWeight="normal" color={"text.1"}>
+                  <Text fontWeight="normal" color={"text.1"}>
                     {skill.name}
                   </Text>
                 </Box>
               </Stack>
             ))}
           </Grid>
-        </Box>
+        </Stack>
       </Stack>
     </Container>
   );

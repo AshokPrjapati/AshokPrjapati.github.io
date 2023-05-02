@@ -1,8 +1,34 @@
-.skills {
+.skillsCard {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     border: 1px solid transparent;
 }
 
-.skills:hover {
+.skillsCard:hover {
     border-color: #e11d48;
+}
+
+.skillsCatContainer {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 1.5rem;
+    border: 1px solid #fff;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7)
+}
+
+.skillCatHeading {
+    width: max-content;
+    text-align: center;
+    margin: 1rem auto;
+    padding: .5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 5px 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

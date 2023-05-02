@@ -23,7 +23,6 @@ const theme = extendTheme({
             2: "#0d1117",
             3: "#1e293b",
             4: "#0284c7",
-            "card": "#151c26"
         }
     },
 
