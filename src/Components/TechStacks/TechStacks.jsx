@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Container, Text, Image, Heading, Flex, Stack, Box, Grid, VStack } from "@chakra-ui/react";
+import { Container, Text, Image, Heading, Flex, Stack, Box, Grid } from "@chakra-ui/react";
 import styles from "./TechStacks.module.css"
 import AOS from "aos";
 import "aos/dist/aos.css";
