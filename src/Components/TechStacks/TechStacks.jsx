@@ -33,7 +33,7 @@ const TechStacks = () => {
               className={styles.skillCatHeading}
               bg="text.3"
             >
-              Frontend Developement
+              Frontend
             </Heading>
 
             <Grid gridTemplateColumns={{
@@ -74,7 +74,7 @@ const TechStacks = () => {
               className={styles.skillCatHeading}
               bg="text.3"
             >
-              Backend Developement
+              Backend
             </Heading>
             <Grid gridTemplateColumns={{
               base: "repeat(2,1fr)",
@@ -114,7 +114,7 @@ const TechStacks = () => {
             className={styles.skillCatHeading}
             bg="text.3"
           >
-            Developement Tools
+            Tools
           </Heading>
           <Grid
             gridTemplateColumns={{
