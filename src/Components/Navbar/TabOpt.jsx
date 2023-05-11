@@ -1,41 +1,37 @@
-import { Button, Flex, Link } from "@chakra-ui/react";
+import { Button, Flex, Link as ChakraLink } from "@chakra-ui/react";
+import { Link } from "react-scroll"
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 
 const links = [
   {
-    path: "#home",
+    path: "home",
     text: "Home",
   },
   {
-    path: "#about",
+    path: "about",
     text: "About",
   },
   {
-    path: "#skills",
+    path: "skills",
     text: "Skills",
   },
   {
-    path: "#projects",
+    path: "projects",
     text: "Project",
   },
   {
-    path: "#gitState",
+    path: "gitState",
     text: "Git Stats",
   },
 
   {
-    path: "#contact",
+    path: "contact",
     text: "Contact",
   },
-  {
-    path: "/assets/Ashok-Kumar-Resume.pdf",
-    text: "Resume",
-  },
-];
+]
 
 function TabOpt({ isOpen, toggle }) {
-  const [active, setActive] = useState("#home");
   return (
     <Flex
       direction={{ base: "column", lg: "row" }}
@@ -48,39 +44,61 @@ function TabOpt({ isOpen, toggle }) {
       borderRadius={"10px"}
     >
       {links.map((link, i) => (
-        <Link
+
+        <Button as={Link}
+          className={styles.default}
+          activeClass={styles.active}
+          to={link.path}
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={750}
           key={i}
-          href={link.path}
-          isExternal={link.text === "Resume"}
-          onClick={() => {
-            setActive(link.path);
-            if (link.text === "Resume") {
-              const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
-              const downloadLink = document.createElement("a");
-              downloadLink.href = pdfUrl;
-              downloadLink.download = "Ashok-kumar-Resume.pdf";
-              downloadLink.click();
-            }
+          w={{ base: "100%", md: "auto", lg: "auto" }}
+          colorScheme="none"
+          _hover={{
+            bg: "text.3",
+            color: "text.1",
+            shadow: "0px 0px 10px #e11d48",
           }}
+          onClick={toggle}
+          z-index={99}
+          color="text.2"
         >
-          <Button
-            w={{ base: "100%", md: "auto", lg: "auto" }}
-            className={active === link.path ? styles.active : styles.default}
-            colorScheme="none"
-            _hover={{
-              bg: "text.3",
-              color: "text.1",
-              shadow: "0px 0px 10px #e11d48",
-            }}
-            onClick={toggle}
-            z-index={99}
-            color="text.2"
-          >
-            {link.text}
-          </Button>
-        </Link>
+          {link.text}
+        </Button>
+
       ))}
-    </Flex>
+
+      <ChakraLink
+        className={styles.default}
+        activeClass={styles.active}
+        href={"/assets/Ashok-Kumar-Resume.pdf"}
+        isExternal={true}
+        onClick={() => {
+          const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
+          const downloadLink = document.createElement("a");
+          downloadLink.href = pdfUrl;
+          downloadLink.download = "Ashok-kumar-Resume.pdf";
+          downloadLink.click();
+        }}
+      >
+        <Button
+          w={{ base: "100%", md: "auto", lg: "auto" }}
+          colorScheme="none"
+          _hover={{
+            bg: "text.3",
+            color: "text.1",
+            shadow: "0px 0px 10px #e11d48",
+          }}
+          onClick={toggle}
+          z-index={99}
+          color="text.2"
+        >
+          Resume
+        </Button>
+      </ChakraLink>
+    </Flex >
   );
 }
 

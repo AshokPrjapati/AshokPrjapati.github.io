@@ -5,19 +5,24 @@
 }
 
 .active {
-    border: 1px solid var(--red);
-    color: var(--red) !important;
-    color: #fff;
+    border: 1.5px solid var(--red);
     border-radius: 5px;
+    color: var(--red) !important;
+    filter: drop-shadow(0 0 15px #e11d48);
+    font-weight: bold;
 }
 
 .active:hover {
+    box-shadow: none;
     color: #fff !important;
+    filter: none
 }
+
 
 .default {
     background-color: none;
-    color: var(--grey)
+    color: var(--grey);
+    cursor: pointer;
 }
 
 .sticky {

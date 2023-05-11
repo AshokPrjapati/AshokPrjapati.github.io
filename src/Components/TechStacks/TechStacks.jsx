@@ -16,7 +16,7 @@ const TechStacks = () => {
         w={"max-content"}
         m="auto"
         textAlign={"center"}
-        p={"60px 10px 10px 10px"}
+        p={"65px 10px 10px 10px"}
         color={"text.1"}
         fontWeight={500}
         borderBottom="3px solid #e11d48"

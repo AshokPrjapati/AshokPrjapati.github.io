@@ -28,7 +28,7 @@ const TechStacks = () => {
   }, []);
   const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
   return (
-    <Container maxW={"5xl"} p={"60px 10px"}>
+    <Container maxW={"5xl"} p={"65px 10px"}>
       <Heading
         w={"max-content"}
         m="auto"

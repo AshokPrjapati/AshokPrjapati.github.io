@@ -70,7 +70,7 @@ export default function Contact() {
           <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
             <Heading
               w={"max-content"}
-              p={"60px 10px 10px 10px"}
+              p={"65px 10px 10px 10px"}
               m="auto"
               textAlign={"center"}
               color={"text.1"}
@@ -283,14 +283,14 @@ export default function Contact() {
               </Flex>
             </Box>
 
-            {/* <Flex align={"center"} color={"text.1"}>
-              Designed and build by{" "}
-              <span style={{ margin: "0 5px", color: "#e11d48" }}>
+            <Flex align={"center"} color={"text.1"}>
+              Made with 💖 by{" "}
+              <span style={{ margin: "0 5px", color: "#e11d48", fontWeight: "bold" }}>
                 {" "}
                 Ashok Kumar{" "}
               </span>{" "}
-              <FaCopyright /> 2023
-            </Flex> */}
+              {/* <FaCopyright /> 2023 */}
+            </Flex>
           </VStack>
         </Box>
       </Box >
