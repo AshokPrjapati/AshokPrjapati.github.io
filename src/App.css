@@ -13,6 +13,19 @@ html {
     overflow: hidden;
 }
 
+#home,
+#skills,
+#gitState {
+    background-attachment: fixed;
+    background-image: url("/public/images/bg1.svg");
+}
+
+#projects,
+#about,
+#contact {
+    background-attachment: fixed;
+    background-image: url("/public/images/bg2.svg");
+}
 
 ::-webkit-scrollbar {
     width: 10px;

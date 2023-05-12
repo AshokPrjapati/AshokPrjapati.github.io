@@ -56,13 +56,9 @@ export default function Contact() {
 
   return (
     <Flex
-      bg={"gray.900"}
+      bg={"bg.3"}
       align="center"
       justify="center"
-      css={{
-        backgroundImage: useColorModeValue(CONFETTI_DARK, CONFETTI_LIGHT),
-        backgroundAttachment: "fixed",
-      }}
       id="contact"
     >
       <Box borderRadius="lg" pb="25px">
