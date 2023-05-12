@@ -2,27 +2,7 @@ import React, { useEffect, useState } from "react";
 import emailjs from 'emailjs-com';
 import { useRef } from 'react';
 
-import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  FormControl,
-  FormLabel,
-  Heading,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  Link,
-  Text,
-  Textarea,
-  Tooltip,
-  useClipboard,
-  useColorModeValue,
-  VStack,
-  useToast
-} from "@chakra-ui/react";
+import { Box, Button, Divider, Flex, FormControl, FormLabel, Heading, IconButton, Input, InputGroup, InputLeftElement, Link, Text, Textarea, Tooltip, useClipboard, useColorModeValue, VStack, useToast } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import { PhoneIcon } from "@chakra-ui/icons";
@@ -32,25 +12,33 @@ import { FaFilePdf } from "react-icons/fa";
 
 
 export default function Contact() {
+
+  // form reference
   const form = useRef();
   const toast = useToast();
   const [loading, setLoading] = useState();
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // input data
     let name = form.current.name.value;
     let email = form.current.email.value;
     let message = form.current.message.value;
+
+    // check for empty fields
     if (!name || !email || !message) {
-      return toast({
-        title: 'Please, Fill all fields',
-        status: 'warning',
-        duration: 6000,
-        isClosable: true,
-      })
+      return toast({ title: 'Please, Fill all fields', status: 'warning', duration: 6000, isClosable: true });
+    }
+
+    // check for valid email
+    if (!email.includes("@") || !email.includes(".com")) {
+      return toast({ title: 'Invalid email', status: 'warning', duration: 6000, isClosable: true })
     }
 
     setLoading(true);
+
+    // send email
     emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
       .then((result) => {
         toast({
