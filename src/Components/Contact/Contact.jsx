@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import emailjs from 'emailjs-com';
+import { useRef } from 'react';
 
 import {
   Box,
@@ -13,13 +15,13 @@ import {
   InputGroup,
   InputLeftElement,
   Link,
-  Stack,
   Text,
   Textarea,
   Tooltip,
   useClipboard,
   useColorModeValue,
   VStack,
+  useToast
 } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
@@ -27,26 +29,47 @@ import { PhoneIcon } from "@chakra-ui/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaFilePdf } from "react-icons/fa";
-import { CONFETTI_DARK, CONFETTI_LIGHT } from "../../Theme/config";
 
-const initialData = {
-  name: "",
-  email: "",
-  message: "",
-};
 
 export default function Contact() {
-  const [formData, setformData] = useState(initialData);
+  const form = useRef();
+  const toast = useToast();
+  const [loading, setLoading] = useState();
 
-  const { name, email, message } = formData;
+  const sendEmail = (e) => {
+    e.preventDefault();
+    let name = form.current.name.value;
+    let email = form.current.email.value;
+    let message = form.current.message.value;
+    if (!name || !email || !message) {
+      return toast({
+        title: 'Please, Fill all fields',
+        status: 'warning',
+        duration: 6000,
+        isClosable: true,
+      })
+    }
 
-  const handleChange = (e) => {
-    let val = e.target.value;
-    setformData({ ...formData, [e.target.name]: val });
-  };
-
-  const sendEmail = async () => {
-    console.log(formData);
+    setLoading(true);
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+      .then((result) => {
+        toast({
+          title: `${name}, Your message has been sent`,
+          status: 'success',
+          duration: 6000,
+          isClosable: true,
+        });
+        form.current.reset();
+        setLoading(false);
+      }, (error) => {
+        toast({
+          title: "Something went wrong, Please try again after some time",
+          status: 'error',
+          duration: 6000,
+          isClosable: true,
+        })
+        setLoading(false);
+      });
   };
 
   useEffect(() => {
@@ -144,11 +167,8 @@ export default function Contact() {
               </Flex>
               <Divider my={"1rem"} />
               <form
-                //   action="https://script.google.com/macros/s/AKfycbz5WemVKBSKCBIfm8kbVATI-qxLPCOuMuwGeC748b5kGAaa6EIUnfjr4UjY6KIQ0bIM/exec"
-                id="gform"
-                method="POST"
+                ref={form} onSubmit={sendEmail}
               >
-                {" "}
                 <VStack spacing={5}>
                   <FormControl isRequired>
                     <FormLabel>Name</FormLabel>
@@ -156,11 +176,9 @@ export default function Contact() {
                     <InputGroup>
                       <InputLeftElement children={<BsPerson />} />
                       <Input
+                        id="name"
                         type="text"
                         name="name"
-                        value={name}
-                        placeholder="Your Name"
-                        onChange={handleChange}
                       />
                     </InputGroup>
                   </FormControl>
@@ -171,11 +189,9 @@ export default function Contact() {
                     <InputGroup>
                       <InputLeftElement children={<MdOutlineEmail />} />
                       <Input
+                        id="email"
                         type="email"
                         name="email"
-                        value={email}
-                        placeholder="Your Email"
-                        onChange={handleChange}
                       />
                     </InputGroup>
                   </FormControl>
@@ -184,16 +200,17 @@ export default function Contact() {
                     <FormLabel>Message</FormLabel>
 
                     <Textarea
+                      id="message"
                       name="message"
                       placeholder="Your Message"
                       rows={6}
-                      value={message}
                       resize="none"
-                      onChange={handleChange}
                     />
                   </FormControl>
 
                   <Button
+                    isLoading={loading}
+                    loadingText="Please wait.."
                     type="submit"
                     colorScheme="blue"
                     bg="blue.400"
