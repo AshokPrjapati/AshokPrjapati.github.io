@@ -1,10 +1,10 @@
 # AshokPrjapati.github.io
+
 <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
     <img src="https://readme-typing-svg.demolab.com/?lines=🙏🙏 नमस्ते! ; I am Ashok%20Kumar; I am a Full-stack%20web%20developer 👨🏻‍💻;  Curious%20to%20learn%20new%20things !&font=Fira%20Code&center=true&width=440&height=45&color=#37bcf7&vCenter=true&size=22&pause=1000"></a>
 </p>
-
 
 ## Hi 👋 I'm [Ashok Kumar](https://github.com/AshokPrjapati)
 
@@ -13,12 +13,7 @@
 - Highly passionate about **building web applications**.
 - Interested in **exploring new technologies** with curious mind.
 
-
-
 <br />
-
-
-
 
 <br />
 
@@ -34,7 +29,7 @@
 
 <br />
 
-- 👨‍💻 Checkout my Resume,  [Resume](https://ashokprjapati.github.io/assets/Ashok-Kumar-Resume.pdf)
+- 👨‍💻 Checkout my Resume, [Resume](https://ashokprjapati.github.io/assets/Ashok-Kumar-Resume.pdf)
 - 💼 any freelance work? do reach, [email](mailto:ap271449@gmail.com) :)
 - 💬 ask me about web development, I would love to help ;)
 - 👨‍💻 Checkout my Portfolio [Portfolio](https://ashokprjapati.github.io/)
@@ -44,11 +39,11 @@
 ## :hammer_and_wrench: Skills / Interests
 
 ### 🚀 Languages
+
 ![HTML](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![TypeScript](https://img.shields.io/badge/typescript%20-%23B34A26.svg?&style=for-the-badge&logo=typescript&logoColor=blue&color=323330)
-
 
 ### 🧩 Libraries & Framework
 
@@ -58,7 +53,6 @@
 ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 ![Chakra-UI](https://img.shields.io/badge/Chakra_UI-%23593d88.svg?&style=for-the-badge&logo=chakra-UI&logoColor=white&color=blue)
 
-
 ### 🧑🏻‍💻 Tools & Platform
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
@@ -66,7 +60,6 @@
 ![VS Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 ![VS](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-
 
 <br />
 
@@ -81,18 +74,13 @@
 <!--   <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=AshokPrjapat&theme=radical&langs_count=8" /> -->
 </p>
 
-
-
-
 ### 🔝 Most used languages
+
 <img
   alt="Ashok Kumar's Top Languages"
   src="https://github-readme-stats.vercel.app/api/top-langs/?username=AshokPrjapati&theme=radical&langs_count=8"
   height="207px"
 />
-
-
-
 
 ## :earth_asia: Connect with me...
 
@@ -114,4 +102,4 @@
   </a>
 </p>
 
-
+##test
