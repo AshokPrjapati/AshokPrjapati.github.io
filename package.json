@@ -1,0 +1,39 @@
+{
+  "name": "ashokprjapati.github.io",
+  "version": "1.0.0",
+  "description": "Ashok Kumar's Portfolio - Built with Next.js, TypeScript, and Tailwind CSS",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-personal:AshokPrjapati/AshokPrjapati.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "typescript",
+    "tailwindcss",
+    "react"
+  ],
+  "author": "Ashok Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^15.5.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "^15.5.3",
+    "typescript": "^5.9.2"
+  }
+}
