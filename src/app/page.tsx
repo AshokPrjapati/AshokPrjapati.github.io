@@ -3,6 +3,12 @@ import { Section } from "@/components/Section";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Test div to verify Tailwind is working */}
+      <div className="bg-red-500 text-white p-4 text-center">
+        🧪 Tailwind Test: If you see this with red background and white text,
+        Tailwind CSS v4 is working!
+      </div>
+
       <Section
         id="home"
         className="min-h-screen flex items-center justify-center"
