@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Navigation } from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "Ashok Kumar - Portfolio",
@@ -23,7 +24,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="font-sans antialiased">
+        <Navigation />
+        <main className="pt-16">{children}</main>
+      </body>
     </html>
   );
 }

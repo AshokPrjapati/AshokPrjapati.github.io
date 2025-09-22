@@ -1,7 +1,12 @@
+import { Section } from "@/components/Section";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Section
+        id="home"
+        className="min-h-screen flex items-center justify-center"
+      >
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             🙏 नमस्ते! I am <span className="text-blue-600">Ashok Kumar</span>
@@ -46,7 +51,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </div>
-    </main>
+      </Section>
+    </div>
   );
 }
