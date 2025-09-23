@@ -12,7 +12,10 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 const SIcons: React.FC = () => {
   const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
   return (
-    <Flex gap={{ base: 4, sm: 6 }} justify={{ base: "center", md: "left" }}>
+    <Flex
+      gap={{ base: 4, sm: 6 }}
+      justifyContent={{ base: "center", md: "flex-start" }}
+    >
       <Link
         href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
         isExternal
