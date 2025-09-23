@@ -36,9 +36,8 @@ function GitState() {
           fontSize={16}
           blockRadius={5}
           blockMargin={6}
-          tooltips={true}
           color={"#e11d48"}
-          access_token="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"
+          // access_token="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"
         >
           <ReactTooltip delayShow={20} html />
         </GitHubCalendar>
