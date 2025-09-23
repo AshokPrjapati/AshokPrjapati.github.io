@@ -17,28 +17,28 @@ const Navbar: React.FC = () => {
   const { isOpen, onToggle } = useDisclosure();
   return (
     <>
-      <Box className={styles.sticky} shadow={"lg"}>
+      <Box className={styles.sticky} shadow="lg">
         <Container maxW="5xl">
           <Flex
-            justify={"space-between"}
-            align={"center"}
-            height={"65px"}
-            width={"100%"}
+            justify="space-between"
+            align="center"
+            height="65px"
+            width="100%"
             zIndex={10}
           >
-            <NavLink to={"/"}>
+            <NavLink to="/">
               <Flex
-                fontSize={"3xl"}
-                fontFamily={"Roboto"}
+                fontSize="3xl"
+                fontFamily="Roboto"
                 fontWeight={500}
-                color={"text.1"}
+                color="text.1"
               >
-                <Text color={"text.1"}>Ashok</Text>
-                <Text color={"text.3"}>{" Kumar"}</Text>
+                <Text color="text.1">Ashok</Text>
+                <Text color="text.3">" Kumar"</Text>
               </Flex>
             </NavLink>
             <Box>
-              <Flex display={{ base: "none", lg: "flex" }} color={"text.2"}>
+              <Flex display={{ base: "none", lg: "flex" }} color="text.2">
                 <TabOpt />
               </Flex>
               <Flex
@@ -47,8 +47,8 @@ const Navbar: React.FC = () => {
                 display={{ base: "flex", lg: "none" }}
               >
                 <IconButton
-                  color={"text.1"}
-                  bg={"none"}
+                  color="text.1"
+                  bg="none"
                   _hover={{ bg: "none" }}
                   onClick={onToggle}
                   icon={
@@ -58,8 +58,8 @@ const Navbar: React.FC = () => {
                       <HamburgerIcon w={5} h={5} />
                     )
                   }
-                  variant={"ghost"}
-                  aria-label={"Toggle Navigation"}
+                  variant="ghost"
+                  aria-label="Toggle Navigation"
                 />
               </Flex>
             </Box>
@@ -73,10 +73,10 @@ const Navbar: React.FC = () => {
       >
         <Box
           w="90%"
-          borderRadius={"5px"}
+          borderRadius="5px"
           m="auto"
-          bg={"rgba(0,0,0,0.5)"}
-          backdropFilter={"blur(10px)"}
+          bg="rgba(0,0,0,0.5)"
+          backdropFilter="blur(10px)"
           display={{ base: "auto", lg: "none" }}
         >
           <TabOpt isOpen={isOpen} toggle={onToggle} />
