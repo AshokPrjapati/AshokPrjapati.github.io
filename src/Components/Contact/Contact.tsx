@@ -102,11 +102,14 @@ export default function Contact() {
   }, []);
   const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
 
+  const bgColor = "bg.3";
+  const spacing = { base: 4, md: 8, lg: 20 };
+
   return (
-    <Flex bg={"bg.3"} align="center" justify="center" id="contact">
+    <Flex bg={bgColor} align="center" justify="center" id="contact">
       <Box borderRadius="lg" pb="25px">
         <Box>
-          <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
+          <VStack spacing={spacing}>
             <Heading
               w={"max-content"}
               p={"65px 10px 10px 10px"}
