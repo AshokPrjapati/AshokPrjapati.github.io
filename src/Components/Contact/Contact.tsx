@@ -179,8 +179,9 @@ export default function Contact() {
                         aria-label="twitter"
                         variant="ghost"
                         size="md"
+                        fontSize="28px"
                         mr="1rem"
-                        icon={<PhoneIcon size="28px" />}
+                        icon={<PhoneIcon />}
                         _hover={{
                           bg: "#fff",
                           color: useColorModeValue("gray.700", "white"),
@@ -237,7 +238,7 @@ export default function Contact() {
                     _hover={{
                       bg: "blue.500",
                     }}
-                    isFullWidth
+                    width="100%"
                     onClick={sendEmail}
                   >
                     Send Message

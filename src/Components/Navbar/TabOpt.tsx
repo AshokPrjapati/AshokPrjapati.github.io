@@ -65,14 +65,14 @@ const TabOpt: React.FC<TabOptProps> = ({ isOpen, toggle }) => {
           duration={750}
           key={i}
           w={{ base: "100%", md: "auto", lg: "auto" }}
-          colorScheme="none"
+          variant="ghost"
           _hover={{
             bg: "text.3",
             color: "text.1",
             shadow: "0px 0px 10px #e11d48",
           }}
           onClick={toggle}
-          z-index={99}
+          zIndex={99}
           color="text.2"
         >
           {link.text}
@@ -93,14 +93,14 @@ const TabOpt: React.FC<TabOptProps> = ({ isOpen, toggle }) => {
       >
         <Button
           w={{ base: "100%", md: "auto", lg: "auto" }}
-          colorScheme="none"
+          variant="ghost"
           _hover={{
             bg: "text.3",
             color: "text.1",
             shadow: "0px 0px 10px #e11d48",
           }}
           onClick={toggle}
-          z-index={99}
+          zIndex={99}
           color="text.2"
         >
           Resume
