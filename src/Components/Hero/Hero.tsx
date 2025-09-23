@@ -17,14 +17,14 @@ import SIcons from "./SIcons";
 
 const Hero: React.FC = () => {
   return (
-    <Container pt={{ base: "40px", md: "none" }} maxW={"5xl"} minH={"100vh"}>
+    <Container pt={{ base: "40px", md: 0 }} maxW="5xl" minH="100vh">
       <Stack
         spacing={{ base: 8, md: 10 }}
-        py={"1rem"}
+        py="1rem"
         direction={{ base: "column-reverse", md: "row" }}
         minH="100vh"
-        justifyContent={"center"}
-        alignItems={"center"}
+        justifyContent="center"
+        alignItems="center"
       >
         <Stack
           flex={1}
@@ -37,11 +37,11 @@ const Hero: React.FC = () => {
             fontWeight={600}
             fontSize={{ base: "2xl", sm: "3xl", lg: "4xl" }}
           >
-            <Text color={"text.1"} as={"span"}>
+            <Text color="text.1" as="span">
               Hi, I am Ashok Kumar
             </Text>
             <br />
-            <Text as={"span"} color={"text.3"}>
+            <Text as="span" color="text.3">
               <Typewriter
                 options={{
                   strings: [
@@ -55,14 +55,13 @@ const Hero: React.FC = () => {
               />
             </Text>
           </Heading>
-          <Text color={"text.1"}>
+          <Text color="text.1">
             An enthusiastic Full Stack Web Developer with a strong set of
             technical as well as non-technical skills and a dedication towards
             creating useful and interactive web applications.
           </Text>
           <Box textAlign={{ base: "center", md: "left" }}>
-            <Box
-              as={Link}
+            <Link
               className={styles.button}
               href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
               isExternal
@@ -77,38 +76,38 @@ const Hero: React.FC = () => {
               color="text.3"
             >
               {<ArrowForwardIcon />} Resume
-            </Box>
+            </Link>
           </Box>
 
           <SIcons />
         </Stack>
-        <Flex flex={1} justify={"center"} align={"center"}>
+        <Flex flex={1} justify="center" align="center">
           <Box
-            p={"20px"}
-            maxH={"20rem"}
+            p="20px"
+            maxH="20rem"
             maxW="20rem"
-            rounded={"2xl"}
-            m={"auto"}
-            overflow={"hidden"}
-            position={"relative"}
+            rounded="2xl"
+            m="auto"
+            overflow="hidden"
+            position="relative"
           >
             <Box
-              position={"absolute"}
+              position="absolute"
               top="1.5rem"
               textAlign="center"
-              bg={"text.3"}
+              bg="text.3"
               width="90%"
-              height={"90%"}
-              borderRadius={"50%"}
+              height="90%"
+              borderRadius="50%"
             ></Box>
             <Image
-              alt={"Hero Image"}
-              fit={"cover"}
-              align={"center"}
-              w={"100%"}
-              h={"100%"}
-              src={"./profile.png"}
-              position={"relative"}
+              alt="Hero Image"
+              fit="cover"
+              align="center"
+              w="100%"
+              h="100%"
+              src="./profile.png"
+              position="relative"
               zIndex={8}
             />
           </Box>

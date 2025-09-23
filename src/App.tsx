@@ -6,8 +6,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import Projects from "./Components/Projects/Projects";
 import GitState from "./Components/GitState/GitState";
 import TechStacks from "./Components/TechStacks/TechStacks";
-import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
+import About from "./Components/About/About";
 
 const App: React.FC = () => {
   return (

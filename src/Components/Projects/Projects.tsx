@@ -15,7 +15,7 @@ import {
   Link,
   Grid,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import styles from "../Hero/Hero.module.css";
 import projectData from "./projectData";
@@ -41,9 +41,9 @@ const Projects = () => {
       </Heading>
       <Grid
         templateColumns={{ base: "repeat(1,1fr)", lg: "repeat(2,1fr)" }}
-        justify={"space-between"}
-        // align={"center"}
-        spacing={{ base: 8, md: 10 }}
+        justifyItems={"center"}
+        alignItems={"center"}
+        gap={{ base: 8, md: 10 }}
         py={{ base: 18, md: 25 }}
       >
         {projectData.map((p) => (
@@ -60,7 +60,9 @@ const Projects = () => {
               <Box
                 h={"210px"}
                 bg={"gray.100"}
-                align="center"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
                 mt={-6}
                 mx={-6}
                 mb={6}
@@ -68,7 +70,6 @@ const Projects = () => {
                 <Image
                   h={"210px"}
                   src={p.src}
-                  layout={"fill"}
                   alt={"project-preview"}
                   data-aos="fade-up"
                   objectFit={"cover"}
