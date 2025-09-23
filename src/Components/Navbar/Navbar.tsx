@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
             align="center"
             height="65px"
             width="100%"
-            zIndex={10 as any}
+            zIndex={10}
           >
             <NavLink to="/">
               <Flex
