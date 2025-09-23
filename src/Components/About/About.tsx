@@ -157,6 +157,7 @@ const TechStacks = () => {
                   bg: "text.3",
                   color: "#fff",
                 }}
+                aria-label="github"
               />
             </Link>
 
@@ -178,6 +179,7 @@ const TechStacks = () => {
                   bg: "text.3",
                   color: "#fff",
                 }}
+                aria-label="linkedin"
               />
             </Link>
             <Link>
@@ -185,7 +187,6 @@ const TechStacks = () => {
                 label={hasCopied ? "Email Copied!" : "Copy Email"}
                 closeOnClick={false}
                 hasArrow
-                with={"33.3%"}
               >
                 <IconButton
                   icon={<EmailIcon />}
@@ -201,6 +202,7 @@ const TechStacks = () => {
                     color: "#fff",
                   }}
                   onClick={onCopy}
+                  aria-label="email"
                 />
               </Tooltip>
             </Link>
@@ -218,6 +220,7 @@ const TechStacks = () => {
                   bg: "text.3",
                   color: "#fff",
                 }}
+                aria-label="phone"
               />
             </Link>
           </CardFooter>
