@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
             align="center"
             height="65px"
             width="100%"
-            zIndex={10}
+            zIndex={10 as any}
           >
             <NavLink to="/">
               <Flex
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
                 <TabOpt />
               </Flex>
               <Flex
-                flex={{ base: 1, lg: "auto" }}
+                flex={{ base: 1, lg: "auto" } as any}
                 ml={{ base: -2 }}
                 display={{ base: "flex", lg: "none" }}
               >
