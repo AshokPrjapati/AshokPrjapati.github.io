@@ -54,8 +54,7 @@ const TabOpt: React.FC<TabOptProps> = ({ isOpen, toggle }) => {
       borderRadius={"10px"}
     >
       {links.map((link, i) => (
-        <Button
-          as={Link}
+        <Link
           className={styles.default}
           activeClass={styles.active}
           to={link.path}
@@ -64,19 +63,22 @@ const TabOpt: React.FC<TabOptProps> = ({ isOpen, toggle }) => {
           offset={0}
           duration={750}
           key={i}
-          w={{ base: "100%", md: "auto", lg: "auto" }}
-          variant="ghost"
-          _hover={{
-            bg: "text.3",
-            color: "text.1",
-            shadow: "0px 0px 10px #e11d48",
-          }}
-          onClick={toggle}
-          zIndex={99}
-          color="text.2"
         >
-          {link.text}
-        </Button>
+          <Button
+            w={{ base: "100%", md: "auto", lg: "auto" }}
+            variant="ghost"
+            _hover={{
+              bg: "text.3",
+              color: "text.1",
+              shadow: "0px 0px 10px #e11d48",
+            }}
+            onClick={toggle}
+            zIndex={99}
+            color="text.2"
+          >
+            {link.text}
+          </Button>
+        </Link>
       ))}
 
       <ChakraLink
