@@ -7,3 +7,8 @@ export interface TabOptProps {
   isOpen?: boolean;
   toggle?: () => void;
 }
+
+export interface Skill {
+  icon: string;
+  skillName: string;
+}
