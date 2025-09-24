@@ -22,29 +22,29 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from "./about.module.css";
 
-const TechStacks = () => {
+const About = () => {
   useEffect(() => {
     AOS.init();
   }, []);
   const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
   return (
-    <Container maxW={"5xl"} p={"65px 10px"}>
+    <Container maxW="5xl" p="65px 10px">
       <Heading
-        w={"max-content"}
+        w="max-content"
         m="auto"
-        textAlign={"center"}
-        p={"0 10px 10px 10px"}
-        color={"text.1"}
-        fontWeight={500}
+        textAlign="center"
+        p="0 10px 10px 10px"
+        color="text.1"
+        fontWeight="500"
         borderBottom="3px solid #e11d48"
-        mb={"40px"}
+        mb="40px"
       >
         About
       </Heading>
       <Flex
         direction={{ base: "column", lg: "row" }}
         justifyContent={{ base: "center", lg: "space-between" }}
-        alignItems={"center"}
+        alignItems="center"
         gap="2rem"
       >
         <Stack spacing="1rem" data-aos="fade-up-right">
@@ -230,4 +230,4 @@ const TechStacks = () => {
   );
 };
 
-export default TechStacks;
+export default About;
