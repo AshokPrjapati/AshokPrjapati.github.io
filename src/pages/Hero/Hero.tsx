@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Hero.module.css";
 import {
   Container,
   Stack,
@@ -62,7 +61,7 @@ const Hero: React.FC = () => {
           </Text>
           <Box textAlign={{ base: "center", md: "left" }}>
             <Link
-              className={styles.button}
+              className="button"
               href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
               isExternal
               _hover={{ textDecor: "none", bg: "text.3", color: "#fff" }}

@@ -1,15 +1,4 @@
-interface ProjectData {
-  id: number;
-  name: string;
-  src: string;
-  discription: string;
-  techStack: string;
-  detail: string;
-  sourceCode: string;
-  liveLink: string;
-}
-
-const projectData: ProjectData[] = [
+const projectData = [
   {
     id: 1,
     name: "Capsule- Tata 1mg (clone)",

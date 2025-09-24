@@ -12,8 +12,8 @@ import {
 import styles from "./TechStacks.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-import { frontendSkills, backendSkills, tools } from "../../Theme/config";
+import { backendSkills, frontendSkills } from "../../constants/skillsData";
+import { tools } from "../../constants/constant";
 
 const TechStacks = () => {
   useEffect(() => {
