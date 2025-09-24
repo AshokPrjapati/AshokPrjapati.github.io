@@ -22,7 +22,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from "./about.module.css";
 
-const About = () => {
+const About: React.FC = () => {
   useEffect(() => {
     AOS.init();
   }, []);

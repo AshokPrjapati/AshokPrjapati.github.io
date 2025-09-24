@@ -1,13 +1,13 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import "./App.css";
-import Hero from "./Components/Hero/Hero";
 import Navbar from "./Components/Navbar/Navbar";
-import Projects from "./Components/Projects/Projects";
-import GitState from "./Components/GitState/GitState";
-import TechStacks from "./Components/TechStacks/TechStacks";
-import Contact from "./Components/Contact/Contact";
-import About from "./Components/About/About";
+import Hero from "./pages/Hero/Hero";
+import About from "./pages/About/About";
+import TechStacks from "./pages/TechStacks/TechStacks";
+import Projects from "./pages/Projects/Projects";
+import GitState from "./pages/GitState/GitState";
+import Contact from "./pages/Contact/Contact";
 
 const App: React.FC = () => {
   return (
