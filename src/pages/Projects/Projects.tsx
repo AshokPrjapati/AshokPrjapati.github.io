@@ -18,7 +18,7 @@ import {
 import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import styles from "../Hero/Hero.module.css";
-import projectData from "./projectData";
+import projectData from "../../constants/projectData";
 
 const Projects = () => {
   useEffect(() => {
