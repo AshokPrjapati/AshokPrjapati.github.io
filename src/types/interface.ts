@@ -10,7 +10,7 @@ export interface TabOptProps {
 
 export interface Skill {
   icon: string;
-  skillName: string;
+  name: string;
 }
 
 export interface Tool {

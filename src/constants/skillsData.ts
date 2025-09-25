@@ -1,62 +1,62 @@
 export const frontendSkills = [
   {
     icon: "./images/react.svg",
-    skillName: "React.js",
+    name: "React.js",
   },
   {
     icon: "./images/next.svg",
-    skillName: "Next.js",
+    name: "Next.js",
   },
 
   {
     icon: "./images/js.svg",
-    skillName: "JavaScript",
+    name: "JavaScript",
   },
   {
     icon: "./images/css.svg",
-    skillName: "CSS3",
+    name: "CSS3",
   },
   {
     icon: "./images/html.svg",
-    skillName: "HTML",
+    name: "HTML",
   },
   {
     icon: "./images/typescript.svg",
-    skillName: "TypeScript",
+    name: "TypeScript",
   },
   {
     icon: "./images/redux.svg",
-    skillName: "Redux",
+    name: "Redux",
   },
   {
     icon: "./images/chakra.svg",
-    skillName: "Chakra-UI",
+    name: "Chakra-UI",
   },
   {
     icon: "./images/react-router-dom.svg",
-    skillName: "React Router Dom",
+    name: "React Router Dom",
   },
 ];
 
 export const backendSkills = [
   {
     icon: "./images/mongo.svg",
-    skillName: "MongoDB",
+    name: "MongoDB",
   },
   {
     icon: "./images/express.svg",
-    skillName: "Express.js",
+    name: "Express.js",
   },
   {
     icon: "./images/node-js.svg",
-    skillName: "Node.js",
+    name: "Node.js",
   },
   {
     icon: "https://mongoosejs.com/docs/images/favicon/favicon-32x32.png",
-    skillName: "Mongoose",
+    name: "Mongoose",
   },
   {
     icon: "./images/jwt.svg",
-    skillName: "JWT Auth",
+    name: "JWT Auth",
   },
 ];
