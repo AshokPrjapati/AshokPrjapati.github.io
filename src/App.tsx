@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ErrorBoundary from "./Components/ErrorBoundary";
 import { Box } from "@chakra-ui/react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
@@ -17,25 +18,27 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Navbar />
-      <Box id="home" bg={"bg.2"}>
-        <Hero />
-      </Box>
-      <Box id="about" bg={"bg.3"}>
-        <About />
-      </Box>
-      <Box id="skills" bg={"bg.2"}>
-        <TechStacks />
-      </Box>
-      <Box id="projects" bg={"bg.3"}>
-        <Projects />
-      </Box>
-      <Box id="gitState" bg={"bg.2"}>
-        <GitState />
-      </Box>
-      <Contact />
-    </div>
+    <ErrorBoundary>
+      <div className="App">
+        <Navbar />
+        <Box id="home" bg={"bg.2"}>
+          <Hero />
+        </Box>
+        <Box id="about" bg={"bg.3"}>
+          <About />
+        </Box>
+        <Box id="skills" bg={"bg.2"}>
+          <TechStacks />
+        </Box>
+        <Box id="projects" bg={"bg.3"}>
+          <Projects />
+        </Box>
+        <Box id="gitState" bg={"bg.2"}>
+          <GitState />
+        </Box>
+        <Contact />
+      </div>
+    </ErrorBoundary>
   );
 };
 
