@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import TabOpt from "./TabOpt";
+import NavButton from "./NavButton";
 import styles from "./Navbar.module.css";
 
 const Navbar: React.FC = () => {
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
             </NavLink>
             <Box>
               <Flex display={{ base: "none", lg: "flex" }} color="text.2">
-                <TabOpt />
+                <NavButton />
               </Flex>
               <Flex
                 flex={{ base: 1, lg: "auto" } as any}
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
           backdropFilter="blur(10px)"
           display={{ base: "auto", lg: "none" }}
         >
-          <TabOpt isOpen={isOpen} toggle={onToggle} />
+          <NavButton toggle={onToggle} />
         </Box>
       </Slide>
     </>

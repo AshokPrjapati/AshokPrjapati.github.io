@@ -5,7 +5,7 @@ import styles from "./Navbar.module.css";
 import { ModuleItem, TabOptProps } from "../../types/interface";
 import { MODULES } from "../../constants/constant";
 
-const TabOpt: React.FC<TabOptProps> = ({ isOpen, toggle }) => {
+const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
   const renderNavButton = (label: string) => {
     return (
       <Button
@@ -77,4 +77,4 @@ const TabOpt: React.FC<TabOptProps> = ({ isOpen, toggle }) => {
   );
 };
 
-export default TabOpt;
+export default NavButton;
