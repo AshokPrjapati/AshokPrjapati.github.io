@@ -27,7 +27,7 @@ const Projects = () => {
   const bg = useColorModeValue("bg.1", "gray.900");
   const clr = useColorModeValue("text.1", "white");
 
-  const renderProjectData = (project: ProjectData) => {
+  const renderProjectContent = (project: ProjectData) => {
     return (
       <Center py={6} key={project.id}>
         <Box
@@ -167,7 +167,7 @@ const Projects = () => {
         gap={{ base: 8, md: 10 }}
         py={{ base: 18, md: 25 }}
       >
-        {projectData.map((project) => renderProjectData(project))}
+        {projectData.map((project) => renderProjectContent(project))}
       </Grid>
     </Container>
   );
