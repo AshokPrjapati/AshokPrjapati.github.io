@@ -27,6 +27,7 @@ import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import { PhoneIcon } from "@chakra-ui/icons";
 import { FaFilePdf } from "react-icons/fa";
+import SectionHeader from "../../Components/SectionHeader";
 
 export default function Contact() {
   // form reference
@@ -105,17 +106,7 @@ export default function Contact() {
       <Box borderRadius="lg" pb="25px">
         <Box>
           <VStack spacing={spacing}>
-            <Heading
-              w={"max-content"}
-              p={"65px 10px 10px 10px"}
-              m="auto"
-              textAlign={"center"}
-              color={"text.1"}
-              fontWeight={500}
-              borderBottom="3px solid #e11d48"
-            >
-              Contact Me
-            </Heading>
+            <SectionHeader label="Contact Me" />
             <Box
               bg={"gray.700"}
               borderRadius="lg"

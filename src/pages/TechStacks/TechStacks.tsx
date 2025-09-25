@@ -13,6 +13,7 @@ import styles from "./TechStacks.module.css";
 import { backendSkills, frontendSkills } from "../../constants/skillsData";
 import { tools } from "../../constants/constant";
 import { Skill } from "../../types/interface";
+import SectionHeader from "../../Components/SectionHeader";
 
 const TechStacks = () => {
   const renderSkillHeading = (label: string) => {
@@ -47,17 +48,7 @@ const TechStacks = () => {
 
   return (
     <Container maxW="5xl" pb="60px" userSelect="none">
-      <Heading
-        w="max-content"
-        m="auto"
-        textAlign="center"
-        p="65px 10px 10px 10px"
-        color="text.1"
-        fontWeight={500}
-        borderBottom="3px solid #e11d48"
-      >
-        Skills
-      </Heading>
+      <SectionHeader label="Skills" />
       <Stack spacing="1rem" mt="3rem">
         <Flex
           direction={{ base: "column", md: "row" }}

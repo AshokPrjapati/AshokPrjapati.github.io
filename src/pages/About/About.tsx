@@ -19,27 +19,17 @@ import {
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 import styles from "./about.module.css";
+import SectionHeader from "../../Components/SectionHeader";
 
 const About: React.FC = () => {
   const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
   return (
-    <Container maxW="5xl" p="65px 10px">
-      <Heading
-        w="max-content"
-        m="auto"
-        textAlign="center"
-        p="0 10px 10px 10px"
-        color="text.1"
-        fontWeight="500"
-        borderBottom="3px solid #e11d48"
-        mb="40px"
-      >
-        About
-      </Heading>
+    <Container maxW="5xl" p="0px 10px 40px 10px" userSelect="none">
+      <SectionHeader label="About" />
       <Flex
         direction={{ base: "column", lg: "row" }}
         justifyContent={{ base: "center", lg: "space-between" }}
-        alignItems="center"
+        alignItems={{ base: "center", lg: "flex-start" }}
         gap="2rem"
       >
         <Stack spacing="1rem" data-aos="fade-up-right">

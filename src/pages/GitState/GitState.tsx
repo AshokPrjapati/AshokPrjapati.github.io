@@ -1,21 +1,12 @@
 import GitHubCalendar from "react-github-calendar";
 import ReactTooltip from "react-tooltip";
 import { Container, Heading, Image, Link, Flex, Box } from "@chakra-ui/react";
+import SectionHeader from "../../Components/SectionHeader";
 
 function GitState() {
   return (
     <Container maxW={"5xl"}>
-      <Heading
-        w={"max-content"}
-        m="auto"
-        textAlign={"center"}
-        p={"65px 10px 10px 10px"}
-        color={"text.1"}
-        fontWeight={500}
-        borderBottom="3px solid #e11d48"
-      >
-        Git Stats
-      </Heading>
+      <SectionHeader label=" Git Stats" />
       <Box data-aos="zoom-out">
         <GitHubCalendar
           style={{

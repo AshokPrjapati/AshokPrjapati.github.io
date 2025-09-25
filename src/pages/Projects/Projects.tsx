@@ -16,6 +16,7 @@ import {
 import { FaGithub } from "react-icons/fa";
 import projectData from "../../constants/projectData";
 import { ProjectData } from "../../types/interface";
+import SectionHeader from "../../Components/SectionHeader";
 
 const Projects = () => {
   const bg = useColorModeValue("bg.1", "gray.900");
@@ -143,17 +144,7 @@ const Projects = () => {
 
   return (
     <Container maxW={"5xl"}>
-      <Heading
-        w={"max-content"}
-        m="auto"
-        textAlign={"center"}
-        p={"65px 10px 10px 10px"}
-        color={"text.1"}
-        fontWeight={500}
-        borderBottom="3px solid #e11d48"
-      >
-        Projects
-      </Heading>
+      <SectionHeader label="Projects" />
       <Grid
         templateColumns={{ base: "repeat(1,1fr)", lg: "repeat(2,1fr)" }}
         justifyItems={"center"}
