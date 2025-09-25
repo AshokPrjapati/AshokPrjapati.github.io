@@ -6,6 +6,25 @@ import { ModuleItem, TabOptProps } from "../../types/interface";
 import { MODULES } from "../../constants/constant";
 
 const TabOpt: React.FC<TabOptProps> = ({ isOpen, toggle }) => {
+  const renderNavButton = (label: string) => {
+    return (
+      <Button
+        w={{ base: "100%", md: "auto", lg: "auto" }}
+        variant="ghost"
+        _hover={{
+          bg: "text.3",
+          color: "text.1",
+          shadow: "0px 0px 10px #e11d48",
+        }}
+        onClick={toggle}
+        zIndex={99}
+        color="text.2"
+      >
+        {label}
+      </Button>
+    );
+  };
+
   const renderModuleWithLink = (module: ModuleItem, idx: number) => {
     return (
       <Link
@@ -18,21 +37,27 @@ const TabOpt: React.FC<TabOptProps> = ({ isOpen, toggle }) => {
         duration={750}
         key={idx}
       >
-        <Button
-          w={{ base: "100%", md: "auto", lg: "auto" }}
-          variant="ghost"
-          _hover={{
-            bg: "text.3",
-            color: "text.1",
-            shadow: "0px 0px 10px #e11d48",
-          }}
-          onClick={toggle}
-          zIndex={99}
-          color="text.2"
-        >
-          {module.text}
-        </Button>
+        {renderNavButton(module.text)}
       </Link>
+    );
+  };
+
+  const renderResumeButton = () => {
+    return (
+      <ChakraLink
+        className={styles.default}
+        href={"/assets/Ashok-Kumar-Resume.pdf"}
+        isExternal={true}
+        onClick={() => {
+          const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
+          const downloadLink = document.createElement("a");
+          downloadLink.href = pdfUrl;
+          downloadLink.download = "Ashok-kumar-Resume.pdf";
+          downloadLink.click();
+        }}
+      >
+        {renderNavButton("Resume")}
+      </ChakraLink>
     );
   };
 
@@ -47,34 +72,7 @@ const TabOpt: React.FC<TabOptProps> = ({ isOpen, toggle }) => {
       borderRadius="10px"
     >
       {MODULES.map((module, index) => renderModuleWithLink(module, index))}
-
-      <ChakraLink
-        className={styles.default}
-        href={"/assets/Ashok-Kumar-Resume.pdf"}
-        isExternal={true}
-        onClick={() => {
-          const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
-          const downloadLink = document.createElement("a");
-          downloadLink.href = pdfUrl;
-          downloadLink.download = "Ashok-kumar-Resume.pdf";
-          downloadLink.click();
-        }}
-      >
-        <Button
-          w={{ base: "100%", md: "auto", lg: "auto" }}
-          variant="ghost"
-          _hover={{
-            bg: "text.3",
-            color: "text.1",
-            shadow: "0px 0px 10px #e11d48",
-          }}
-          onClick={toggle}
-          zIndex={99}
-          color="text.2"
-        >
-          Resume
-        </Button>
-      </ChakraLink>
+      {renderResumeButton()}
     </Flex>
   );
 };
