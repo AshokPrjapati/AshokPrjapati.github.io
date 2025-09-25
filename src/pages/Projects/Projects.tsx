@@ -1,6 +1,4 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import {
   Container,
   Stack,
@@ -15,15 +13,11 @@ import {
   Link,
   Grid,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import projectData from "../../constants/projectData";
 import { ProjectData } from "../../types/interface";
 
 const Projects = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const bg = useColorModeValue("bg.1", "gray.900");
   const clr = useColorModeValue("text.1", "white");
 

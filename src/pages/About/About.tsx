@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Box,
   Card,
@@ -18,14 +18,9 @@ import {
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import styles from "./about.module.css";
 
 const About: React.FC = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
   return (
     <Container maxW="5xl" p="65px 10px">

@@ -1,15 +1,8 @@
-import React, { useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
 import ReactTooltip from "react-tooltip";
 import { Container, Heading, Image, Link, Flex, Box } from "@chakra-ui/react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 function GitState() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
     <Container maxW={"5xl"}>
       <Heading

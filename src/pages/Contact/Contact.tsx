@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import emailjs from "emailjs-com";
 import { useRef } from "react";
 
@@ -26,8 +26,6 @@ import {
 import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import { PhoneIcon } from "@chakra-ui/icons";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { FaFilePdf } from "react-icons/fa";
 
 export default function Contact() {
@@ -97,9 +95,6 @@ export default function Contact() {
       );
   };
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
 
   const bgColor = "bg.3";

@@ -10,17 +10,11 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import styles from "./TechStacks.module.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { backendSkills, frontendSkills } from "../../constants/skillsData";
 import { tools } from "../../constants/constant";
 import { Skill } from "../../types/interface";
 
 const TechStacks = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   const renderSkillHeading = (label: string) => {
     return (
       <Heading

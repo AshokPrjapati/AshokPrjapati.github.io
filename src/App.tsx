@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box } from "@chakra-ui/react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
@@ -8,8 +8,14 @@ import TechStacks from "./pages/TechStacks/TechStacks";
 import Projects from "./pages/Projects/Projects";
 import GitState from "./pages/GitState/GitState";
 import Contact from "./pages/Contact/Contact";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App: React.FC = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="App">
       <Navbar />
