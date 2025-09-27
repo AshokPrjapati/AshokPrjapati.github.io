@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
 
   const renderMobileMenuList = () => {
     return (
-      <Slide direction="bottom" in={isOpen}>
+      <Slide direction="bottom">
         <Box
           w="90%"
           borderRadius="5px"
