@@ -1,7 +1,3 @@
-// theme.js
-
-// 1. import `extendTheme` function
-
 import { extendTheme, theme as baseTheme } from "@chakra-ui/react";
 
 const colors = {

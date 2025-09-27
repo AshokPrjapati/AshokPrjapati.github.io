@@ -38,7 +38,6 @@ const App: React.FC = () => {
   const renderModule = (module: ModuleItem, index: number) => {
     const { componentName, path } = module;
     const Component = getComponentByModuleName(componentName);
-    // Use new color names and Chakra color mode
     const bg =
       colorMode === "light"
         ? index % 2 === 0
@@ -51,7 +50,7 @@ const App: React.FC = () => {
     return (
       <Box key={index} id={path} bg={bg}>
         <Container pt={{ base: "40px", md: 0 }} maxW="8xl" minH="100vh">
-          {React.createElement(Component as React.FC)}
+          <Component />
         </Container>
       </Box>
     );
