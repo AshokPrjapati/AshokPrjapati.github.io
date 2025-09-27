@@ -84,6 +84,44 @@ const Hero: React.FC = () => {
       </Stack>
     );
   };
+
+  const renderProfileImage = () => {
+    return (
+      <Flex
+        flex={1}
+        justify="center"
+        align="center"
+        p="20px"
+        maxH="20rem"
+        maxW="20rem"
+        rounded="2xl"
+        m="auto"
+        overflow="hidden"
+        position="relative"
+      >
+        <Box
+          position="absolute"
+          top="1.5rem"
+          textAlign="center"
+          bg="text.3"
+          width="90%"
+          height="90%"
+          borderRadius="50%"
+        />
+        <Image
+          alt="Hero Image"
+          fit="cover"
+          align="center"
+          w="100%"
+          h="100%"
+          src="./profile.png"
+          position="relative"
+          zIndex={8}
+        />
+      </Flex>
+    );
+  };
+
   return (
     <Stack
       spacing={8 as number}
@@ -92,39 +130,10 @@ const Hero: React.FC = () => {
       minH="100vh"
       justifyContent="center"
       alignItems="center"
+      gap={20}
     >
       {renderIntroPart()}
-      <Flex flex={1} justify="center" align="center">
-        <Box
-          p="20px"
-          maxH="20rem"
-          maxW="20rem"
-          rounded="2xl"
-          m="auto"
-          overflow="hidden"
-          position="relative"
-        >
-          <Box
-            position="absolute"
-            top="1.5rem"
-            textAlign="center"
-            bg="text.3"
-            width="90%"
-            height="90%"
-            borderRadius="50%"
-          ></Box>
-          <Image
-            alt="Hero Image"
-            fit="cover"
-            align="center"
-            w="100%"
-            h="100%"
-            src="./profile.png"
-            position="relative"
-            zIndex={8}
-          />
-        </Box>
-      </Flex>
+      {renderProfileImage()}
     </Stack>
   );
 };
