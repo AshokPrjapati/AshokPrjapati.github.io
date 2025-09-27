@@ -1,4 +1,10 @@
-import { Button, Flex, Link as ChakraLink } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Link as ChakraLink,
+  useColorMode,
+} from "@chakra-ui/react";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
 import React from "react";
 import styles from "./Navbar.module.css";
@@ -6,19 +12,21 @@ import { ModuleItem, TabOptProps } from "../../types/interface";
 import { MODULES_DATA } from "../../constants/constant";
 
 const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   const renderNavButton = (label: string) => {
     return (
       <Button
         w={{ base: "100%", md: "auto", lg: "auto" }}
         variant="ghost"
         _hover={{
-          bg: "text.3",
-          color: "text.1",
-          shadow: "0px 0px 10px #e11d48",
+          bg: "secondary",
+          color: "background",
+          shadow: "0px 0px 10px var(--color-secondary)",
         }}
         onClick={toggle}
         zIndex={99}
-        color="text.2"
+        color="primary"
       >
         {label}
       </Button>
@@ -73,6 +81,18 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
     >
       {MODULES_DATA.map((module, index) => renderModuleWithLink(module, index))}
       {renderResumeButton()}
+      <Button
+        ml={4}
+        size="sm"
+        onClick={toggleColorMode}
+        colorScheme={colorMode === "light" ? "blue" : "cyan"}
+        variant="outline"
+        aria-label={
+          colorMode === "light" ? "Switch to dark mode" : "Switch to light mode"
+        }
+      >
+        {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+      </Button>
     </Flex>
   );
 };

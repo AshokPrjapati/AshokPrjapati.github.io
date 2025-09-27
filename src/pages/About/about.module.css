@@ -1,5 +1,5 @@
 .exp {
-    border: 1px solid #fff;
+    border: 1px solid #00eaff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,26 +9,29 @@
     gap: 1rem;
     text-align: center;
     user-select: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.15);
+    background: #112240;
 }
 
 .exp>div>p>span {
-    color: #e11d48;
+    color: #00eaff;
     font-weight: 600;
 }
 
 .about {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.10);
     user-select: none;
+    background: #1c2541;
+    border-radius: 8px;
 }
 
 .about:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    border-color: #e11d48;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.20);
+    border-color: #00eaff;
 }
 
 .degree {
-    color: #e11d48;
+    color: #64ffda;
     font-weight: 600;
 }
 
@@ -38,15 +41,17 @@
 }
 
 .exp:hover {
-    border-color: #e11d48;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-color: #64ffda;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.20);
 }
 
 .icon {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.10);
+    background: #23272f;
+    border-radius: 50%;
 }
 
 .icon:hover {
-    background-color: #e11d48;
-    color: red;
+    background-color: #00eaff;
+    color: #0a192f;
 }

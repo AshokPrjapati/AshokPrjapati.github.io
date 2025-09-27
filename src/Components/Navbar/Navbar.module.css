@@ -1,27 +1,21 @@
-:root {
-    --red: #e11d48;
-    --green: rgb(3, 102, 3);
-    --grey: #a0a0a0
-}
 
 .active {
-    border: 1.5px solid var(--red);
+    border: 1.5px solid var(--color-secondary);
     border-radius: 5px;
-    color: var(--red) !important;
-    filter: drop-shadow(0 0 15px #e11d48);
+    color: var(--color-secondary) !important;
+    filter: drop-shadow(0 0 15px var(--color-secondary));
     font-weight: bold;
 }
 
 .active:hover {
     box-shadow: none;
-    color: #fff !important;
-    filter: none
+    color: var(--color-background) !important;
+    filter: none;
 }
-
 
 .default {
     background-color: none;
-    color: var(--grey);
+    color: var(--color-muted);
     cursor: pointer;
 }
 

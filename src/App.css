@@ -1,30 +1,63 @@
 /* width */
+
+
 html {
   scroll-behavior: smooth;
+  font-family: 'Inter', 'Montserrat', 'Roboto Mono', sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #0077ff;
+  --color-secondary: #00eaff;
+  --color-background: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-accent: #64ffda;
+  --color-text: #1a202c;
+  --color-muted: #8892b0;
+  --color-error: #e11d48;
+  --color-border: #e2e8f0;
+  --color-card: #f8fafc;
+}
+
+[data-theme="dark"] {
+  --color-primary: #00eaff;
+  --color-secondary: #0077ff;
+  --color-background: #0a192f;
+  --color-surface: #112240;
+  --color-accent: #64ffda;
+  --color-text: #eaf6fb;
+  --color-muted: #8892b0;
+  --color-error: #e11d48;
+  --color-border: #23272f;
+  --color-card: #1c2541;
 }
 
 .App {
   position: relative;
   overflow: hidden;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Inter', 'Montserrat', 'Roboto Mono', sans-serif;
 }
 
 #home,
 #skills,
 #gitState {
   background-attachment: fixed;
-  background-image: url("/public/images/bg1.svg");
+  background: linear-gradient(120deg, var(--color-background) 60%, var(--color-surface) 100%);
 }
 
 #projects,
 #about,
 #contact {
   background-attachment: fixed;
-  background-image: url("/public/images/bg2.svg");
+  background: linear-gradient(120deg, var(--color-card) 60%, var(--color-border) 100%);
 }
 
 ::-webkit-scrollbar {
@@ -33,37 +66,42 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: var(--color-border);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #e11d48;
+  background: var(--color-secondary);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #1e293b;
+  background: var(--color-accent);
 }
 
 /* Hero Section */
 .button {
   width: max-content;
   border-radius: 25px;
-  color: #fff;
+  color: var(--color-secondary);
   padding: 12px 2rem;
-  font-weight: 400;
+  font-weight: 500;
   font-size: large;
-  background-color: inherit;
-  border: 2px solid #e11d48;
-  color: #e11d48;
+  background-color: var(--color-border);
+  border: 2px solid var(--color-secondary);
+  transition: background 0.2s, color 0.2s;
+}
+.button:hover {
+  background: var(--color-secondary);
+  color: var(--color-background);
 }
 
 /* Project Section */
 .lineClamp {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -71,6 +109,7 @@ html {
 .lineClampDesc {
   display: -webkit-box;
   -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

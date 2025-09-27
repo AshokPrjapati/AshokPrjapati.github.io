@@ -6,6 +6,8 @@ import {
   useDisclosure,
   Text,
   Slide,
+  useColorMode,
+  Button,
 } from "@chakra-ui/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -25,12 +27,12 @@ const Navbar: React.FC = () => {
           fontWeight={700}
           letterSpacing="wide"
         >
-          <Text color="text.1" mr={1}>
+          <Text color="primary" mr={1}>
             &lt;
           </Text>
-          <Text color="text.1">Ashok</Text>
-          <Text color="text.3">Kumar</Text>
-          <Text color="text.1" ml={1}>
+          <Text color="primary">Ashok</Text>
+          <Text color="secondary">Kumar</Text>
+          <Text color="primary" ml={1}>
             /&gt;
           </Text>
         </Flex>
@@ -88,8 +90,9 @@ const Navbar: React.FC = () => {
   return (
     <Flex
       maxW="100%"
-      px={10 as number}
-      className={styles.sticky}
+      as="nav"
+      px={10}
+      className={styles.sticky as string}
       shadow="lg"
       justify="space-between"
       align="center"
