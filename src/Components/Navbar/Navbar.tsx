@@ -15,57 +15,59 @@ import styles from "./Navbar.module.css";
 
 const Navbar: React.FC = () => {
   const { isOpen, onToggle } = useDisclosure();
-  return (
-    <>
-      <Box className={styles.sticky} shadow="lg">
-        <Container maxW="5xl">
-          <Flex
-            justify="space-between"
-            align="center"
-            height="65px"
-            width="100%"
-            zIndex={10}
-          >
-            <NavLink to="/">
-              <Flex
-                fontSize="3xl"
-                fontFamily="Roboto"
-                fontWeight={500}
-                color="text.1"
-              >
-                <Text color="text.1">Ashok</Text>
-                <Text color="text.3">" Kumar"</Text>
-              </Flex>
-            </NavLink>
-            <Box>
-              <Flex display={{ base: "none", lg: "flex" }} color="text.2">
-                <NavButton />
-              </Flex>
-              <Flex
-                flex={{ base: 1, lg: "auto" } as any}
-                ml={{ base: -2 }}
-                display={{ base: "flex", lg: "none" }}
-              >
-                <IconButton
-                  color="text.1"
-                  bg="none"
-                  _hover={{ bg: "none" }}
-                  onClick={onToggle}
-                  icon={
-                    isOpen ? (
-                      <CloseIcon w={3} h={3} />
-                    ) : (
-                      <HamburgerIcon w={5} h={5} />
-                    )
-                  }
-                  variant="ghost"
-                  aria-label="Toggle Navigation"
-                />
-              </Flex>
-            </Box>
-          </Flex>
-        </Container>
-      </Box>
+
+  const renderPortfolioName = () => {
+    return (
+      <NavLink to="/">
+        <Flex
+          fontSize="3xl"
+          alignItems="center"
+          fontFamily="monospace"
+          fontWeight={700}
+          letterSpacing="wide"
+        >
+          <Text color="text.1" mr={1}>
+            &lt;
+          </Text>
+          <Text color="text.1">Ashok</Text>
+          <Text color="text.3">Kumar</Text>
+          <Text color="text.1" ml={1}>
+            /&gt;
+          </Text>
+        </Flex>
+      </NavLink>
+    );
+  };
+
+  const renderMenuButtons = () => {
+    return (
+      <>
+        <Flex display={{ base: "none", lg: "flex" }} color="text.2">
+          <NavButton />
+        </Flex>
+        <Flex
+          flex={{ base: 1, lg: "auto" } as any}
+          ml={{ base: -2 }}
+          display={{ base: "flex", lg: "none" }}
+        >
+          <IconButton
+            color="text.1"
+            bg="none"
+            _hover={{ bg: "none" }}
+            onClick={onToggle}
+            icon={
+              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+            }
+            variant="ghost"
+            aria-label="Toggle Navigation"
+          />
+        </Flex>
+      </>
+    );
+  };
+
+  const renderMobileMenu = () => {
+    return (
       <Slide
         direction="bottom"
         in={isOpen}
@@ -82,6 +84,26 @@ const Navbar: React.FC = () => {
           <NavButton toggle={onToggle} />
         </Box>
       </Slide>
+    );
+  };
+
+  return (
+    <>
+      <Box className={styles.sticky} shadow="lg">
+        <Container maxW="full" px={10}>
+          <Flex
+            justify="space-between"
+            align="center"
+            height="65px"
+            width="100%"
+            zIndex={10}
+          >
+            {renderPortfolioName()}
+            {renderMenuButtons()}
+          </Flex>
+        </Container>
+      </Box>
+      {renderMobileMenu()}
     </>
   );
 };
