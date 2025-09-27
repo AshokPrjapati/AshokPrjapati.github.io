@@ -19,9 +19,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 import styles from "./about.module.css";
 import SectionHeader from "../../Components/SectionHeader";
+import { PROFILE_EMAIL } from "../../constants/constant";
 
 const About: React.FC = () => {
-  const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
+  const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);
   return (
     <Box p="0px 10px 40px 10px" userSelect="none">
       <SectionHeader label="About" />
