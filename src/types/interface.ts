@@ -1,6 +1,9 @@
+import { ModuleName } from "../constants/constant";
+
 export interface ModuleItem {
   path: string;
   text: string;
+  componentName: ModuleName;
 }
 
 export interface TabOptProps {

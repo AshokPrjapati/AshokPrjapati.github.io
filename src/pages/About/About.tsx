@@ -3,7 +3,6 @@ import {
   Box,
   Card,
   CardBody,
-  Container,
   Flex,
   Heading,
   Text,
@@ -24,7 +23,7 @@ import SectionHeader from "../../Components/SectionHeader";
 const About: React.FC = () => {
   const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
   return (
-    <Container maxW="5xl" p="0px 10px 40px 10px" userSelect="none">
+    <Box p="0px 10px 40px 10px" userSelect="none">
       <SectionHeader label="About" />
       <Flex
         direction={{ base: "column", lg: "row" }}
@@ -211,7 +210,7 @@ const About: React.FC = () => {
           </CardFooter>
         </Card>
       </Flex>
-    </Container>
+    </Box>
   );
 };
 

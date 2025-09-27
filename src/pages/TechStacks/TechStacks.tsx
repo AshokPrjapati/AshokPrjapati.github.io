@@ -1,14 +1,4 @@
-import { useEffect } from "react";
-import {
-  Container,
-  Text,
-  Image,
-  Heading,
-  Flex,
-  Stack,
-  Box,
-  Grid,
-} from "@chakra-ui/react";
+import { Text, Image, Heading, Flex, Stack, Box, Grid } from "@chakra-ui/react";
 import styles from "./TechStacks.module.css";
 import { backendSkills, frontendSkills } from "../../constants/skillsData";
 import { tools } from "../../constants/constant";
@@ -47,7 +37,7 @@ const TechStacks = () => {
   };
 
   return (
-    <Container maxW="5xl" pb="60px" userSelect="none">
+    <Box pb="60px" userSelect="none">
       <SectionHeader label="Skills" />
       <Stack spacing="1rem" mt="3rem">
         <Flex
@@ -103,7 +93,7 @@ const TechStacks = () => {
           </Grid>
         </Stack>
       </Stack>
-    </Container>
+    </Box>
   );
 };
 

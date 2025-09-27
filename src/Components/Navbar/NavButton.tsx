@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import React from "react";
 import styles from "./Navbar.module.css";
 import { ModuleItem, TabOptProps } from "../../types/interface";
-import { MODULES } from "../../constants/constant";
+import { MODULES_DATA } from "../../constants/constant";
 
 const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
   const renderNavButton = (label: string) => {
@@ -71,7 +71,7 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
       m="auto"
       borderRadius="10px"
     >
-      {MODULES.map((module, index) => renderModuleWithLink(module, index))}
+      {MODULES_DATA.map((module, index) => renderModuleWithLink(module, index))}
       {renderResumeButton()}
     </Flex>
   );

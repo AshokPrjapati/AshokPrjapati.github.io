@@ -1,28 +1,43 @@
-export const MODULES = [
+export const enum ModuleName {
+  HERO = "Hero",
+  ABOUT = "About",
+  TECHSTACKS = "TechStacks",
+  PROJECTS = "Projects",
+  GITSTATE = "GitState",
+  CONTACT = "Contact",
+}
+
+export const MODULES_DATA = [
   {
     path: "home",
     text: "Home",
+    componentName: ModuleName.HERO,
   },
   {
     path: "about",
     text: "About",
+    componentName: ModuleName.ABOUT,
   },
   {
     path: "skills",
     text: "Skills",
+    componentName: ModuleName.TECHSTACKS,
   },
   {
     path: "projects",
     text: "Project",
+    componentName: ModuleName.PROJECTS,
   },
   {
     path: "gitState",
     text: "Git Stats",
+    componentName: ModuleName.GITSTATE,
   },
 
   {
     path: "contact",
     text: "Contact",
+    componentName: ModuleName.CONTACT,
   },
 ];
 

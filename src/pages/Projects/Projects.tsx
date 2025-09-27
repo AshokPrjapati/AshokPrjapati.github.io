@@ -1,6 +1,5 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
-  Container,
   Stack,
   Box,
   Center,
@@ -143,7 +142,7 @@ const Projects = () => {
   };
 
   return (
-    <Container maxW={"5xl"}>
+    <>
       <SectionHeader label="Projects" />
       <Grid
         templateColumns={{ base: "repeat(1,1fr)", lg: "repeat(2,1fr)" }}
@@ -154,7 +153,7 @@ const Projects = () => {
       >
         {projectData.map((project) => renderProjectContent(project))}
       </Grid>
-    </Container>
+    </>
   );
 };
 

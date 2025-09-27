@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ErrorBoundary from "./Components/ErrorBoundary";
-import { Box } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./pages/Hero/Hero";
@@ -11,32 +11,47 @@ import GitState from "./pages/GitState/GitState";
 import Contact from "./pages/Contact/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ModuleName, MODULES_DATA } from "./constants/constant";
+import { ModuleItem } from "./types/interface";
 
 const App: React.FC = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
+  const getComponentByModuleName = (
+    moduleName: ModuleName
+  ): React.ComponentType<any> => {
+    const components: Record<string, React.ComponentType<any>> = {
+      Hero,
+      About,
+      TechStacks,
+      Projects,
+      GitState,
+      Contact,
+    };
+    return components[moduleName];
+  };
+
+  const renderModule = (module: ModuleItem, index: number) => {
+    const { componentName, path } = module;
+    const Component = getComponentByModuleName(componentName);
+    const bg = index % 2 === 0 ? "bg.2" : "bg.3";
+
+    return (
+      <Box key={index} id={path} bg={bg}>
+        <Container pt={{ base: "40px", md: 0 }} maxW="5xl" minH="100vh">
+          <Component />
+        </Container>
+      </Box>
+    );
+  };
+
   return (
     <ErrorBoundary>
       <div className="App">
         <Navbar />
-        <Box id="home" bg={"bg.2"}>
-          <Hero />
-        </Box>
-        <Box id="about" bg={"bg.3"}>
-          <About />
-        </Box>
-        <Box id="skills" bg={"bg.2"}>
-          <TechStacks />
-        </Box>
-        <Box id="projects" bg={"bg.3"}>
-          <Projects />
-        </Box>
-        <Box id="gitState" bg={"bg.2"}>
-          <GitState />
-        </Box>
-        <Contact />
+        {MODULES_DATA.map((module, index) => renderModule(module, index))}
       </div>
     </ErrorBoundary>
   );
