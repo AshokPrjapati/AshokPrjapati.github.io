@@ -76,3 +76,5 @@ export const tools = [
     name: "Vercel",
   },
 ];
+
+export const PROFILE_EMAIL = "ashok.prjapati97@gmail.com";

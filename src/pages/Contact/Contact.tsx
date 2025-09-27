@@ -28,6 +28,7 @@ import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import { PhoneIcon } from "@chakra-ui/icons";
 import { FaFilePdf } from "react-icons/fa";
 import SectionHeader from "../../Components/SectionHeader";
+import { PROFILE_EMAIL } from "../../constants/constant";
 
 export default function Contact() {
   // form reference
@@ -96,7 +97,7 @@ export default function Contact() {
       );
   };
 
-  const { hasCopied, onCopy } = useClipboard("ashok.prjapati97@gmail.com");
+  const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);
 
   const bgColor = "bg.3";
   const spacing = { base: 4, md: 8, lg: 20 };
@@ -148,7 +149,7 @@ export default function Contact() {
                     />
                   </Tooltip>
                   <Text color="#fff" display={{ base: "none", md: "flex" }}>
-                    ashok.prjapati97@gmail.com
+                    {PROFILE_EMAIL}
                   </Text>
                 </Flex>
                 <Flex
