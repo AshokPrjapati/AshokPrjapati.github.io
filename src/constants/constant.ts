@@ -77,4 +77,9 @@ export const tools = [
   },
 ];
 
+export const gitRepoLanguagesStates =
+  "https://github-readme-stats.vercel.app/api/top-langs/?username=AshokPrjapati&theme=radical&langs_count=8";
+export const gitContributeStates =
+  "https://github-readme-streak-stats.herokuapp.com?user=AshokPrjapati&theme=radical&border_radius=5.8&mode=daily";
+
 export const PROFILE_EMAIL = "ashok.prjapati97@gmail.com";
