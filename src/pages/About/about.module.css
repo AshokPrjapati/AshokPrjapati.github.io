@@ -44,14 +44,3 @@
     border-color: #64ffda;
     box-shadow: 0 0 20px rgba(0, 234, 255, 0.20);
 }
-
-.icon {
-    box-shadow: 0 0 10px rgba(0, 234, 255, 0.10);
-    background: #23272f;
-    border-radius: 50%;
-}
-
-.icon:hover {
-    background-color: #00eaff;
-    color: #0a192f;
-}
