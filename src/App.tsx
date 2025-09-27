@@ -40,7 +40,7 @@ const App: React.FC = () => {
 
     return (
       <Box key={index} id={path} bg={bg}>
-        <Container pt={{ base: "40px", md: 0 }} maxW="6xl" minH="100vh">
+        <Container pt={{ base: "40px", md: 0 }} maxW="8xl" minH="100vh">
           <Component />
         </Container>
       </Box>
@@ -49,10 +49,10 @@ const App: React.FC = () => {
 
   return (
     <ErrorBoundary>
-      <div className="App">
+      <Box className="App">
         <Navbar />
         {MODULES_DATA.map((module, index) => renderModule(module, index))}
-      </div>
+      </Box>
     </ErrorBoundary>
   );
 };
