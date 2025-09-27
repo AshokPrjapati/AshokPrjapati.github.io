@@ -1,7 +1,6 @@
-import { useState } from "react";
+// ================== Library's imports ================== //
+import { ReactElement, useState, useRef } from "react";
 import emailjs from "emailjs-com";
-import { useRef } from "react";
-
 import {
   Box,
   Button,
@@ -9,7 +8,6 @@ import {
   Flex,
   FormControl,
   FormLabel,
-  Heading,
   IconButton,
   Input,
   InputGroup,
@@ -27,14 +25,70 @@ import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import { PhoneIcon } from "@chakra-ui/icons";
 import { FaFilePdf } from "react-icons/fa";
-import SectionHeader from "../../Components/SectionHeader";
+
+// ================== Custom Hooks ======================= //
+
+// ================== Assets ============================= //
+
+// ================== Interfaces & Types ================= //
+
+// ================== Constants & Utils ================== //
 import { PROFILE_EMAIL } from "../../constants/constant";
 
+// ================== Services =========================== //
+
+// ================== Routes ============================= //
+
+// ================== Components ========================= //
+import SectionHeader from "../../Components/SectionHeader";
+import { getResumeDownloadLink } from "../../utils/commonUtils";
+
+// ================== Lazy Components ==================== //
+
 export default function Contact() {
-  // form reference
+  /*
+   ===================================================================================================
+   Props, Variables, Refs & Hooks
+   ===================================================================================================
+ */
   const form = useRef<any>({ current: null });
   const toast = useToast();
+  const textColor = useColorModeValue("gray.700", "white");
+  const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);
+
+  const bgColor = "bg.3";
+  const spacing = { base: 4, md: 8, lg: 20 };
+
+  /*
+   ===================================================================================================
+   States
+   ===================================================================================================
+ */
   const [loading, setLoading] = useState<boolean>(false);
+
+  /*
+   ===================================================================================================
+   LifeCycle Methods: 
+   ===================================================================================================
+ */
+
+  /*
+   ===================================================================================================
+   Service Calls: For Getting Data from service/API
+   ===================================================================================================
+ */
+
+  /*
+   ===================================================================================================
+   Validators:
+   ===================================================================================================
+ */
+
+  /*
+   ===================================================================================================
+   Handlers: Event handler for onChange, onBlur etc
+   ===================================================================================================
+ */
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -97,227 +151,232 @@ export default function Contact() {
       );
   };
 
-  const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);
+  /*
+   ===================================================================================================
+   Helper Functions:
+   ===================================================================================================
+ */
 
-  const bgColor = "bg.3";
-  const spacing = { base: 4, md: 8, lg: 20 };
+  /*
+   ===================================================================================================
+   Sectional Render Functions: For Sub components / section wise renders
+   ===================================================================================================
+ */
+
+  const renderIconButton = (
+    ariaLabel: string,
+    icon: ReactElement,
+    handleCopy?: () => void
+  ) => {
+    return (
+      <IconButton
+        color={"blue.300"}
+        aria-label={ariaLabel}
+        variant="ghost"
+        size="md"
+        fontSize="3xl"
+        icon={icon}
+        _hover={{
+          bg: "#fff",
+          color: textColor,
+        }}
+        onClick={handleCopy}
+        isRound
+        mr="1rem"
+      />
+    );
+  };
+
+  const renderInfoIconButton = (ariaLabel: string, icon: ReactElement) => {
+    return (
+      <IconButton
+        color={"blue.300"}
+        aria-label={ariaLabel}
+        variant="ghost"
+        size="md"
+        fontSize="3xl"
+        icon={icon}
+        _hover={{
+          bg: "#fff",
+          color: textColor,
+        }}
+        isRound
+      />
+    );
+  };
+
+  const renderProfileInfo = () => {
+    return (
+      <Flex
+        align="center"
+        justify="space-around"
+        alignItems={"center"}
+        direction={{ base: "row", md: "column" }}
+      >
+        <Flex
+          fontWeight={"medium"}
+          w="100%"
+          justifyContent="flex-start"
+          alignItems={"center"}
+        >
+          <Tooltip
+            label={hasCopied ? "Email Copied!" : "Copy Email"}
+            closeOnClick={false}
+            hasArrow
+          >
+            {renderIconButton("email", <MdEmail />, onCopy)}
+          </Tooltip>
+          <Text color="#fff" display={{ base: "none", md: "flex" }}>
+            {PROFILE_EMAIL}
+          </Text>
+        </Flex>
+        <Flex
+          fontWeight={"medium"}
+          w="100%"
+          justifyContent={{ base: "flex-end", md: "flex-start" }}
+          alignItems={"center"}
+        >
+          <Tooltip label={"+91 9799191449"} closeOnClick={false} hasArrow>
+            <Link href="tel:+91 9799191449">
+              {renderIconButton("phone", <PhoneIcon />)}
+            </Link>
+          </Tooltip>
+          <Text color="#fff" display={{ base: "none", md: "flex" }}>
+            +91 9799191449
+          </Text>
+        </Flex>
+      </Flex>
+    );
+  };
+
+  const renderInfoButtons = () => {
+    return (
+      <Flex align="center" justify="space-around" alignItems={"center"}>
+        <Link href="https://github.com/AshokPrjapati" isExternal>
+          {renderInfoIconButton("github", <BsGithub />)}
+        </Link>
+
+        <Link
+          href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
+          isExternal
+        >
+          {renderInfoIconButton("linkedin", <BsLinkedin size="28px" />)}
+        </Link>
+
+        <Tooltip label={"Resume"} closeOnClick={false} hasArrow>
+          <Link
+            href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
+            isExternal
+            onClick={() => {
+              const downloadLink = getResumeDownloadLink();
+              downloadLink.click();
+            }}
+          >
+            {renderInfoIconButton("resume", <FaFilePdf />)}
+          </Link>
+        </Tooltip>
+      </Flex>
+    );
+  };
+
+  const renderContactForm = () => {
+    return (
+      <form ref={form} onSubmit={sendEmail}>
+        <VStack spacing={5}>
+          <FormControl isRequired>
+            <FormLabel>Name</FormLabel>
+
+            <InputGroup>
+              <InputLeftElement children={<BsPerson />} />
+              <Input id="name" type="text" name="name" />
+            </InputGroup>
+          </FormControl>
+
+          <FormControl isRequired>
+            <FormLabel>Email</FormLabel>
+
+            <InputGroup>
+              <InputLeftElement children={<MdOutlineEmail />} />
+              <Input id="email" type="email" name="email" />
+            </InputGroup>
+          </FormControl>
+
+          <FormControl isRequired>
+            <FormLabel>Message</FormLabel>
+
+            <Textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              rows={6}
+              resize="none"
+            />
+          </FormControl>
+
+          <Button
+            isLoading={loading}
+            loadingText="Please wait.."
+            type="submit"
+            colorScheme="blue"
+            bg="blue.400"
+            color="white"
+            _hover={{
+              bg: "blue.500",
+            }}
+            width="100%"
+            onClick={sendEmail}
+          >
+            Send Message
+          </Button>
+        </VStack>
+      </form>
+    );
+  };
+
+  const renderFooter = () => {
+    return (
+      <Flex align={"center"} color={"text.1"}>
+        Made with 💖 by
+        <span
+          style={{
+            margin: "0 5px",
+            color: "#e11d48",
+            fontWeight: "bold",
+          }}
+        >
+          Ashok Kumar
+        </span>
+        {/* <FaCopyright /> 2023 */}
+      </Flex>
+    );
+  };
+
+  /*
+   ===================================================================================================
+   render main content:
+   ===================================================================================================
+ */
 
   return (
     <Flex bg={bgColor} align="center" justify="center" id="contact">
       <Box borderRadius="lg" pb="25px">
-        <Box>
-          <VStack spacing={spacing}>
-            <SectionHeader label="Contact Me" />
-            <Box
-              bg={"gray.700"}
-              borderRadius="lg"
-              p={8}
-              color={"whiteAlpha.900"}
-              shadow="base"
-            >
-              <Flex
-                align="center"
-                justify="space-around"
-                alignItems={"center"}
-                direction={{ base: "row", md: "column" }}
-              >
-                <Flex
-                  fontWeight={"medium"}
-                  w="100%"
-                  justifyContent="flex-start"
-                  alignItems={"center"}
-                >
-                  <Tooltip
-                    label={hasCopied ? "Email Copied!" : "Copy Email"}
-                    closeOnClick={false}
-                    hasArrow
-                  >
-                    <IconButton
-                      color={"blue.300"}
-                      aria-label="email"
-                      variant="ghost"
-                      size="md"
-                      fontSize="3xl"
-                      icon={<MdEmail />}
-                      _hover={{
-                        bg: "#fff",
-                        color: useColorModeValue("gray.700", "white"),
-                      }}
-                      onClick={onCopy}
-                      isRound
-                      mr="1rem"
-                    />
-                  </Tooltip>
-                  <Text color="#fff" display={{ base: "none", md: "flex" }}>
-                    {PROFILE_EMAIL}
-                  </Text>
-                </Flex>
-                <Flex
-                  fontWeight={"medium"}
-                  w="100%"
-                  justifyContent={{ base: "flex-end", md: "flex-start" }}
-                  alignItems={"center"}
-                >
-                  <Tooltip
-                    label={"+91 9799191449"}
-                    closeOnClick={false}
-                    hasArrow
-                  >
-                    <Link href="tel:+91 9799191449">
-                      <IconButton
-                        color={"blue.300"}
-                        aria-label="twitter"
-                        variant="ghost"
-                        size="md"
-                        fontSize="28px"
-                        mr="1rem"
-                        icon={<PhoneIcon />}
-                        _hover={{
-                          bg: "#fff",
-                          color: useColorModeValue("gray.700", "white"),
-                        }}
-                        isRound
-                      />
-                    </Link>
-                  </Tooltip>
-                  <Text color="#fff" display={{ base: "none", md: "flex" }}>
-                    +91 9799191449
-                  </Text>
-                </Flex>
-              </Flex>
-              <Divider my={"1rem"} />
-              <form ref={form} onSubmit={sendEmail}>
-                <VStack spacing={5}>
-                  <FormControl isRequired>
-                    <FormLabel>Name</FormLabel>
-
-                    <InputGroup>
-                      <InputLeftElement children={<BsPerson />} />
-                      <Input id="name" type="text" name="name" />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Email</FormLabel>
-
-                    <InputGroup>
-                      <InputLeftElement children={<MdOutlineEmail />} />
-                      <Input id="email" type="email" name="email" />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Message</FormLabel>
-
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Your Message"
-                      rows={6}
-                      resize="none"
-                    />
-                  </FormControl>
-
-                  <Button
-                    isLoading={loading}
-                    loadingText="Please wait.."
-                    type="submit"
-                    colorScheme="blue"
-                    bg="blue.400"
-                    color="white"
-                    _hover={{
-                      bg: "blue.500",
-                    }}
-                    width="100%"
-                    onClick={sendEmail}
-                  >
-                    Send Message
-                  </Button>
-                </VStack>
-              </form>
-              <Divider my="1rem" />
-              <Flex align="center" justify="space-around" alignItems={"center"}>
-                <Link href="https://github.com/AshokPrjapati" isExternal>
-                  <IconButton
-                    color={"blue.300"}
-                    aria-label="github"
-                    variant="ghost"
-                    size="md"
-                    fontSize="3xl"
-                    icon={<BsGithub />}
-                    _hover={{
-                      bg: "#fff",
-                      color: useColorModeValue("gray.700", "white"),
-                    }}
-                    isRound
-                  />
-                </Link>
-
-                <Link
-                  href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
-                  isExternal
-                >
-                  <IconButton
-                    color={"blue.300"}
-                    aria-label="linkedin"
-                    variant="ghost"
-                    size="md"
-                    icon={<BsLinkedin size="28px" />}
-                    _hover={{
-                      bg: "#fff",
-                      color: useColorModeValue("gray.700", "white"),
-                    }}
-                    isRound
-                  />
-                </Link>
-
-                <Tooltip label={"Resume"} closeOnClick={false} hasArrow>
-                  <Link
-                    href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
-                    isExternal
-                    onClick={() => {
-                      const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
-                      const downloadLink = document.createElement("a");
-                      downloadLink.href = pdfUrl;
-                      downloadLink.download =
-                        "fw21_0784-Ashok-kumar-Resume.pdf";
-                      downloadLink.click();
-                    }}
-                  >
-                    <IconButton
-                      color={"blue.300"}
-                      aria-label="email"
-                      variant="ghost"
-                      size="md"
-                      fontSize="3xl"
-                      icon={<FaFilePdf />}
-                      _hover={{
-                        bg: "#fff",
-                        color: useColorModeValue("gray.700", "white"),
-                      }}
-                      isRound
-                    />
-                  </Link>
-                </Tooltip>
-              </Flex>
-            </Box>
-
-            <Flex align={"center"} color={"text.1"}>
-              Made with 💖 by{" "}
-              <span
-                style={{
-                  margin: "0 5px",
-                  color: "#e11d48",
-                  fontWeight: "bold",
-                }}
-              >
-                {" "}
-                Ashok Kumar{" "}
-              </span>{" "}
-              {/* <FaCopyright /> 2023 */}
-            </Flex>
-          </VStack>
-        </Box>
+        <VStack spacing={spacing}>
+          <SectionHeader label="Contact Me" />
+          <Box
+            bg={"gray.700"}
+            borderRadius="lg"
+            p={8}
+            color={"whiteAlpha.900"}
+            shadow="base"
+          >
+            {renderProfileInfo()}
+            <Divider my={"1rem"} />
+            {renderContactForm()}
+            <Divider my="1rem" />
+            {renderInfoButtons()}
+          </Box>
+          {renderFooter()}
+        </VStack>
       </Box>
     </Flex>
   );
