@@ -1,11 +1,11 @@
 import GitHubCalendar from "react-github-calendar";
 import ReactTooltip from "react-tooltip";
-import { Container, Heading, Image, Link, Flex, Box } from "@chakra-ui/react";
+import { Image, Link, Flex, Box } from "@chakra-ui/react";
 import SectionHeader from "../../Components/SectionHeader";
 
 function GitState() {
   return (
-    <Container maxW={"5xl"}>
+    <>
       <SectionHeader label=" Git Stats" />
       <Box data-aos="zoom-out">
         <GitHubCalendar
@@ -53,7 +53,7 @@ function GitState() {
           <Image src="https://github-readme-streak-stats.herokuapp.com?user=AshokPrjapati&theme=radical&border_radius=5.8&mode=daily" />
         </Link>
       </Flex>
-    </Container>
+    </>
   );
 }
 
