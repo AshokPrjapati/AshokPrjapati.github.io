@@ -44,29 +44,35 @@ const Navbar: React.FC = () => {
       <>
         <Flex display={{ base: "none", lg: "flex" }} color="text.2">
           <NavButton />
-        </Flex>
-        <Flex
-          flex={{ base: 1, lg: "auto" } as any}
-          ml={{ base: -2 }}
-          display={{ base: "flex", lg: "none" }}
-        >
-          <IconButton
-            color="text.1"
-            bg="none"
-            _hover={{ bg: "none" }}
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant="ghost"
-            aria-label="Toggle Navigation"
-          />
+          {renderMobileMenuIcon()}
         </Flex>
       </>
     );
   };
 
-  const renderMobileMenu = () => {
+  const renderMobileMenuIcon = () => {
+    return (
+      <Flex
+        flex={{ base: 1, lg: "auto" } as any}
+        ml={{ base: -2 }}
+        display={{ base: "flex", lg: "none" }}
+      >
+        <IconButton
+          color="text.1"
+          bg="none"
+          _hover={{ bg: "none" }}
+          onClick={onToggle}
+          icon={
+            isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+          }
+          variant="ghost"
+          aria-label="Toggle Navigation"
+        />
+      </Flex>
+    );
+  };
+
+  const renderMobileMenuList = () => {
     return (
       <Slide
         direction="bottom"
@@ -100,10 +106,10 @@ const Navbar: React.FC = () => {
           >
             {renderPortfolioName()}
             {renderMenuButtons()}
+            {renderMobileMenuList()}
           </Flex>
         </Container>
       </Box>
-      {renderMobileMenu()}
     </>
   );
 };
