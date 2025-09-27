@@ -93,13 +93,14 @@ export default function Contact() {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
+    const { name, email, message } = form.current ?? {};
     // input data
-    let name = form.current.name.value;
-    let email = form.current.email.value;
-    let message = form.current.message.value;
+    let nameValue = name.value;
+    let emailValue = email.value;
+    let messageValue = message.value;
 
     // check for empty fields
-    if (!name || !email || !message) {
+    if (!nameValue || !emailValue || !messageValue) {
       return toast({
         title: "Please, Fill all fields",
         status: "warning",
@@ -109,7 +110,7 @@ export default function Contact() {
     }
 
     // check for valid email
-    if (!email.includes("@") || !email.includes(".com")) {
+    if (!emailValue.includes("@") || !emailValue.includes(".com")) {
       return toast({
         title: "Invalid email",
         status: "warning",
@@ -131,7 +132,7 @@ export default function Contact() {
       .then(
         (result) => {
           toast({
-            title: `${name}, Your message has been sent`,
+            title: `${nameValue}, Your message has been sent`,
             status: "success",
             duration: 6000,
             isClosable: true,
