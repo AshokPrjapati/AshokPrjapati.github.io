@@ -50,14 +50,26 @@ html {
 #skills,
 #gitState {
   background-attachment: fixed;
-  background: linear-gradient(120deg, var(--color-background) 60%, var(--color-surface) 100%);
+  background-image: url("/public/images/bg1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Overlay color for color mode */
+  background-blend-mode: overlay;
+  background-color: var(--color-background);
 }
 
 #projects,
 #about,
 #contact {
   background-attachment: fixed;
-  background: linear-gradient(120deg, var(--color-card) 60%, var(--color-border) 100%);
+  background-image: url("/public/images/bg2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Overlay color for color mode */
+  background-blend-mode: overlay;
+  background-color: var(--color-card);
 }
 
 ::-webkit-scrollbar {
