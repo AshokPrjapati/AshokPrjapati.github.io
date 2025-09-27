@@ -87,24 +87,21 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <Container
-      maxW={"100%"}
+    <Flex
+      maxW="100%"
       px={10 as number}
       className={styles.sticky}
       shadow="lg"
+      justify="space-between"
+      align="center"
+      height="65px"
+      width="100%"
+      zIndex={10}
     >
-      <Flex
-        justify="space-between"
-        align="center"
-        height="65px"
-        width="100%"
-        zIndex={10}
-      >
-        {renderPortfolioName()}
-        {renderMenuButtons()}
-        {isOpen ? renderMobileMenuList() : null}
-      </Flex>
-    </Container>
+      {renderPortfolioName()}
+      {renderMenuButtons()}
+      {isOpen ? renderMobileMenuList() : null}
+    </Flex>
   );
 };
 
