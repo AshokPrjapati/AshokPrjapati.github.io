@@ -42,43 +42,36 @@ const Navbar: React.FC = () => {
   const renderMenuButtons = () => {
     return (
       <>
-        <Flex display={{ base: "none", lg: "flex" }} color="text.2">
+        <Box display={{ base: "none", lg: "flex" }}>
           <NavButton />
+        </Box>
+
+        <Box display={{ base: "flex", lg: "none" }}>
           {renderMobileMenuIcon()}
-        </Flex>
+        </Box>
       </>
     );
   };
 
   const renderMobileMenuIcon = () => {
     return (
-      <Flex
-        flex={{ base: 1, lg: "auto" } as any}
-        ml={{ base: -2 }}
-        display={{ base: "flex", lg: "none" }}
-      >
-        <IconButton
-          color="text.1"
-          bg="none"
-          _hover={{ bg: "none" }}
-          onClick={onToggle}
-          icon={
-            isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-          }
-          variant="ghost"
-          aria-label="Toggle Navigation"
-        />
-      </Flex>
+      <IconButton
+        color="text.1"
+        bg="none"
+        _hover={{ bg: "none" }}
+        onClick={onToggle}
+        icon={
+          isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+        }
+        variant="ghost"
+        aria-label="Toggle Navigation"
+      />
     );
   };
 
   const renderMobileMenuList = () => {
     return (
-      <Slide
-        direction="bottom"
-        in={isOpen}
-        style={{ zIndex: 10, position: "absolute" }}
-      >
+      <Slide direction="bottom" in={isOpen}>
         <Box
           w="90%"
           borderRadius="5px"
@@ -106,7 +99,7 @@ const Navbar: React.FC = () => {
           >
             {renderPortfolioName()}
             {renderMenuButtons()}
-            {renderMobileMenuList()}
+            {isOpen ? renderMobileMenuList() : null}
           </Flex>
         </Container>
       </Box>
