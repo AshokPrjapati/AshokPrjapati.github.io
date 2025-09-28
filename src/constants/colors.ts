@@ -2,6 +2,8 @@ export const COLORS = {
   light: {
     primary: "#0077ff",
     secondary: "#00eaff",
+    boxShadowPrimary: "0 4px 12px 0 rgba(0, 119, 255, 0.15)",
+    boxShadowSecondary: "0 4px 12px 0 rgba(0, 234, 255, 0.15)",
     accent: "#64ffda",
     error: "#e11d48",
     bgPrimary: "#f5f7fa",
@@ -14,6 +16,8 @@ export const COLORS = {
   dark: {
     primary: "#00eaff",
     secondary: "#0077ff",
+    boxShadowPrimary: "0 4px 12px 0 rgba(0, 234, 255, 0.15)",
+    boxShadowSecondary: "0 4px 12px 0 rgba(0, 119, 255, 0.15)",
     accent: "#64ffda",
     error: "#e11d48",
     bgPrimary: "#0a192f",
@@ -61,6 +65,14 @@ export const SEMANTIC_COLORS_TOKENS = {
   "border-primary": {
     default: "border.primary._light",
     _dark: "border.primary._dark",
+  },
+  "shadow-primary": {
+    default: "shadow.primary._light",
+    _dark: "shadow.primary._dark",
+  },
+  "shadow-secondary": {
+    default: "shadow.secondary._light",
+    _dark: "shadow.secondary._dark",
   },
   error: {
     default: "brand.error._light",

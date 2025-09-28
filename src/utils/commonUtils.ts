@@ -31,5 +31,13 @@ export const getRootCssVariable = (colorMode?: string) => {
         : COLORS.light.borderPrimary,
     "--accent": colorMode === "dark" ? COLORS.dark.accent : COLORS.light.accent,
     "--error": colorMode === "dark" ? COLORS.dark.error : COLORS.light.error,
+    "--shadow-primary":
+      colorMode === "dark"
+        ? COLORS.dark.boxShadowPrimary
+        : COLORS.light.boxShadowPrimary,
+    "--shadow-secondary":
+      colorMode === "dark"
+        ? COLORS.dark.boxShadowSecondary
+        : COLORS.light.boxShadowSecondary,
   };
 };

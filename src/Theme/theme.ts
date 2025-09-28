@@ -61,6 +61,16 @@ const theme = extendTheme({
         _dark: COLORS.dark.borderPrimary,
       },
     },
+    shadow: {
+      primary: {
+        _light: COLORS.light.boxShadowPrimary,
+        _dark: COLORS.dark.boxShadowPrimary,
+      },
+      secondary: {
+        _light: COLORS.light.boxShadowSecondary,
+        _dark: COLORS.dark.boxShadowSecondary,
+      },
+    },
   },
   semanticTokens: {
     colors: SEMANTIC_COLORS_TOKENS,

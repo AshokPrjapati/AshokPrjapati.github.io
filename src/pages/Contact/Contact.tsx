@@ -1,5 +1,5 @@
 // ================== Library's imports ================== //
-import { ReactElement, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import {
   Box,
@@ -17,7 +17,6 @@ import {
   Textarea,
   Tooltip,
   useClipboard,
-  useColorModeValue,
   VStack,
   useToast,
 } from "@chakra-ui/react";
@@ -53,7 +52,6 @@ export default function Contact() {
  */
   const form = useRef<any>({ current: null });
   const toast = useToast();
-  const textColor = useColorModeValue("gray.700", "white");
   const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);
 
   /*
@@ -163,42 +161,42 @@ export default function Contact() {
 
   const renderIconButton = (
     ariaLabel: string,
-    icon: ReactElement,
+    icon: JSX.Element,
     handleCopy?: () => void
   ) => {
     return (
       <IconButton
-        color={"blue.300"}
+        color={"secondary"}
         aria-label={ariaLabel}
         variant="ghost"
         size="md"
         fontSize="3xl"
         icon={icon}
         _hover={{
-          bg: "text-primary",
-          color: textColor,
+          bg: "secondary",
+          color: "text-primary",
         }}
         onClick={handleCopy}
         isRound
         mr="1rem"
+        p="20px"
       />
     );
   };
 
-  const renderInfoIconButton = (ariaLabel: string, icon: ReactElement) => {
+  const renderInfoIconButton = (ariaLabel: string, icon: JSX.Element) => {
     return (
       <IconButton
-        color={"blue.300"}
+        color="secondary"
         aria-label={ariaLabel}
-        variant="ghost"
-        size="md"
         fontSize="3xl"
         icon={icon}
         _hover={{
-          bg: "text-primary",
-          color: textColor,
+          bg: "secondary",
+          color: "text-primary",
         }}
         isRound
+        p="20px"
       />
     );
   };
@@ -207,13 +205,12 @@ export default function Contact() {
     return (
       <Flex
         align="center"
-        justify="space-around"
+        justify="space-between"
         alignItems={"center"}
-        direction={{ base: "row", md: "column" }}
+        direction={{ base: "column", md: "row" }}
       >
         <Flex
           fontWeight={"medium"}
-          w="100%"
           justifyContent="flex-start"
           alignItems={"center"}
         >
@@ -224,24 +221,19 @@ export default function Contact() {
           >
             {renderIconButton("email", <MdEmail />, onCopy)}
           </Tooltip>
-          <Text color="text-primary" display={{ base: "none", md: "flex" }}>
-            {PROFILE_EMAIL}
-          </Text>
+          <Text color="text-primary">{PROFILE_EMAIL}</Text>
         </Flex>
         <Flex
           fontWeight={"medium"}
-          w="100%"
           justifyContent={{ base: "flex-end", md: "flex-start" }}
           alignItems={"center"}
         >
           <Tooltip label={"+91 9799191449"} closeOnClick={false} hasArrow>
             <Link href="tel:+91 9799191449">
-              {renderIconButton("phone", <PhoneIcon />)}
+              {renderIconButton("phone", <PhoneIcon w={6} />)}
             </Link>
           </Tooltip>
-          <Text color="text-primary" display={{ base: "none", md: "flex" }}>
-            +91 9799191449
-          </Text>
+          <Text color="text-primary">+91 9799191449</Text>
         </Flex>
       </Flex>
     );
@@ -282,7 +274,7 @@ export default function Contact() {
       <form ref={form} onSubmit={sendEmail}>
         <VStack spacing={5}>
           <FormControl isRequired>
-            <FormLabel>Name</FormLabel>
+            <FormLabel color="text-primary">Name</FormLabel>
 
             <InputGroup>
               <InputLeftElement children={<BsPerson />} />
@@ -291,7 +283,7 @@ export default function Contact() {
           </FormControl>
 
           <FormControl isRequired>
-            <FormLabel>Email</FormLabel>
+            <FormLabel color="text-primary">Email</FormLabel>
 
             <InputGroup>
               <InputLeftElement children={<MdOutlineEmail />} />
@@ -300,7 +292,7 @@ export default function Contact() {
           </FormControl>
 
           <FormControl isRequired>
-            <FormLabel>Message</FormLabel>
+            <FormLabel color="text-primary">Message</FormLabel>
 
             <Textarea
               id="message"
@@ -315,11 +307,10 @@ export default function Contact() {
             isLoading={loading}
             loadingText="Please wait.."
             type="submit"
-            colorScheme="blue"
-            bg="blue.400"
-            color="white"
+            bg="secondary"
+            color="text-primary"
             _hover={{
-              bg: "blue.500",
+              shadow: "shadow-primary",
             }}
             width="100%"
             onClick={sendEmail}
@@ -356,15 +347,9 @@ export default function Contact() {
  */
 
   return (
-    <VStack align="center" justify="center" id="contact" gap={5}>
+    <Box id="contact" justifyContent="center" alignItems="center" gap={5}>
       <SectionHeader label="Contact Me" />
-      <Box
-        bg={"gray.700"}
-        borderRadius="lg"
-        p={8}
-        color={"whiteAlpha.900"}
-        shadow="base"
-      >
+      <Box bg="bg-card" borderRadius="lg" p={8} shadow="base">
         {renderProfileInfo()}
         <Divider my={"1rem"} />
         {renderContactForm()}
@@ -372,6 +357,6 @@ export default function Contact() {
         {renderInfoButtons()}
       </Box>
       {renderFooter()}
-    </VStack>
+    </Box>
   );
 }
