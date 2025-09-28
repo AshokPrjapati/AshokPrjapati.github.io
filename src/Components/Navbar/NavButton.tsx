@@ -10,6 +10,7 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import { ModuleItem, TabOptProps } from "../../types/interface";
 import { MODULES_DATA } from "../../constants/constant";
+import { getResumeDownloadLink } from "../../utils/commonUtils";
 
 const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -51,16 +52,13 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
   };
 
   const renderResumeButton = () => {
+    const downloadLink = getResumeDownloadLink();
     return (
       <ChakraLink
         className={styles.default}
         href={"/assets/Ashok-Kumar-Resume.pdf"}
         isExternal={true}
         onClick={() => {
-          const pdfUrl = "/assets/Ashok-Kumar-Resume.pdf";
-          const downloadLink = document.createElement("a");
-          downloadLink.href = pdfUrl;
-          downloadLink.download = "Ashok-kumar-Resume.pdf";
           downloadLink.click();
         }}
       >
@@ -82,7 +80,6 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
       {MODULES_DATA.map((module, index) => renderModuleWithLink(module, index))}
       {renderResumeButton()}
       <Button
-        ml={4}
         size="sm"
         onClick={toggleColorMode}
         colorScheme={colorMode === "light" ? "blue" : "cyan"}
@@ -90,6 +87,7 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
         aria-label={
           colorMode === "light" ? "Switch to dark mode" : "Switch to light mode"
         }
+        mt={1}
       >
         {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
       </Button>

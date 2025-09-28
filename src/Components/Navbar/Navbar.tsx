@@ -6,8 +6,6 @@ import {
   useDisclosure,
   Text,
   Slide,
-  useColorMode,
-  Button,
 } from "@chakra-ui/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -91,8 +89,8 @@ const Navbar: React.FC = () => {
     <Flex
       maxW="100%"
       as="nav"
-      px={10}
-      className={styles.sticky as string}
+      px={{ base: 5, md: 10 }}
+      className={String(styles.sticky)}
       shadow="lg"
       justify="space-between"
       align="center"
