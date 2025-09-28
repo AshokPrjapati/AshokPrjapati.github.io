@@ -1,4 +1,6 @@
-import { extendTheme, theme as baseTheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
+import { COLORS, SEMANTIC_COLORS_TOKENS } from "../constants/colors";
+import { getRootCssVariable } from "../utils/commonUtils";
 
 const theme = extendTheme({
   config: {
@@ -11,111 +13,66 @@ const theme = extendTheme({
     mono: "Roboto Mono, monospace",
   },
   colors: {
-    // Custom color palette that automatically switches
     brand: {
       primary: {
-        _light: "#0077ff",
-        _dark: "#00eaff",
+        _light: COLORS.light.primary,
+        _dark: COLORS.dark.primary,
       },
       secondary: {
-        _light: "#00eaff",
-        _dark: "#0077ff",
+        _light: COLORS.light.secondary,
+        _dark: COLORS.dark.secondary,
       },
       accent: {
-        _light: "#64ffda",
-        _dark: "#64ffda",
+        _light: COLORS.light.accent,
+        _dark: COLORS.dark.accent,
       },
       error: {
-        _light: "#e11d48",
-        _dark: "#e11d48",
+        _light: COLORS.light.error,
+        _dark: COLORS.dark.error,
       },
     },
-    // Background colors
     bg: {
       primary: {
-        _light: "#f5f7fa",
-        _dark: "#0a192f",
+        _light: COLORS.light.bgPrimary,
+        _dark: COLORS.dark.bgPrimary,
       },
       surface: {
-        _light: "#ffffff",
-        _dark: "#112240",
+        _light: COLORS.light.bgSurface,
+        _dark: COLORS.dark.bgSurface,
       },
       card: {
-        _light: "#f8fafc",
-        _dark: "#1c2541",
+        _light: COLORS.light.bgCard,
+        _dark: COLORS.dark.bgCard,
       },
     },
-    // Text colors
     text: {
       primary: {
-        _light: "#1a202c",
-        _dark: "#eaf6fb",
+        _light: COLORS.light.textPrimary,
+        _dark: COLORS.dark.textPrimary,
       },
       muted: {
-        _light: "#8892b0",
-        _dark: "#8892b0",
+        _light: COLORS.light.textMuted,
+        _dark: COLORS.dark.textMuted,
       },
     },
-    // Border colors
     border: {
       primary: {
-        _light: "#e2e8f0",
-        _dark: "#23272f",
+        _light: COLORS.light.borderPrimary,
+        _dark: COLORS.dark.borderPrimary,
       },
     },
   },
   semanticTokens: {
-    colors: {
-      // Semantic tokens that automatically switch based on color mode
-      primary: {
-        default: "brand.primary._light",
-        _dark: "brand.primary._dark",
-      },
-      secondary: {
-        default: "brand.secondary._light",
-        _dark: "brand.secondary._dark",
-      },
-      accent: {
-        default: "brand.accent._light",
-        _dark: "brand.accent._dark",
-      },
-      "bg-primary": {
-        default: "bg.primary._light",
-        _dark: "bg.primary._dark",
-      },
-      "bg-surface": {
-        default: "bg.surface._light",
-        _dark: "bg.surface._dark",
-      },
-      "bg-card": {
-        default: "bg.card._light",
-        _dark: "bg.card._dark",
-      },
-      "text-primary": {
-        default: "text.primary._light",
-        _dark: "text.primary._dark",
-      },
-      "text-muted": {
-        default: "text.muted._light",
-        _dark: "text.muted._dark",
-      },
-      "border-primary": {
-        default: "border.primary._light",
-        _dark: "border.primary._dark",
-      },
-      error: {
-        default: "brand.error._light",
-        _dark: "brand.error._dark",
-      },
-    },
+    colors: SEMANTIC_COLORS_TOKENS,
   },
   styles: {
-    global: {
+    global: (props: any) => ({
+      ":root": getRootCssVariable(props.colorMode),
       body: {
         bg: "bg-primary",
         color: "text-primary",
       },
-    },
+    }),
   },
 });
 

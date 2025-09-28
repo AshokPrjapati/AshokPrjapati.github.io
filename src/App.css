@@ -1,9 +1,6 @@
-/* width */
-
-
 html {
   scroll-behavior: smooth;
-  font-family: 'Inter', 'Montserrat', 'Roboto Mono', sans-serif;
+  font-family: "Inter", "Montserrat", "Roboto Mono", sans-serif;
 }
 
 * {
@@ -12,38 +9,12 @@ html {
   box-sizing: border-box;
 }
 
-:root {
-  --color-primary: #0077ff;
-  --color-secondary: #00eaff;
-  --color-background: #f5f7fa;
-  --color-surface: #ffffff;
-  --color-accent: #64ffda;
-  --color-text: #1a202c;
-  --color-muted: #8892b0;
-  --color-error: #e11d48;
-  --color-border: #e2e8f0;
-  --color-card: #f8fafc;
-}
-
-[data-theme="dark"] {
-  --color-primary: #00eaff;
-  --color-secondary: #0077ff;
-  --color-background: #0a192f;
-  --color-surface: #112240;
-  --color-accent: #64ffda;
-  --color-text: #eaf6fb;
-  --color-muted: #8892b0;
-  --color-error: #e11d48;
-  --color-border: #23272f;
-  --color-card: #1c2541;
-}
-
 .App {
   position: relative;
   overflow: hidden;
-  background: var(--color-background);
-  color: var(--color-text);
-  font-family: 'Inter', 'Montserrat', 'Roboto Mono', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Inter", "Montserrat", "Roboto Mono", sans-serif;
 }
 
 #home,
@@ -56,7 +27,7 @@ html {
   background-position: center;
   /* Overlay color for color mode */
   background-blend-mode: overlay;
-  background-color: var(--color-background);
+  background-color: var(--bg-surface);
 }
 
 #projects,
@@ -69,7 +40,7 @@ html {
   background-position: center;
   /* Overlay color for color mode */
   background-blend-mode: overlay;
-  background-color: var(--color-card);
+  background-color: var(--bg-card);
 }
 
 ::-webkit-scrollbar {
@@ -78,35 +49,35 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--color-border);
+  background: var(--);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--color-secondary);
+  background: var(--secondary);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
+  background: var(--accent);
 }
 
 /* Hero Section */
 .button {
   width: max-content;
   border-radius: 25px;
-  color: var(--color-secondary);
+  color: var(--secondary);
   padding: 12px 2rem;
   font-weight: 500;
   font-size: large;
-  background-color: var(--color-border);
-  border: 2px solid var(--color-secondary);
+  background-color: var(--border);
+  border: 2px solid var(--secondary);
   transition: background 0.2s, color 0.2s;
 }
 .button:hover {
-  background: var(--color-secondary);
-  color: var(--color-background);
+  background: var(--secondary);
+  color: var(--background);
 }
 
 /* Project Section */

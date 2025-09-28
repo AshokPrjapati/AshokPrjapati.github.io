@@ -1,5 +1,5 @@
 .exp {
-    border: 1px solid #00eaff;
+    border: 1px solid var(--secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 
 .exp>div>p>span {
-    color: #00eaff;
+    color: var(--secondary);
     font-weight: 600;
 }
 
@@ -27,11 +27,11 @@
 
 .about:hover {
     box-shadow: 0 0 20px rgba(0, 234, 255, 0.20);
-    border-color: #00eaff;
+    border-color: var(--secondary);
 }
 
 .degree {
-    color: #64ffda;
+    color: var(--accent);
     font-weight: 600;
 }
 
@@ -41,6 +41,6 @@
 }
 
 .exp:hover {
-    border-color: #64ffda;
+    border-color: var(--accent);
     box-shadow: 0 0 20px rgba(0, 234, 255, 0.20);
 }

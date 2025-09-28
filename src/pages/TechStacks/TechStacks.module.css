@@ -6,20 +6,20 @@
     text-align: center;
     font-size: 1rem;
     box-shadow: 0 0 15px rgba(0, 234, 255, 0.10);
-    border: 1px solid #00eaff;
+    border: 1px solid var(--secondary);
     background: #112240;
     color: #eaf6fb;
 }
 
 .skillsCard:hover {
-    border-color: #64ffda;
+    border-color: var(--accent);
     box-shadow: 0 0 20px rgba(0, 234, 255, 0.20);
 }
 
 .skillsCatContainer {
     margin-bottom: 1rem;
     border-radius: 1.5rem;
-    border: 1px solid #00eaff;
+    border: 1px solid var(--secondary);
     padding: 2rem;
     box-shadow: 0 0 20px rgba(0, 234, 255, 0.10);
     background: #1c2541;
@@ -34,5 +34,5 @@
     border-radius: 5px 50px;
     box-shadow: 0 0 10px rgba(0, 234, 255, 0.10);
     background: #23272f;
-    color: #00eaff;
+    color: var(--secondary);
 }
