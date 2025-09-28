@@ -108,7 +108,7 @@ const Hero: React.FC = () => {
           position="absolute"
           top="1.5rem"
           textAlign="center"
-          bg="text.3"
+          bg="primary"
           width="90%"
           height="90%"
           borderRadius="50%"
