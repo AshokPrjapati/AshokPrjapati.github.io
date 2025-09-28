@@ -14,7 +14,7 @@ function GitState() {
         style={{
           width: "97%",
           margin: "auto",
-          color: "#fff",
+          color: "text-secondary",
           padding: "40px 0",
         }}
         username="AshokPrjapati"
@@ -61,7 +61,7 @@ function GitState() {
 
   return (
     <>
-      <SectionHeader label=" Git Stats" />
+      <SectionHeader label="Git Stats" />
       <Box data-aos="zoom-out">{renderGitCalender()}</Box>
       {renderGitStates()}
     </>
