@@ -25,9 +25,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* Overlay color for color mode */
   background-blend-mode: overlay;
-  background-color: var(--bg-surface);
 }
 
 #projects,
@@ -38,9 +36,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* Overlay color for color mode */
   background-blend-mode: overlay;
-  background-color: var(--bg-card);
 }
 
 ::-webkit-scrollbar {

@@ -38,14 +38,7 @@ const App: React.FC = () => {
   const renderModule = (module: ModuleItem, index: number) => {
     const { componentName, path } = module;
     const Component = getComponentByModuleName(componentName);
-    const bg =
-      colorMode === "light"
-        ? index % 2 === 0
-          ? "background"
-          : "card"
-        : index % 2 === 0
-        ? "surface"
-        : "card";
+    const bg = index % 2 === 0 ? "bg-primary" : "bg-surface";
 
     return (
       <Box key={index} id={path} bg={bg}>
