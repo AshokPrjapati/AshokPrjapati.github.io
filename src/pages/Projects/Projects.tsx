@@ -18,16 +18,13 @@ import { ProjectData } from "../../types/interface";
 import SectionHeader from "../../Components/SectionHeader";
 
 const Projects = () => {
-  const bg = useColorModeValue("bg.1", "gray.900");
-  const clr = useColorModeValue("text.1", "white");
-
   const renderProjectContent = (project: ProjectData) => {
     return (
       <Center py={6} key={project.id}>
         <Box
           key={project.id}
           maxW={"445px"}
-          bg={bg}
+          bg="bg-card"
           boxShadow={"2xl"}
           rounded={"md"}
           p={4}
@@ -35,7 +32,6 @@ const Projects = () => {
         >
           <Box
             h={"210px"}
-            bg={"gray.100"}
             display="flex"
             justifyContent="center"
             alignItems="center"
@@ -54,7 +50,7 @@ const Projects = () => {
           </Box>
           <Stack>
             <Heading
-              color={clr}
+              color="text-primary"
               fontSize={"2xl"}
               fontFamily={"body"}
               data-aos="fade-up"
@@ -63,7 +59,7 @@ const Projects = () => {
               {project.name}
             </Heading>
             <Text
-              color={"text.2"}
+              color={"text.secondary"}
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
               className="lineClampDesc"
@@ -71,7 +67,7 @@ const Projects = () => {
               {project.discription}
             </Text>
             <Text
-              color={"text.3"}
+              color={"secondary"}
               textTransform={"uppercase"}
               fontWeight={800}
               fontSize={"sm"}
@@ -83,7 +79,7 @@ const Projects = () => {
               {project.techStack}
             </Text>
             <Text
-              color={"text.2"}
+              color={"text-secondary"}
               pb={"15px"}
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
@@ -110,9 +106,7 @@ const Projects = () => {
                 size={"lg"}
                 fontWeight={"normal"}
                 px={6}
-                colorScheme={"red"}
-                bg={"text.3"}
-                _hover={{ bg: "rgb(3, 102, 3)" }}
+                bg="secondary"
               >
                 Source Code
               </Button>
@@ -128,9 +122,7 @@ const Projects = () => {
                 size={"lg"}
                 fontWeight={"normal"}
                 px={6}
-                colorScheme={"red"}
-                bg={"text.3"}
-                _hover={{ bg: "rgb(3, 102, 3)" }}
+                bg="secondary"
               >
                 Live
               </Button>
