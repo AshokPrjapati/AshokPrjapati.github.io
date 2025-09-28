@@ -1,6 +1,5 @@
 import React from "react";
 import { Stack, Flex, Box, Heading, Text, Image, Link } from "@chakra-ui/react";
-
 import Typewriter from "typewriter-effect";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import SIcons from "./SIcons";
