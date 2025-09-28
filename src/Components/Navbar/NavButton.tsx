@@ -34,7 +34,10 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
     );
   };
 
-  const renderModuleWithLink = (module: ModuleItem, idx: number) => {
+  const renderModuleWithLink = (
+    module: ModuleItem,
+    idx: number
+  ): JSX.Element => {
     return (
       <Link
         className={styles.default}
@@ -78,6 +81,7 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
       borderRadius="10px"
     >
       {MODULES_DATA.map((module, index) => renderModuleWithLink(module, index))}
+
       {renderResumeButton()}
       <Button
         size="sm"

@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
 
   const renderSummaryText = () => {
     return (
-      <Text color="text.1">
+      <Text color="text">
         An enthusiastic Full Stack Web Developer with a strong set of technical
         as well as non-technical skills and a dedication towards creating useful
         and interactive web applications.
@@ -40,11 +40,11 @@ const Hero: React.FC = () => {
         fontWeight={600}
         fontSize={{ base: "2xl", sm: "3xl", lg: "4xl" }}
       >
-        <Text color="text.1" as="span">
+        <Text color="text" as="span">
           Hi, I am Ashok Kumar
         </Text>
         <br />
-        <Text as="span" color="text.3">
+        <Text as="span" color="primary">
           {renderTypeWriterText()}
         </Text>
       </Heading>
@@ -59,9 +59,13 @@ const Hero: React.FC = () => {
           className="button"
           href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
           isExternal
-          _hover={{ textDecor: "none", bg: "text.3", color: "#fff" }}
+          _hover={{
+            bg: "secondary",
+            color: "background",
+            shadow: "0px 0px 10px var(--color-secondary)",
+          }}
           onClick={() => downloadLink.click()}
-          color="text.3"
+          color="primary"
         >
           {<ArrowForwardIcon />} Resume
         </Link>
@@ -76,6 +80,7 @@ const Hero: React.FC = () => {
         spacing={{ base: 5, md: 10 }}
         textAlign={{ base: "center", md: "left" }}
         gap="1rem"
+        maxW={{ base: "100%", md: "50%" }}
       >
         {renderHeading()}
         {renderSummaryText()}

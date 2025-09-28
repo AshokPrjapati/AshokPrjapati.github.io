@@ -1,31 +1,5 @@
-import { extendTheme, theme as baseTheme } from "@chakra-ui/react";
-
-const colors = {
-  light: {
-    primary: "#0077ff",
-    secondary: "#00eaff",
-    background: "#f5f7fa",
-    surface: "#ffffff",
-    accent: "#64ffda",
-    text: "#1a202c",
-    muted: "#8892b0",
-    error: "#e11d48",
-    border: "#e2e8f0",
-    card: "#f8fafc",
-  },
-  dark: {
-    primary: "#00eaff",
-    secondary: "#0077ff",
-    background: "#0a192f",
-    surface: "#112240",
-    accent: "#64ffda",
-    text: "#eaf6fb",
-    muted: "#8892b0",
-    error: "#e11d48",
-    border: "#23272f",
-    card: "#1c2541",
-  },
-};
+import { extendTheme } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
   config: {
@@ -38,21 +12,52 @@ const theme = extendTheme({
     mono: "Roboto Mono, monospace",
   },
   colors: {
-    ...colors.dark,
-    modes: {
-      light: colors.light,
-      dark: colors.dark,
+    primary: {
+      light: "#0077ff",
+      dark: "#00eaff",
+    },
+    secondary: {
+      light: "#00eaff",
+      dark: "#0077ff",
+    },
+    background: {
+      light: "#f5f7fa",
+      dark: "#0a192f",
+    },
+    surface: {
+      light: "#ffffff",
+      dark: "#112240",
+    },
+    accent: {
+      light: "#64ffda",
+      dark: "#64ffda",
+    },
+    text: {
+      light: "#1a202c",
+      dark: "#eaf6fb",
+    },
+    muted: {
+      light: "#8892b0",
+      dark: "#8892b0",
+    },
+    error: {
+      light: "#e11d48",
+      dark: "#e11d48",
+    },
+    border: {
+      light: "#e2e8f0",
+      dark: "#23272f",
+    },
+    card: {
+      light: "#f8fafc",
+      dark: "#1c2541",
     },
   },
   styles: {
     global: (props: any) => ({
       body: {
-        bg:
-          props.colorMode === "light"
-            ? colors.light.background
-            : colors.dark.background,
-        color:
-          props.colorMode === "light" ? colors.light.text : colors.dark.text,
+        bg: mode("#f5f7fa", "#0a192f")(props),
+        color: mode("#1a202c", "#eaf6fb")(props),
         transition: "background 0.2s, color 0.2s",
       },
     }),
