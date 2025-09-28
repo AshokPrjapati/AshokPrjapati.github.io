@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
 
   const renderSummaryText = () => {
     return (
-      <Text color="text">
+      <Text color="text-primary">
         An enthusiastic Full Stack Web Developer with a strong set of technical
         as well as non-technical skills and a dedication towards creating useful
         and interactive web applications.
@@ -40,11 +40,11 @@ const Hero: React.FC = () => {
         fontWeight={600}
         fontSize={{ base: "2xl", sm: "3xl", lg: "4xl" }}
       >
-        <Text color="text" as="span">
+        <Text color="text-primary" as="span">
           Hi, I am Ashok Kumar
         </Text>
         <br />
-        <Text as="span" color="primary">
+        <Text as="span" color="secondary">
           {renderTypeWriterText()}
         </Text>
       </Heading>
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             shadow: "0px 0px 10px var(--color-secondary)",
           }}
           onClick={() => downloadLink.click()}
-          color="primary"
+          color="secondary"
         >
           {<ArrowForwardIcon />} Resume
         </Link>
@@ -108,7 +108,7 @@ const Hero: React.FC = () => {
           position="absolute"
           top="1.5rem"
           textAlign="center"
-          bg="primary"
+          bg="secondary"
           width="90%"
           height="90%"
           borderRadius="50%"

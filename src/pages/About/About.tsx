@@ -33,9 +33,9 @@ const About: React.FC = () => {
       <IconButton
         aria-label={ariaLabel}
         bg="inherit"
-        color="text.3"
+        color="secondary"
         border="1px solid"
-        borderColor="text.3"
+        borderColor="secondary"
         size={"lg"}
         fontWeight={"normal"}
         px={6}
@@ -43,7 +43,7 @@ const About: React.FC = () => {
         onClick={handleCopy}
         _hover={{
           bg: "secondary",
-          color: "text-secondary",
+          color: "text-primary",
         }}
       />
     );
@@ -54,7 +54,7 @@ const About: React.FC = () => {
       <Card
         className={styles.about}
         maxW="md"
-        color={"text.1"}
+        color={"text.primary"}
         data-aos="fade-up-left"
         border="1px solid var(--border-primary)"
       >
@@ -114,12 +114,31 @@ const About: React.FC = () => {
     );
   };
 
+  const workBox = (
+    src: string,
+    title: string,
+    number: string,
+    stamp: string
+  ) => {
+    return (
+      <Box className={styles.exp}>
+        <Image src={src} />
+        <Box fontWeight={"medium"}>
+          <Text>{title}</Text>
+          <Text>
+            <span>{number}</span> {stamp}
+          </Text>
+        </Box>
+      </Box>
+    );
+  };
+
   const renderExperienceCard = () => {
     return (
       <Stack spacing="1rem" data-aos="fade-up-right">
         <Heading lineHeight={1.2} fontWeight={600}>
           <Text
-            color={"text.1"}
+            color={"text.primary"}
             as={"span"}
             fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}
           >
@@ -128,49 +147,21 @@ const About: React.FC = () => {
           <br />
           <Text
             as={"span"}
-            color={"text.3"}
+            color={"secondary"}
             fontSize={{ base: "2xl", sm: "3xl", lg: "4xl" }}
           >
             WEB DEVELOPER
           </Text>
         </Heading>
-        <Grid templateColumns={"repeat(2, 1fr)"} gap="1rem" color={"text.1"}>
-          <Box className={styles.exp}>
-            <Image src="/images/coding.svg" />
-            <Box fontWeight={"medium"}>
-              <Text>Coding</Text>
-              <Text>
-                <span>1400+</span> Hours
-              </Text>
-            </Box>
-          </Box>
-          <Box className={styles.exp}>
-            <Image src="/images/dsa.svg" />
-            <Box fontWeight={"medium"}>
-              <Text>DSA</Text>
-              <Text fontWeight={"medium"}>
-                <span>700+</span> Question Solved
-              </Text>
-            </Box>
-          </Box>
-          <Box className={styles.exp}>
-            <Image src="/images/project.svg" />
-            <Box fontWeight={"medium"}>
-              <Text>Projects</Text>
-              <Text>
-                <span>5+</span> Completed
-              </Text>
-            </Box>
-          </Box>
-          <Box className={styles.exp}>
-            <Image src="/images/github1.svg" />
-            <Box fontWeight={"medium"}>
-              <Text>Github</Text>
-              <Text fontWeight={"medium"}>
-                <span>1000+</span> Contributions
-              </Text>
-            </Box>
-          </Box>
+        <Grid
+          templateColumns={"repeat(2, 1fr)"}
+          gap="1rem"
+          color={"text.primary"}
+        >
+          {workBox("/images/coding.svg", "Coding", "1400+", "Hours")}
+          {workBox("/images/dsa.svg", "DSA", "700+", "Question Solved")}
+          {workBox("/images/project.svg", "Projects", "5+", "Completed")}
+          {workBox("/images/github1.svg", "Github", "1000+", "Contributions")}
         </Grid>
       </Stack>
     );

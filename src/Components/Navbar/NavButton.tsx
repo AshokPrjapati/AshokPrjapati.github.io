@@ -27,7 +27,7 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
         }}
         onClick={toggle}
         zIndex={99}
-        color="primary"
+        color="secondary"
       >
         {label}
       </Button>
@@ -86,7 +86,7 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
       <Button
         size="sm"
         onClick={toggleColorMode}
-        colorScheme={colorMode === "light" ? "blue" : "cyan"}
+        colorScheme={colorMode === "light" ? "cyan" : "blue"}
         variant="outline"
         aria-label={
           colorMode === "light" ? "Switch to dark mode" : "Switch to light mode"

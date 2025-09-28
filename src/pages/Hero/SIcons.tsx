@@ -22,9 +22,9 @@ const SIcons: React.FC = () => {
       <IconButton
         aria-label={ariaLabel}
         bg="inherit"
-        color="text.3"
+        color="secondary"
         border="1px solid"
-        borderColor="text.3"
+        borderColor="secondary"
         size={"lg"}
         fontWeight={"normal"}
         px={6}
@@ -32,7 +32,7 @@ const SIcons: React.FC = () => {
         onClick={handleCopy}
         _hover={{
           bg: "secondary",
-          color: "text-secondary",
+          color: "text-primary",
         }}
       />
     );
