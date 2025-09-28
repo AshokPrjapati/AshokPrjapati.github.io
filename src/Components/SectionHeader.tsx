@@ -12,9 +12,9 @@ const SectionHeader = (props: HeadingProps) => {
       m="auto"
       textAlign="center"
       p="30px 10px 10px 10px"
-      color="text.1"
+      color="text-primary"
       fontWeight="500"
-      borderBottom="3px solid #e11d48"
+      borderBottom="3px solid var(--secondary)"
       mb="40px"
     >
       {label}
