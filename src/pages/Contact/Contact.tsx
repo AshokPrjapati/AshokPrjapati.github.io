@@ -324,7 +324,13 @@ export default function Contact() {
 
   const renderFooter = () => {
     return (
-      <Flex align={"center"} color={"text-primary"}>
+      <Flex
+        align={"center"}
+        color={"text-primary"}
+        w="100%"
+        justify={"center"}
+        mt={20}
+      >
         Made with 💖 by
         <span
           style={{
@@ -340,15 +346,8 @@ export default function Contact() {
     );
   };
 
-  /*
-   ===================================================================================================
-   render main content:
-   ===================================================================================================
- */
-
-  return (
-    <Box id="contact" justifyContent="center" alignItems="center" gap={5}>
-      <SectionHeader label="Contact Me" />
+  const renderCard = () => {
+    return (
       <Box bg="bg-card" borderRadius="lg" p={8} shadow="base">
         {renderProfileInfo()}
         <Divider my={"1rem"} />
@@ -356,6 +355,19 @@ export default function Contact() {
         <Divider my="1rem" />
         {renderInfoButtons()}
       </Box>
+    );
+  };
+
+  /*
+   ===================================================================================================
+   render main content:
+   ===================================================================================================
+ */
+
+  return (
+    <Box id="contact" justifyContent="center" alignItems="center">
+      <SectionHeader label="Contact Me" />
+      {renderCard()}
       {renderFooter()}
     </Box>
   );
