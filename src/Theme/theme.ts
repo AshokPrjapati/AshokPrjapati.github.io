@@ -1,5 +1,4 @@
-import { extendTheme } from "@chakra-ui/react";
-import { mode } from "@chakra-ui/theme-tools";
+import { extendTheme, theme as baseTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   config: {
@@ -12,55 +11,111 @@ const theme = extendTheme({
     mono: "Roboto Mono, monospace",
   },
   colors: {
-    primary: {
-      light: "#0077ff",
-      dark: "#00eaff",
+    // Custom color palette that automatically switches
+    brand: {
+      primary: {
+        _light: "#0077ff",
+        _dark: "#00eaff",
+      },
+      secondary: {
+        _light: "#00eaff",
+        _dark: "#0077ff",
+      },
+      accent: {
+        _light: "#64ffda",
+        _dark: "#64ffda",
+      },
+      error: {
+        _light: "#e11d48",
+        _dark: "#e11d48",
+      },
     },
-    secondary: {
-      light: "#00eaff",
-      dark: "#0077ff",
+    // Background colors
+    bg: {
+      primary: {
+        _light: "#f5f7fa",
+        _dark: "#0a192f",
+      },
+      surface: {
+        _light: "#ffffff",
+        _dark: "#112240",
+      },
+      card: {
+        _light: "#f8fafc",
+        _dark: "#1c2541",
+      },
     },
-    background: {
-      light: "#f5f7fa",
-      dark: "#0a192f",
-    },
-    surface: {
-      light: "#ffffff",
-      dark: "#112240",
-    },
-    accent: {
-      light: "#64ffda",
-      dark: "#64ffda",
-    },
+    // Text colors
     text: {
-      light: "#1a202c",
-      dark: "#eaf6fb",
+      primary: {
+        _light: "#1a202c",
+        _dark: "#eaf6fb",
+      },
+      muted: {
+        _light: "#8892b0",
+        _dark: "#8892b0",
+      },
     },
-    muted: {
-      light: "#8892b0",
-      dark: "#8892b0",
-    },
-    error: {
-      light: "#e11d48",
-      dark: "#e11d48",
-    },
+    // Border colors
     border: {
-      light: "#e2e8f0",
-      dark: "#23272f",
+      primary: {
+        _light: "#e2e8f0",
+        _dark: "#23272f",
+      },
     },
-    card: {
-      light: "#f8fafc",
-      dark: "#1c2541",
+  },
+  semanticTokens: {
+    colors: {
+      // Semantic tokens that automatically switch based on color mode
+      primary: {
+        default: "brand.primary._light",
+        _dark: "brand.primary._dark",
+      },
+      secondary: {
+        default: "brand.secondary._light",
+        _dark: "brand.secondary._dark",
+      },
+      accent: {
+        default: "brand.accent._light",
+        _dark: "brand.accent._dark",
+      },
+      "bg-primary": {
+        default: "bg.primary._light",
+        _dark: "bg.primary._dark",
+      },
+      "bg-surface": {
+        default: "bg.surface._light",
+        _dark: "bg.surface._dark",
+      },
+      "bg-card": {
+        default: "bg.card._light",
+        _dark: "bg.card._dark",
+      },
+      "text-primary": {
+        default: "text.primary._light",
+        _dark: "text.primary._dark",
+      },
+      "text-muted": {
+        default: "text.muted._light",
+        _dark: "text.muted._dark",
+      },
+      "border-primary": {
+        default: "border.primary._light",
+        _dark: "border.primary._dark",
+      },
+      error: {
+        default: "brand.error._light",
+        _dark: "brand.error._dark",
+      },
     },
   },
   styles: {
-    global: (props: any) => ({
+    global: {
       body: {
-        bg: mode("#f5f7fa", "#0a192f")(props),
-        color: mode("#1a202c", "#eaf6fb")(props),
-        transition: "background 0.2s, color 0.2s",
+        bg: "bg-primary",
+        color: "text-primary",
       },
-    }),
+    },
   },
 });
 
