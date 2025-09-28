@@ -56,9 +56,6 @@ export default function Contact() {
   const textColor = useColorModeValue("gray.700", "white");
   const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);
 
-  const bgColor = "bg.3";
-  const spacing = { base: 4, md: 8, lg: 20 };
-
   /*
    ===================================================================================================
    States
@@ -178,7 +175,7 @@ export default function Contact() {
         fontSize="3xl"
         icon={icon}
         _hover={{
-          bg: "#fff",
+          bg: "text-primary",
           color: textColor,
         }}
         onClick={handleCopy}
@@ -198,7 +195,7 @@ export default function Contact() {
         fontSize="3xl"
         icon={icon}
         _hover={{
-          bg: "#fff",
+          bg: "text-primary",
           color: textColor,
         }}
         isRound
@@ -227,7 +224,7 @@ export default function Contact() {
           >
             {renderIconButton("email", <MdEmail />, onCopy)}
           </Tooltip>
-          <Text color="#fff" display={{ base: "none", md: "flex" }}>
+          <Text color="text-primary" display={{ base: "none", md: "flex" }}>
             {PROFILE_EMAIL}
           </Text>
         </Flex>
@@ -242,7 +239,7 @@ export default function Contact() {
               {renderIconButton("phone", <PhoneIcon />)}
             </Link>
           </Tooltip>
-          <Text color="#fff" display={{ base: "none", md: "flex" }}>
+          <Text color="text-primary" display={{ base: "none", md: "flex" }}>
             +91 9799191449
           </Text>
         </Flex>
@@ -336,12 +333,12 @@ export default function Contact() {
 
   const renderFooter = () => {
     return (
-      <Flex align={"center"} color={"text.1"}>
+      <Flex align={"center"} color={"text-primary"}>
         Made with 💖 by
         <span
           style={{
             margin: "0 5px",
-            color: "#e11d48",
+            color: "var(--secondary)",
             fontWeight: "bold",
           }}
         >
@@ -359,26 +356,22 @@ export default function Contact() {
  */
 
   return (
-    <Flex bg={bgColor} align="center" justify="center" id="contact">
-      <Box borderRadius="lg" pb="25px">
-        <VStack spacing={spacing}>
-          <SectionHeader label="Contact Me" />
-          <Box
-            bg={"gray.700"}
-            borderRadius="lg"
-            p={8}
-            color={"whiteAlpha.900"}
-            shadow="base"
-          >
-            {renderProfileInfo()}
-            <Divider my={"1rem"} />
-            {renderContactForm()}
-            <Divider my="1rem" />
-            {renderInfoButtons()}
-          </Box>
-          {renderFooter()}
-        </VStack>
+    <VStack align="center" justify="center" id="contact" gap={5}>
+      <SectionHeader label="Contact Me" />
+      <Box
+        bg={"gray.700"}
+        borderRadius="lg"
+        p={8}
+        color={"whiteAlpha.900"}
+        shadow="base"
+      >
+        {renderProfileInfo()}
+        <Divider my={"1rem"} />
+        {renderContactForm()}
+        <Divider my="1rem" />
+        {renderInfoButtons()}
       </Box>
-    </Flex>
+      {renderFooter()}
+    </VStack>
   );
 }
