@@ -6,7 +6,6 @@ import {
   Heading,
   Text,
   Image,
-  useColorModeValue,
   Divider,
   Button,
   Link,
@@ -64,7 +63,7 @@ const Projects = () => {
               data-aos-anchor-placement="bottom-bottom"
               className="lineClampDesc"
             >
-              {project.discription}
+              {project.description}
             </Text>
             <Text
               color={"secondary"}

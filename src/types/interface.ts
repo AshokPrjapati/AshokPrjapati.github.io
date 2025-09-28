@@ -35,7 +35,7 @@ export interface ProjectData {
   id: number;
   name: string;
   src: string;
-  discription: string;
+  description: string;
   techStack: string;
   detail: string;
   sourceCode: string;
