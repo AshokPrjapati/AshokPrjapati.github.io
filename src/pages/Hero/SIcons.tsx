@@ -31,8 +31,8 @@ const SIcons: React.FC = () => {
         icon={icon as ReactElement}
         onClick={handleCopy}
         _hover={{
-          bg: "text.3",
-          color: "#fff",
+          bg: "secondary",
+          color: "text-secondary",
         }}
       />
     );

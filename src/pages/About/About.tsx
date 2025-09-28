@@ -42,8 +42,8 @@ const About: React.FC = () => {
         icon={icon as ReactElement}
         onClick={handleCopy}
         _hover={{
-          bg: "text.3",
-          color: "#fff",
+          bg: "secondary",
+          color: "text-secondary",
         }}
       />
     );
@@ -56,7 +56,7 @@ const About: React.FC = () => {
         maxW="md"
         color={"text.1"}
         data-aos="fade-up-left"
-        border="1px solid #fff"
+        border="1px solid var(--border-primary)"
       >
         <CardBody textAlign={"left"}>
           <Text>

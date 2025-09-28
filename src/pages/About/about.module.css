@@ -10,7 +10,7 @@
     text-align: center;
     user-select: none;
     box-shadow: 0 0 10px rgba(0, 234, 255, 0.15);
-    background: #112240;
+    background: var(--bg-surface);
 }
 
 .exp>div>p>span {
@@ -21,7 +21,7 @@
 .about {
     box-shadow: 0 0 10px rgba(0, 234, 255, 0.10);
     user-select: none;
-    background: #1c2541;
+    background: var(--bg-card);
     border-radius: 8px;
 }
 
