@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
   const renderMobileMenuIcon = () => {
     return (
       <IconButton
-        color="text.1"
+        color="text-primary"
         bg="none"
         _hover={{ bg: "none" }}
         onClick={onToggle}
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
     <Flex
       maxW="100%"
       as="nav"
-      px={{ base: 5, md: 10 }}
+      px={{ base: 5 as number, md: 10 as number }}
       className={String(styles.sticky)}
       shadow="lg"
       justify="space-between"
