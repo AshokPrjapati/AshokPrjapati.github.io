@@ -1,4 +1,4 @@
-export const frontendSkills = [
+export const FE_SKILLS = [
   {
     icon: "./images/react.svg",
     name: "React.js",
@@ -38,7 +38,7 @@ export const frontendSkills = [
   },
 ];
 
-export const backendSkills = [
+export const BE_SKILLS = [
   {
     icon: "./images/mongo.svg",
     name: "MongoDB",
@@ -58,5 +58,41 @@ export const backendSkills = [
   {
     icon: "./images/jwt.svg",
     name: "JWT Auth",
+  },
+];
+
+export const TOOLS_SKILLS = [
+  {
+    icon: "./images/git.svg",
+    name: "Git",
+  },
+  {
+    icon: "./images/github.svg",
+    name: "Github",
+  },
+  {
+    icon: "./images/vs-code.svg",
+    name: "VS-Code",
+  },
+  {
+    icon: "./images/cypress.svg",
+    name: "Cypress",
+  },
+
+  {
+    icon: "./images/netlify.svg",
+    name: "Netlify",
+  },
+  {
+    icon: "./images/code-json.svg",
+    name: "JSON Server",
+  },
+  {
+    icon: "./images/npm-48.png",
+    name: "NPM",
+  },
+  {
+    icon: "./images/vercel.svg",
+    name: "Vercel",
   },
 ];

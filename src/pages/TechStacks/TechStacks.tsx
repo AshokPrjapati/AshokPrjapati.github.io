@@ -1,9 +1,8 @@
 import { Text, Image, Heading, Flex, Stack, Box, Grid } from "@chakra-ui/react";
 import styles from "./TechStacks.module.css";
-import { backendSkills, frontendSkills } from "../../constants/skillsData";
-import { tools } from "../../constants/constant";
 import { Skill } from "../../types/interface";
 import SectionHeader from "../../Components/SectionHeader";
+import { BE_SKILLS, FE_SKILLS, TOOLS_SKILLS } from "../../constants/skillsData";
 
 const TechStacks = () => {
   const renderSkillHeading = (label: string) => {
@@ -58,7 +57,7 @@ const TechStacks = () => {
               }}
               gap="1rem"
             >
-              {frontendSkills.map((skill, i) => renderSkillBox(skill, i))}
+              {FE_SKILLS.map((skill, i) => renderSkillBox(skill, i))}
             </Grid>
           </Stack>
           <Stack
@@ -73,7 +72,7 @@ const TechStacks = () => {
               }}
               gap="1rem"
             >
-              {backendSkills.map((skill: Skill, i: number) =>
+              {BE_SKILLS.map((skill: Skill, i: number) =>
                 renderSkillBox(skill, i)
               )}
             </Grid>
@@ -89,7 +88,7 @@ const TechStacks = () => {
             }}
             gap="30px 30px"
           >
-            {tools.map((tool, i) => renderSkillBox(tool, i))}
+            {TOOLS_SKILLS.map((tool, i) => renderSkillBox(tool, i))}
           </Grid>
         </Stack>
       </Stack>
