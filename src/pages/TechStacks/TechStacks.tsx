@@ -11,8 +11,8 @@ const TechStacks = () => {
       <Heading
         className={styles.skillCatHeading}
         fontSize={"1.3rem"}
-        border="1px solid var(--primary)"
-        color="primary"
+        border="1px solid var(--secondary)"
+        color="secondary"
       >
         {label}
       </Heading>
