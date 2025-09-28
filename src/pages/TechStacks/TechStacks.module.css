@@ -1,38 +1,36 @@
 .skillsCard {
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
-    border-radius: 1.5rem;
-    text-align: center;
-    font-size: 1rem;
-    box-shadow: 0 0 15px rgba(0, 234, 255, 0.10);
-    border: 1px solid var(--secondary);
-    background: #112240;
-    color: #eaf6fb;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.1);
+  border: 1px solid var(--primary);
+  background: var(--bg-card);
 }
 
 .skillsCard:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 20px rgba(0, 234, 255, 0.20);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.2);
 }
 
 .skillsCatContainer {
-    margin-bottom: 1rem;
-    border-radius: 1.5rem;
-    border: 1px solid var(--secondary);
-    padding: 2rem;
-    box-shadow: 0 0 20px rgba(0, 234, 255, 0.10);
-    background: #1c2541;
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--secondary);
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.1);
+  background: var(--bg-card);
 }
 
 .skillCatHeading {
-    width: max-content;
-    text-align: center;
-    margin: 1rem auto;
-    padding: .5rem 3rem;
-    font-weight: 500;
-    border-radius: 5px 50px;
-    box-shadow: 0 0 10px rgba(0, 234, 255, 0.10);
-    background: #23272f;
-    color: var(--secondary);
+  width: max-content;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 0.5rem 3rem;
+  font-weight: 500;
+  border-radius: 5px 50px;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.1);
+  background: var(--bg-card);
 }

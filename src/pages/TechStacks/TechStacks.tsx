@@ -10,8 +10,9 @@ const TechStacks = () => {
     return (
       <Heading
         className={styles.skillCatHeading}
-        bg="text.3"
         fontSize={"1.3rem"}
+        border="1px solid var(--primary)"
+        color="primary"
       >
         {label}
       </Heading>
@@ -21,7 +22,6 @@ const TechStacks = () => {
   const renderSkillBox = (skill: Skill, index: number): JSX.Element => {
     return (
       <Stack
-        bg="bg.3"
         key={index}
         className={styles.skillsCard}
         data-aos="fade-right"
@@ -30,7 +30,7 @@ const TechStacks = () => {
       >
         <Image src={skill.icon} w="30px" h="30px" m={"0 auto"} />
         <Box ml="3">
-          <Text color={"text.1"}>{skill.name}</Text>
+          <Text color={"text-primary"}>{skill.name}</Text>
         </Box>
       </Stack>
     );
