@@ -20,6 +20,10 @@ import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 import styles from "./about.module.css";
 import SectionHeader from "../../Components/SectionHeader";
 import { PROFILE_EMAIL } from "../../constants/constant";
+import { ReactComponent as CodingIcon } from "../../images/coding.svg";
+import { ReactComponent as DsaIcon } from "../../images/dsa.svg";
+import { ReactComponent as ProjectIcon } from "../../images/project.svg";
+import { ReactComponent as Github1Icon } from "../../images/github1.svg";
 
 const About: React.FC = () => {
   const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);
@@ -115,14 +119,16 @@ const About: React.FC = () => {
   };
 
   const workBox = (
-    src: string,
+    IconComponent: React.ElementType,
     title: string,
     number: string,
     stamp: string
   ) => {
     return (
       <Box className={styles.exp}>
-        <Image src={src} />
+        <Box w="50px" h="50px" m="0 auto" color="secondary">
+          {React.createElement(IconComponent)}
+        </Box>
         <Box fontWeight={"medium"}>
           <Text>{title}</Text>
           <Text>
@@ -158,10 +164,10 @@ const About: React.FC = () => {
           gap="1rem"
           color={"text.primary"}
         >
-          {workBox("/images/coding.svg", "Coding", "1400+", "Hours")}
-          {workBox("/images/dsa.svg", "DSA", "700+", "Question Solved")}
-          {workBox("/images/project.svg", "Projects", "5+", "Completed")}
-          {workBox("/images/github1.svg", "Github", "1000+", "Contributions")}
+          {workBox(CodingIcon, "Coding", "1400+", "Hours")}
+          {workBox(DsaIcon, "DSA", "700+", "Question Solved")}
+          {workBox(ProjectIcon, "Projects", "5+", "Completed")}
+          {workBox(Github1Icon, "Github", "1000+", "Contributions")}
         </Grid>
       </Stack>
     );
