@@ -28,7 +28,7 @@ const TechStacks = () => {
         data-aos-offset="150"
         data-aos-easing="ease-in-sine"
       >
-        <Icon w="30px" h="30px" m={"0 auto"} color="secondary">
+        <Icon w="50px" h="50px" m={"0 auto"} color="secondary">
           {React.createElement(skill.icon)}
         </Icon>
         <Box ml="3">
