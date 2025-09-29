@@ -127,7 +127,7 @@ const About: React.FC = () => {
   ) => {
     return (
       <Box className={styles.exp}>
-        <Icon w="60px" h="60px" m="auto" color="secondary">
+        <Icon w="50px" h="50px" m="auto" color="secondary">
           {React.createElement(IconComponent)}
         </Icon>
         <Box fontWeight={"medium"}>
