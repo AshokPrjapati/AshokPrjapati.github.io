@@ -14,6 +14,7 @@ import {
   IconButton,
   Grid,
   Stack,
+  Icon,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
@@ -126,9 +127,9 @@ const About: React.FC = () => {
   ) => {
     return (
       <Box className={styles.exp}>
-        <Box w="50px" h="50px" m="0 auto" color="secondary">
+        <Icon w="60px" h="60px" m="auto" color="secondary">
           {React.createElement(IconComponent)}
-        </Box>
+        </Icon>
         <Box fontWeight={"medium"}>
           <Text>{title}</Text>
           <Text>
