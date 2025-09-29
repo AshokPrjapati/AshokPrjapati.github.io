@@ -21,10 +21,10 @@ import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 import styles from "./about.module.css";
 import SectionHeader from "../../Components/SectionHeader";
 import { PROFILE_EMAIL } from "../../constants/constant";
-import { ReactComponent as CodingIcon } from "../../images/coding.svg";
-import { ReactComponent as DsaIcon } from "../../images/dsa.svg";
-import { ReactComponent as ProjectIcon } from "../../images/project.svg";
-import { ReactComponent as Github1Icon } from "../../images/github1.svg";
+import { ReactComponent as CodingIcon } from "../../images/techIcons/coding.svg";
+import { ReactComponent as DsaIcon } from "../../images/techIcons/dsa.svg";
+import { ReactComponent as ProjectIcon } from "../../images/techIcons/project.svg";
+import { ReactComponent as Github1Icon } from "../../images/techIcons/github1.svg";
 
 const About: React.FC = () => {
   const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);

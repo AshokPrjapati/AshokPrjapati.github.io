@@ -1,24 +1,24 @@
-import { ReactComponent as ReactIcon } from "../images/react.svg";
-import { ReactComponent as NextIcon } from "../images/next.svg";
-import { ReactComponent as JsIcon } from "../images/js.svg";
-import { ReactComponent as CssIcon } from "../images/css.svg";
-import { ReactComponent as HtmlIcon } from "../images/html.svg";
-import { ReactComponent as TsIcon } from "../images/typescript.svg";
-import { ReactComponent as ReduxIcon } from "../images/redux.svg";
-import { ReactComponent as ChakraIcon } from "../images/chakra.svg";
-import { ReactComponent as RouterIcon } from "../images/react-router-dom.svg";
-import { ReactComponent as MongoIcon } from "../images/mongo.svg";
-import { ReactComponent as ExpressIcon } from "../images/express.svg";
-import { ReactComponent as NodeIcon } from "../images/node-js.svg";
-import { ReactComponent as JwtIcon } from "../images/jwt.svg";
-import { ReactComponent as GitIcon } from "../images/git.svg";
-import { ReactComponent as GithubIcon } from "../images/github.svg";
-import { ReactComponent as VsCodeIcon } from "../images/vs-code.svg";
-import { ReactComponent as CypressIcon } from "../images/cypress.svg";
-import { ReactComponent as NetlifyIcon } from "../images/netlify.svg";
-import { ReactComponent as JsonServerIcon } from "../images/code-json.svg";
+import { ReactComponent as ReactIcon } from "../images/techIcons/react.svg";
+import { ReactComponent as NextIcon } from "../images/techIcons/next.svg";
+import { ReactComponent as JsIcon } from "../images/techIcons/js.svg";
+import { ReactComponent as CssIcon } from "../images/techIcons/css.svg";
+import { ReactComponent as HtmlIcon } from "../images/techIcons/html.svg";
+import { ReactComponent as TsIcon } from "../images/techIcons/typescript.svg";
+import { ReactComponent as ReduxIcon } from "../images/techIcons/redux.svg";
+import { ReactComponent as ChakraIcon } from "../images/techIcons/chakra.svg";
+import { ReactComponent as RouterIcon } from "../images/techIcons/react-router-dom.svg";
+import { ReactComponent as MongoIcon } from "../images/techIcons/mongo.svg";
+import { ReactComponent as ExpressIcon } from "../images/techIcons/express.svg";
+import { ReactComponent as NodeIcon } from "../images/techIcons/node-js.svg";
+import { ReactComponent as JwtIcon } from "../images/techIcons/jwt.svg";
+import { ReactComponent as GitIcon } from "../images/techIcons/git.svg";
+import { ReactComponent as GithubIcon } from "../images/techIcons/github.svg";
+import { ReactComponent as VsCodeIcon } from "../images/techIcons/vs-code.svg";
+import { ReactComponent as CypressIcon } from "../images/techIcons/cypress.svg";
+import { ReactComponent as NetlifyIcon } from "../images/techIcons/netlify.svg";
+import { ReactComponent as JsonServerIcon } from "../images/techIcons/code-json.svg";
 // NpmIcon import removed, PNG cannot be imported as ReactComponent
-import { ReactComponent as VercelIcon } from "../images/vercel.svg";
+import { ReactComponent as VercelIcon } from "../images/techIcons/vercel.svg";
 
 export const FE_SKILLS = [
   { icon: ReactIcon, name: "React.js" },

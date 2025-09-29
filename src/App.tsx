@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ErrorBoundary from "./Components/ErrorBoundary";
-import { Box, Container, useColorMode } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./pages/Hero/Hero";
@@ -15,8 +15,6 @@ import { ModuleName, MODULES_DATA } from "./constants/constant";
 import { ModuleItem } from "./types/interface";
 
 const App: React.FC = () => {
-  const { colorMode } = useColorMode();
-
   useEffect(() => {
     AOS.init();
   }, []);
