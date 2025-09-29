@@ -12,12 +12,7 @@ export interface TabOptProps {
 }
 
 export interface Skill {
-  icon: string;
-  name: string;
-}
-
-export interface Tool {
-  icon: string;
+  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   name: string;
 }
 

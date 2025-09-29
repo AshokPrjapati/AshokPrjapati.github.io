@@ -1,4 +1,5 @@
-import { Text, Image, Heading, Flex, Stack, Box, Grid } from "@chakra-ui/react";
+import React from "react";
+import { Text, Heading, Flex, Stack, Box, Grid, Icon } from "@chakra-ui/react";
 import styles from "./TechStacks.module.css";
 import { Skill } from "../../types/interface";
 import SectionHeader from "../../Components/SectionHeader";
@@ -27,7 +28,9 @@ const TechStacks = () => {
         data-aos-offset="150"
         data-aos-easing="ease-in-sine"
       >
-        <Image src={skill.icon} w="30px" h="30px" m={"0 auto"} />
+        <Icon w="30px" h="30px" m={"0 auto"} color="secondary">
+          {React.createElement(skill.icon)}
+        </Icon>
         <Box ml="3">
           <Text color={"text-primary"}>{skill.name}</Text>
         </Box>
@@ -57,7 +60,7 @@ const TechStacks = () => {
               }}
               gap="1rem"
             >
-              {FE_SKILLS.map((skill, i) => renderSkillBox(skill, i))}
+              {FE_SKILLS.map((skill: Skill, i) => renderSkillBox(skill, i))}
             </Grid>
           </Stack>
           <Stack
@@ -88,7 +91,7 @@ const TechStacks = () => {
             }}
             gap="30px 30px"
           >
-            {TOOLS_SKILLS.map((tool, i) => renderSkillBox(tool, i))}
+            {TOOLS_SKILLS.map((tool: Skill, i) => renderSkillBox(tool, i))}
           </Grid>
         </Stack>
       </Stack>
