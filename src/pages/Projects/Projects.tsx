@@ -10,6 +10,7 @@ import {
   Button,
   Link,
   Grid,
+  Flex,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import projectData from "../../constants/projectData";
@@ -28,6 +29,7 @@ const Projects = () => {
           rounded={"md"}
           p={4}
           overflow={"hidden"}
+          borderRadius={"20px"}
         >
           <Box
             h={"210px"}
@@ -135,15 +137,16 @@ const Projects = () => {
   return (
     <>
       <SectionHeader label="Projects" />
-      <Grid
-        templateColumns={{ base: "repeat(1,1fr)", lg: "repeat(2,1fr)" }}
-        justifyItems={"center"}
-        alignItems={"center"}
+      <Flex
+        justifyContent="center"
+        alignItems="center"
         gap={{ base: 8, md: 10 }}
         py={{ base: 18, md: 25 }}
+        flexWrap="wrap"
+        m="auto"
       >
         {projectData.map((project) => renderProjectContent(project))}
-      </Grid>
+      </Flex>
     </>
   );
 };
