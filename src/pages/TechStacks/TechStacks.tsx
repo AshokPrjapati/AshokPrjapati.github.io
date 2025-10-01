@@ -34,7 +34,7 @@ const TechStacks = () => {
   };
 
   return (
-    <Box pb="60px" userSelect="none">
+    <Box py={10} userSelect="none">
       <SectionHeader label="Skills" />
       <Stack spacing="1rem" mt="3rem">
         <Flex

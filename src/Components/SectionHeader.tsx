@@ -11,7 +11,6 @@ const SectionHeader = (props: HeadingProps) => {
       w="max-content"
       m="auto"
       textAlign="center"
-      p="30px 10px 10px 10px"
       color="text-primary"
       fontWeight="500"
       borderBottom="3px solid var(--secondary)"

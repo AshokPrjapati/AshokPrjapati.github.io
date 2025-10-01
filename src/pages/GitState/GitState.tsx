@@ -60,11 +60,11 @@ function GitState() {
   };
 
   return (
-    <>
+    <Box py={10}>
       <SectionHeader label="Git Stats" />
       <Box data-aos="zoom-out">{renderGitCalender()}</Box>
       {renderGitStates()}
-    </>
+    </Box>
   );
 }
 

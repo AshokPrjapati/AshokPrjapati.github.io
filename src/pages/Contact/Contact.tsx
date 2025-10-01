@@ -365,7 +365,7 @@ export default function Contact() {
  */
 
   return (
-    <Box id="contact" justifyContent="center" alignItems="center">
+    <Box py={10} id="contact" justifyContent="center" alignItems="center">
       <SectionHeader label="Contact Me" />
       {renderCard()}
       {renderFooter()}

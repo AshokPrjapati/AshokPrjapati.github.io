@@ -175,7 +175,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <Box p="0px 10px 40px 10px" userSelect="none">
+    <Box py={10} userSelect="none">
       <SectionHeader label="About" />
       <Flex
         direction={{ base: "column" as const, lg: "row" as const }}

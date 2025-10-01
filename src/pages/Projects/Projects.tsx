@@ -124,19 +124,18 @@ const Projects = () => {
   };
 
   return (
-    <>
+    <Box py={10}>
       <SectionHeader label="Projects" />
       <Flex
         justifyContent="center"
         alignItems="center"
-        gap={8}
-        py={20}
+        gap={10}
         flexWrap="wrap"
         m="auto"
       >
         {projectData.map((project) => renderProjectContent(project))}
       </Flex>
-    </>
+    </Box>
   );
 };
 
