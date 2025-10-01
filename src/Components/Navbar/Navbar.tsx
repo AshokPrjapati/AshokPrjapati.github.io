@@ -10,6 +10,7 @@ import {
 import React from "react";
 import { NavLink } from "react-router-dom";
 import NavButton from "./NavButton";
+import styles from "./Navbar.module.css";
 
 const Navbar: React.FC = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -91,13 +92,17 @@ const Navbar: React.FC = () => {
     <Flex
       maxW="100%"
       as="nav"
-      px={{ base: 5 as number, md: 10 as number }}
+      className={styles.navbar}
+      px={{ base: 5, md: 10 }}
       shadow="lg"
       justify="space-between"
       align="center"
       height="65px"
       width="100%"
       zIndex={10}
+      bg="bg-surface"
+      borderBottom="1px solid"
+      borderColor="border-primary"
     >
       {renderPortfolioName()}
       {renderMenuButtons()}
