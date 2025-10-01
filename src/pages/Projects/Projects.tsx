@@ -20,35 +20,26 @@ import SectionHeader from "../../Components/SectionHeader";
 const Projects = () => {
   const renderProjectContent = (project: ProjectData) => {
     return (
-      <Center py={6} key={project.id}>
-        <Box
-          key={project.id}
-          maxW={"445px"}
-          bg="bg-card"
-          boxShadow={"2xl"}
-          rounded={"md"}
-          p={4}
-          overflow={"hidden"}
-          borderRadius={"20px"}
-        >
-          <Box
+      <Center
+        py={6}
+        key={project.id}
+        bg="bg-card"
+        maxW={"445px"}
+        boxShadow={"2xl"}
+        rounded={"md"}
+        overflow={"hidden"}
+        borderRadius={"20px 5px"}
+      >
+        <Stack gap={4}>
+          <Image
             h={"210px"}
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            mt={-6}
-            mx={-6}
-            mb={6}
-          >
-            <Image
-              h={"210px"}
-              src={project.src}
-              alt={"project-preview"}
-              data-aos="fade-up"
-              objectFit={"cover"}
-              data-aos-anchor-placement="bottom-bottom"
-            />
-          </Box>
+            src={project.src}
+            alt={"project-preview"}
+            data-aos="fade-up"
+            objectFit={"cover"}
+            data-aos-anchor-placement="bottom-bottom"
+            borderRadius={"20px 5px"}
+          />
           <Stack>
             <Heading
               color="text-primary"
@@ -81,7 +72,6 @@ const Projects = () => {
             </Text>
             <Text
               color={"text-secondary"}
-              pb={"15px"}
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
             >
@@ -129,7 +119,7 @@ const Projects = () => {
               </Button>
             </Link>
           </Box>
-        </Box>
+        </Stack>
       </Center>
     );
   };

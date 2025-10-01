@@ -8,12 +8,7 @@ import { BE_SKILLS, FE_SKILLS, TOOLS_SKILLS } from "../../constants/skillsData";
 const TechStacks = () => {
   const renderSkillHeading = (label: string) => {
     return (
-      <Heading
-        className={styles.skillCatHeading}
-        fontSize={"1.3rem"}
-        border="1px solid var(--secondary)"
-        color="secondary"
-      >
+      <Heading className={styles.skillCatHeading} fontSize={"1.3rem"}>
         {label}
       </Heading>
     );
@@ -32,7 +27,7 @@ const TechStacks = () => {
           {React.createElement(skill.icon)}
         </Icon>
         <Box ml="3">
-          <Text color={"text-primary"}>{skill.name}</Text>
+          <Text color={"text-secondary"}>{skill.name}</Text>
         </Box>
       </Stack>
     );
