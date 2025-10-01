@@ -23,12 +23,20 @@ export const getRootCssVariable = (colorMode?: string) => {
       colorMode === "dark" ? COLORS.dark.bgCard : COLORS.light.bgCard,
     "--text-primary":
       colorMode === "dark" ? COLORS.dark.textPrimary : COLORS.light.textPrimary,
+    "--text-secondary":
+      colorMode === "dark"
+        ? COLORS.dark.textSecondary
+        : COLORS.light.textSecondary,
     "--text-muted":
       colorMode === "dark" ? COLORS.dark.textMuted : COLORS.light.textMuted,
     "--border-primary":
       colorMode === "dark"
         ? COLORS.dark.borderPrimary
         : COLORS.light.borderPrimary,
+    "--border-secondary":
+      colorMode === "dark"
+        ? COLORS.dark.borderSecondary
+        : COLORS.light.borderSecondary,
     "--accent": colorMode === "dark" ? COLORS.dark.accent : COLORS.light.accent,
     "--error": colorMode === "dark" ? COLORS.dark.error : COLORS.light.error,
     "--shadow-primary":

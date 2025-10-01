@@ -8,9 +8,10 @@ const theme = extendTheme({
     useSystemColorMode: true,
   },
   fonts: {
-    heading: "Montserrat, Inter, Roboto Mono, sans-serif",
-    body: "Inter, Roboto Mono, sans-serif",
-    mono: "Roboto Mono, monospace",
+    heading:
+      "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    body: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    mono: "'JetBrains Mono', 'Fira Code', 'SF Mono', monospace",
   },
   colors: {
     brand: {
@@ -50,6 +51,10 @@ const theme = extendTheme({
         _light: COLORS.light.textPrimary,
         _dark: COLORS.dark.textPrimary,
       },
+      secondary: {
+        _light: COLORS.light.textSecondary,
+        _dark: COLORS.dark.textSecondary,
+      },
       muted: {
         _light: COLORS.light.textMuted,
         _dark: COLORS.dark.textMuted,
@@ -59,6 +64,10 @@ const theme = extendTheme({
       primary: {
         _light: COLORS.light.borderPrimary,
         _dark: COLORS.dark.borderPrimary,
+      },
+      secondary: {
+        _light: COLORS.light.borderSecondary,
+        _dark: COLORS.dark.borderSecondary,
       },
     },
     shadow: {
@@ -78,9 +87,27 @@ const theme = extendTheme({
   styles: {
     global: (props: any) => ({
       ":root": getRootCssVariable(props.colorMode),
+      html: {
+        scrollBehavior: "smooth",
+        fontSize: "16px",
+      },
       body: {
         bg: "bg-primary",
         color: "text-primary",
+        lineHeight: "base",
+        fontFeatureSettings: '"kern" 1, "liga" 1',
+        textRendering: "optimizeLegibility",
+        WebkitFontSmoothing: "antialiased",
+        MozOsxFontSmoothing: "grayscale",
+      },
+      "*": {
+        margin: 0,
+        padding: 0,
+        boxSizing: "border-box",
+      },
+      "::selection": {
+        bg: "primary",
+        color: "white",
       },
     }),
   },

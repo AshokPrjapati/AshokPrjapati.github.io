@@ -60,7 +60,7 @@ const Projects = () => {
               {project.name}
             </Heading>
             <Text
-              color={"text.secondary"}
+              color={"text-secondary"}
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
               className="lineClampDesc"
