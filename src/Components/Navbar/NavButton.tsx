@@ -14,21 +14,21 @@ import { getResumeDownloadLink } from "../../utils/commonUtils";
 
 const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const commonButtonCss = {
+    w: { base: "100%", md: "auto", lg: "auto" },
+    variant: "ghost",
+    _hover: {
+      bg: "secondary",
+      color: "background",
+      shadow: "0px 0px 10px var(--color-secondary)",
+    },
+    zIndex: 99,
+    color: "secondary",
+  };
 
   const renderNavButton = (label: string) => {
     return (
-      <Button
-        w={{ base: "100%", md: "auto", lg: "auto" }}
-        variant="ghost"
-        _hover={{
-          bg: "secondary",
-          color: "background",
-          shadow: "0px 0px 10px var(--color-secondary)",
-        }}
-        onClick={toggle}
-        zIndex={99}
-        color="secondary"
-      >
+      <Button {...commonButtonCss} onClick={toggle}>
         {label}
       </Button>
     );
@@ -70,6 +70,21 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
     );
   };
 
+  const renderThemeToggleButton = () => {
+    return (
+      <Button
+        {...commonButtonCss}
+        onClick={toggleColorMode}
+        colorScheme={colorMode === "light" ? "cyan" : "blue"}
+        aria-label={
+          colorMode === "light" ? "Switch to dark mode" : "Switch to light mode"
+        }
+      >
+        {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+      </Button>
+    );
+  };
+
   return (
     <Flex
       direction={{ base: "column", lg: "row" }}
@@ -81,20 +96,8 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
       borderRadius="10px"
     >
       {MODULES_DATA.map((module, index) => renderModuleWithLink(module, index))}
-
       {renderResumeButton()}
-      <Button
-        size="sm"
-        onClick={toggleColorMode}
-        colorScheme={colorMode === "light" ? "cyan" : "blue"}
-        variant="outline"
-        aria-label={
-          colorMode === "light" ? "Switch to dark mode" : "Switch to light mode"
-        }
-        mt={1}
-      >
-        {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-      </Button>
+      {renderThemeToggleButton()}
     </Flex>
   );
 };
