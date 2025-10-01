@@ -21,7 +21,6 @@ const Projects = () => {
   const renderProjectContent = (project: ProjectData) => {
     return (
       <Center
-        py={6}
         key={project.id}
         bg="bg-card"
         maxW={"445px"}
@@ -30,7 +29,7 @@ const Projects = () => {
         overflow={"hidden"}
         borderRadius={"20px 5px"}
       >
-        <Stack gap={4}>
+        <Stack gap={4} p={4}>
           <Image
             h={"210px"}
             src={project.src}
