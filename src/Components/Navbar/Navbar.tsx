@@ -10,7 +10,6 @@ import {
 import React from "react";
 import { NavLink } from "react-router-dom";
 import NavButton from "./NavButton";
-import styles from "./Navbar.module.css";
 
 const Navbar: React.FC = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -73,10 +72,13 @@ const Navbar: React.FC = () => {
       <Slide direction="bottom">
         <Box
           w="90%"
-          borderRadius="5px"
+          borderRadius="lg"
           m="auto"
-          bg="rgba(0,0,0,0.5)"
-          backdropFilter="blur(10px)"
+          bg="bg-surface"
+          backdropFilter="blur(20px)"
+          border="1px solid"
+          borderColor="border-primary"
+          boxShadow="shadow-primary"
           display={{ base: "auto", lg: "none" }}
         >
           <NavButton toggle={onToggle} />
@@ -90,7 +92,6 @@ const Navbar: React.FC = () => {
       maxW="100%"
       as="nav"
       px={{ base: 5 as number, md: 10 as number }}
-      className={String(styles.sticky)}
       shadow="lg"
       justify="space-between"
       align="center"

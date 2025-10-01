@@ -140,8 +140,8 @@ const Projects = () => {
       <Flex
         justifyContent="center"
         alignItems="center"
-        gap={{ base: 8, md: 10 }}
-        py={{ base: 18, md: 25 }}
+        gap={8}
+        py={20}
         flexWrap="wrap"
         m="auto"
       >

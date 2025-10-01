@@ -7,7 +7,6 @@ import {
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
 import React from "react";
-import styles from "./Navbar.module.css";
 import { ModuleItem, TabOptProps } from "../../types/interface";
 import { MODULES_DATA } from "../../constants/constant";
 import { getResumeDownloadLink } from "../../utils/commonUtils";
@@ -16,14 +15,16 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const commonButtonCss = {
     w: { base: "100%", md: "auto", lg: "auto" },
-    variant: "ghost",
+    variant: "ghost" as const,
+    size: "md" as const,
     _hover: {
-      bg: "secondary",
-      color: "background",
-      shadow: "0px 0px 10px var(--color-secondary)",
+      bg: "primary",
+      color: "white",
+      transform: "translateY(-1px)",
     },
-    zIndex: 99,
-    color: "secondary",
+    transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+    borderRadius: "md",
+    fontWeight: "500",
   };
 
   const renderNavButton = (label: string) => {
@@ -40,8 +41,8 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
   ): JSX.Element => {
     return (
       <Link
-        className={styles.default}
-        activeClass={styles.active}
+        className=""
+        activeClass=""
         to={module.path}
         spy={true}
         smooth={true}
@@ -58,7 +59,6 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
     const downloadLink = getResumeDownloadLink();
     return (
       <ChakraLink
-        className={styles.default}
         href={"/assets/Ashok-Kumar-Resume.pdf"}
         isExternal={true}
         onClick={() => {
@@ -75,7 +75,6 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
       <Button
         {...commonButtonCss}
         onClick={toggleColorMode}
-        colorScheme={colorMode === "light" ? "cyan" : "blue"}
         aria-label={
           colorMode === "light" ? "Switch to dark mode" : "Switch to light mode"
         }
@@ -90,10 +89,10 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
       direction={{ base: "column", lg: "row" }}
       gap={2}
       textAlign="center"
-      p="10px 15px"
+      p={4}
       width="90%"
       m="auto"
-      borderRadius="10px"
+      borderRadius="lg"
     >
       {MODULES_DATA.map((module, index) => renderModuleWithLink(module, index))}
       {renderResumeButton()}
