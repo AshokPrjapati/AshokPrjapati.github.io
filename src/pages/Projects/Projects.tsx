@@ -124,14 +124,15 @@ const Projects = () => {
   };
 
   return (
-    <Box py={10}>
+    <Box py={10} w="100%" maxW="100%" overflow="hidden">
       <SectionHeader label="Projects" />
       <Flex
         justifyContent="center"
         alignItems="center"
-        gap={10}
+        gap="2.5rem"
         flexWrap="wrap"
         m="auto"
+        maxW="100%"
       >
         {projectData.map((project) => renderProjectContent(project))}
       </Flex>

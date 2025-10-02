@@ -39,8 +39,8 @@ const App: React.FC = () => {
     const bg = index % 2 === 0 ? "bg-primary" : "bg-surface";
 
     return (
-      <Box key={index} id={path} bg={bg}>
-        <Container maxW="8xl" minH="100vh">
+      <Box key={index} id={path} bg={bg} w="100%">
+        <Container maxW="8xl" minH="100vh" w="100%">
           <Component />
         </Container>
       </Box>

@@ -8,7 +8,7 @@ import { BE_SKILLS, FE_SKILLS, TOOLS_SKILLS } from "../../constants/skillsData";
 const TechStacks = () => {
   const renderSkillHeading = (label: string) => {
     return (
-      <Heading className={styles.skillCatHeading} fontSize={"1.3rem"}>
+      <Heading className={styles.skillCatHeading} fontSize="xl">
         {label}
       </Heading>
     );
@@ -34,9 +34,9 @@ const TechStacks = () => {
   };
 
   return (
-    <Box py={10} userSelect="none">
+    <Box py={10} userSelect="none" w="100%" overflow="hidden">
       <SectionHeader label="Skills" />
-      <Stack spacing="1rem" mt="3rem">
+      <Box mt="3rem">
         <Flex
           direction={{ base: "column", md: "row" }}
           justify={"space-between"}
@@ -76,7 +76,7 @@ const TechStacks = () => {
             </Grid>
           </Stack>
         </Flex>
-        <Stack className={styles.skillsCatContainer}>
+        <Stack className={styles.skillsCatContainer} mt="1rem">
           {renderSkillHeading("Tools")}
           <Grid
             gridTemplateColumns={{
@@ -89,7 +89,7 @@ const TechStacks = () => {
             {TOOLS_SKILLS.map((tool: Skill, i) => renderSkillBox(tool, i))}
           </Grid>
         </Stack>
-      </Stack>
+      </Box>
     </Box>
   );
 };

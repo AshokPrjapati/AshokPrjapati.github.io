@@ -128,13 +128,15 @@ const Hero: React.FC = () => {
 
   return (
     <Stack
-      spacing={8 as number}
+      spacing={8}
       py="1rem"
       direction={["column-reverse", "row"]}
       minH="100vh"
       justifyContent="center"
       alignItems="center"
-      gap={20}
+      gap={{ base: 8, md: 12, lg: 20 }}
+      maxW="100%"
+      overflow="hidden"
     >
       {renderIntroPart()}
       {renderProfileImage()}

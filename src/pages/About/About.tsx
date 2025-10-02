@@ -175,7 +175,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <Box py={10} userSelect="none">
+    <Box py={10} userSelect="none" w="100%" maxW="100%" overflow="hidden">
       <SectionHeader label="About" />
       <Flex
         direction={{ base: "column" as const, lg: "row" as const }}
@@ -185,6 +185,8 @@ const About: React.FC = () => {
         }}
         alignItems={{ base: "center" as const, lg: "flex-start" as const }}
         gap="2rem"
+        w="100%"
+        maxW="100%"
       >
         {renderExperienceCard()}
         {renderAboutCard()}
