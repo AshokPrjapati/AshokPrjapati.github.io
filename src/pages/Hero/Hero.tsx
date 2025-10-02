@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import SIcons from "./SIcons";
 import { getResumeDownloadLink } from "../../utils/commonUtils";
+import { RESUME_DRIVE_LINK } from "../../constants/constant";
 
 const Hero: React.FC = () => {
   const renderTypeWriterText = () => {
@@ -56,7 +57,7 @@ const Hero: React.FC = () => {
       <Box textAlign={{ base: "center", md: "left" }}>
         <Link
           className="button"
-          href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
+          href={RESUME_DRIVE_LINK}
           isExternal
           _hover={{
             bg: "secondary",

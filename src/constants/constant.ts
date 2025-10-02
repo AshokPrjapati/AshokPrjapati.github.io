@@ -41,6 +41,9 @@ export const MODULES_DATA = [
   },
 ];
 
+export const RESUME_DRIVE_LINK =
+  "https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing";
+
 export const gitRepoLanguagesStates =
   "https://github-readme-stats.vercel.app/api/top-langs/?username=AshokPrjapati&theme=radical&langs_count=8";
 export const gitContributeStates =
