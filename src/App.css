@@ -39,22 +39,6 @@ html {
   position: relative;
 }
 
-#home::before,
-#skills::before,
-#gitState::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
-}
-
 #projects,
 #about,
 #contact {
@@ -62,21 +46,6 @@ html {
   position: relative;
 }
 
-#projects::before,
-#about::before,
-#contact::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 30% 70%, rgba(6, 182, 212, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
-}
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
