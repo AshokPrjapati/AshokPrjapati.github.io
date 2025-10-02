@@ -180,6 +180,7 @@ export default function Contact() {
         isRound
         mr="1rem"
         p="20px"
+        w="100%"
       />
     );
   };
@@ -206,12 +207,13 @@ export default function Contact() {
       <Flex
         align="center"
         justify="space-between"
-        alignItems={"center"}
+        alignItems="center"
         direction={{ base: "column", md: "row" }}
+        w="100%"
       >
         <Flex
           fontWeight={"medium"}
-          justifyContent="flex-start"
+          justifyContent="space-between"
           alignItems={"center"}
         >
           <Tooltip
