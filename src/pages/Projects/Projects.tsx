@@ -18,10 +18,42 @@ import { ProjectData } from "../../types/interface";
 import SectionHeader from "../../Components/SectionHeader";
 
 const Projects = () => {
+  const renderProjectActionButtons = (
+    link: string,
+    icon: React.ReactElement<any, string | React.JSXElementConstructor<any>>,
+    label: string
+  ) => {
+    return (
+      <Link href={link} isExternal _hover={{ textDecor: "none" }}>
+        <Button
+          leftIcon={icon}
+          rounded={"full"}
+          size={"lg"}
+          fontWeight={"normal"}
+          px={6}
+          bg="secondary"
+        >
+          {label}
+        </Button>
+      </Link>
+    );
+  };
+
   const renderProjectContent = (project: ProjectData) => {
+    const {
+      id,
+      name,
+      description,
+      techStack,
+      detail,
+      src,
+      sourceCode,
+      liveLink,
+    } = project;
+
     return (
       <Center
-        key={project.id}
+        key={id}
         bg="bg-card"
         maxW={"445px"}
         boxShadow={"2xl"}
@@ -32,7 +64,7 @@ const Projects = () => {
         <Stack gap={4} p={4}>
           <Image
             h={"210px"}
-            src={project.src}
+            src={src}
             alt={"project-preview"}
             data-aos="fade-up"
             objectFit={"cover"}
@@ -47,7 +79,7 @@ const Projects = () => {
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
             >
-              {project.name}
+              {name}
             </Heading>
             <Text
               color={"text-secondary"}
@@ -55,7 +87,7 @@ const Projects = () => {
               data-aos-anchor-placement="bottom-bottom"
               className="lineClampDesc"
             >
-              {project.description}
+              {description}
             </Text>
             <Text
               color={"secondary"}
@@ -67,57 +99,33 @@ const Projects = () => {
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
             >
-              {project.techStack}
+              {techStack}
             </Text>
             <Text
               color={"text-secondary"}
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
             >
-              {project.detail}
+              {detail}
             </Text>
           </Stack>
           <Divider />
-          <Box
+          <Flex
             mt={6}
-            className="between-center"
-            zIndex={1}
+            direction={{ base: "column", md: "row" }}
+            justifyContent={{ base: "center", md: "space-between" }}
+            gap={6}
+            alignItems={{ base: "center", md: "center" }}
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
           >
-            <Link
-              href={project.sourceCode}
-              isExternal
-              _hover={{ textDecor: "none" }}
-            >
-              <Button
-                leftIcon={<FaGithub />}
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"normal"}
-                px={6}
-                bg="secondary"
-              >
-                Source Code
-              </Button>
-            </Link>
-            <Link
-              href={project.liveLink}
-              isExternal
-              _hover={{ textDecor: "none" }}
-            >
-              <Button
-                leftIcon={<ExternalLinkIcon />}
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"normal"}
-                px={6}
-                bg="secondary"
-              >
-                Live
-              </Button>
-            </Link>
-          </Box>
+            {renderProjectActionButtons(
+              sourceCode,
+              <FaGithub />,
+              "Source Code"
+            )}
+            {renderProjectActionButtons(liveLink, <ExternalLinkIcon />, "Live")}
+          </Flex>
         </Stack>
       </Center>
     );

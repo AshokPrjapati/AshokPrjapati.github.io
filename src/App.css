@@ -153,15 +153,7 @@ html {
   line-height: 1.6;
 }
 
-/* Layout Utilities */
-.between-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+
 
 /* Focus Styles */
 :focus-visible {
@@ -201,11 +193,6 @@ html {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  .between-center {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
   .button {
     justify-content: center;
     width: 100%;
