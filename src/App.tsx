@@ -40,7 +40,7 @@ const App: React.FC = () => {
 
     return (
       <Box key={index} id={path} bg={bg} w="100%">
-        <Container maxW="8xl" minH="100vh" w="100%" overflowX="hidden">
+        <Container maxW="8xl" minH="max-content" w="100%" overflowX="hidden">
           <Component />
         </Container>
       </Box>

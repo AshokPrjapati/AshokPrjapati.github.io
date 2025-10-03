@@ -77,5 +77,30 @@ export const getRootCssVariable = (colorMode?: string) => {
       colorMode === "dark"
         ? COLORS.dark.heroCardShadow
         : COLORS.light.heroCardShadow,
+    // About Section
+    "--about-card-bg":
+      colorMode === "dark" ? COLORS.dark.aboutCardBg : COLORS.light.aboutCardBg,
+    "--about-card-shadow":
+      colorMode === "dark"
+        ? COLORS.dark.aboutCardShadow
+        : COLORS.light.aboutCardShadow,
+    "--about-card-hover-shadow":
+      colorMode === "dark"
+        ? COLORS.dark.aboutCardHoverShadow
+        : COLORS.light.aboutCardHoverShadow,
+    "--about-stat-bg":
+      colorMode === "dark" ? COLORS.dark.aboutStatBg : COLORS.light.aboutStatBg,
+    "--about-stat-shadow":
+      colorMode === "dark"
+        ? COLORS.dark.aboutStatShadow
+        : COLORS.light.aboutStatShadow,
+    "--about-stat-hover-shadow":
+      colorMode === "dark"
+        ? COLORS.dark.aboutStatHoverShadow
+        : COLORS.light.aboutStatHoverShadow,
+    "--about-gradient-bg":
+      colorMode === "dark"
+        ? COLORS.dark.aboutGradientBg
+        : COLORS.light.aboutGradientBg,
   };
 };

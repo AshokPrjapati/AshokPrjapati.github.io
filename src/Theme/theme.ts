@@ -51,6 +51,35 @@ const theme = extendTheme({
         _light: COLORS.light.heroCardShadow,
         _dark: COLORS.dark.heroCardShadow,
       },
+      // About Section
+      aboutCardBg: {
+        _light: COLORS.light.aboutCardBg,
+        _dark: COLORS.dark.aboutCardBg,
+      },
+      aboutCardShadow: {
+        _light: COLORS.light.aboutCardShadow,
+        _dark: COLORS.dark.aboutCardShadow,
+      },
+      aboutCardHoverShadow: {
+        _light: COLORS.light.aboutCardHoverShadow,
+        _dark: COLORS.dark.aboutCardHoverShadow,
+      },
+      aboutStatBg: {
+        _light: COLORS.light.aboutStatBg,
+        _dark: COLORS.dark.aboutStatBg,
+      },
+      aboutStatShadow: {
+        _light: COLORS.light.aboutStatShadow,
+        _dark: COLORS.dark.aboutStatShadow,
+      },
+      aboutStatHoverShadow: {
+        _light: COLORS.light.aboutStatHoverShadow,
+        _dark: COLORS.dark.aboutStatHoverShadow,
+      },
+      aboutGradientBg: {
+        _light: COLORS.light.aboutGradientBg,
+        _dark: COLORS.dark.aboutGradientBg,
+      },
     },
     bg: {
       primary: {

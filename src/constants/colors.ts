@@ -27,6 +27,14 @@ export const COLORS = {
     heroGradientBg: "linear(135deg, #667eea 0%, #764ba2 100%)",
     heroProfileShadow: "0 20px 60px rgba(99, 102, 241, 0.3)",
     heroCardShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
+    // About Section
+    aboutCardBg: "#ffffff",
+    aboutCardShadow: "0 8px 32px rgba(99, 102, 241, 0.12)",
+    aboutCardHoverShadow: "0 16px 48px rgba(99, 102, 241, 0.2)",
+    aboutStatBg: "#f8fafc",
+    aboutStatShadow: "0 4px 20px rgba(99, 102, 241, 0.08)",
+    aboutStatHoverShadow: "0 8px 30px rgba(99, 102, 241, 0.15)",
+    aboutGradientBg: "linear(135deg, #667eea 0%, #764ba2 100%)",
   },
   dark: {
     primary: "#818cf8",
@@ -56,6 +64,14 @@ export const COLORS = {
     heroGradientBg: "linear(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
     heroProfileShadow: "0 20px 60px rgba(129, 140, 248, 0.4)",
     heroCardShadow: "0 10px 40px rgba(0, 0, 0, 0.3)",
+    // About Section
+    aboutCardBg: "#2d3748",
+    aboutCardShadow: "0 8px 32px rgba(0, 0, 0, 0.4)",
+    aboutCardHoverShadow: "0 16px 48px rgba(129, 140, 248, 0.3)",
+    aboutStatBg: "#1a202c",
+    aboutStatShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
+    aboutStatHoverShadow: "0 8px 30px rgba(129, 140, 248, 0.2)",
+    aboutGradientBg: "linear(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
   },
 };
 
@@ -161,5 +177,34 @@ export const SEMANTIC_COLORS_TOKENS = {
   "hero-card-shadow": {
     default: "brand.heroCardShadow._light",
     _dark: "brand.heroCardShadow._dark",
+  },
+  // About Section
+  "about-card-bg": {
+    default: "brand.aboutCardBg._light",
+    _dark: "brand.aboutCardBg._dark",
+  },
+  "about-card-shadow": {
+    default: "brand.aboutCardShadow._light",
+    _dark: "brand.aboutCardShadow._dark",
+  },
+  "about-card-hover-shadow": {
+    default: "brand.aboutCardHoverShadow._light",
+    _dark: "brand.aboutCardHoverShadow._dark",
+  },
+  "about-stat-bg": {
+    default: "brand.aboutStatBg._light",
+    _dark: "brand.aboutStatBg._dark",
+  },
+  "about-stat-shadow": {
+    default: "brand.aboutStatShadow._light",
+    _dark: "brand.aboutStatShadow._dark",
+  },
+  "about-stat-hover-shadow": {
+    default: "brand.aboutStatHoverShadow._light",
+    _dark: "brand.aboutStatHoverShadow._dark",
+  },
+  "about-gradient-bg": {
+    default: "brand.aboutGradientBg._light",
+    _dark: "brand.aboutGradientBg._dark",
   },
 };
