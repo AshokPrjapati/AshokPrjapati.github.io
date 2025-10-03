@@ -10,6 +10,7 @@ import React from "react";
 import { ModuleItem, TabOptProps } from "../../types/interface";
 import { MODULES_DATA } from "../../constants/constant";
 import { getResumeDownloadLink } from "../../utils/commonUtils";
+import styles from "./Navbar.module.css";
 
 const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -49,7 +50,7 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
     return (
       <Link
         className=""
-        activeClass=""
+        activeClass={styles.activeNavButton}
         to={module.path}
         spy={true}
         smooth={true}
