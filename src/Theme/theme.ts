@@ -31,54 +31,13 @@ const theme = extendTheme({
         _light: COLORS.light.error,
         _dark: COLORS.dark.error,
       },
-      gradient: {
-        _light: COLORS.light.gradient,
-        _dark: COLORS.dark.gradient,
+      success: {
+        _light: COLORS.light.success,
+        _dark: COLORS.dark.success,
       },
-      gradientBg: {
-        _light: COLORS.light.gradientBg,
-        _dark: COLORS.dark.gradientBg,
-      },
-      heroGradientBg: {
-        _light: COLORS.light.heroGradientBg,
-        _dark: COLORS.dark.heroGradientBg,
-      },
-      heroProfileShadow: {
-        _light: COLORS.light.heroProfileShadow,
-        _dark: COLORS.dark.heroProfileShadow,
-      },
-      heroCardShadow: {
-        _light: COLORS.light.heroCardShadow,
-        _dark: COLORS.dark.heroCardShadow,
-      },
-      // About Section
-      aboutCardBg: {
-        _light: COLORS.light.aboutCardBg,
-        _dark: COLORS.dark.aboutCardBg,
-      },
-      aboutCardShadow: {
-        _light: COLORS.light.aboutCardShadow,
-        _dark: COLORS.dark.aboutCardShadow,
-      },
-      aboutCardHoverShadow: {
-        _light: COLORS.light.aboutCardHoverShadow,
-        _dark: COLORS.dark.aboutCardHoverShadow,
-      },
-      aboutStatBg: {
-        _light: COLORS.light.aboutStatBg,
-        _dark: COLORS.dark.aboutStatBg,
-      },
-      aboutStatShadow: {
-        _light: COLORS.light.aboutStatShadow,
-        _dark: COLORS.dark.aboutStatShadow,
-      },
-      aboutStatHoverShadow: {
-        _light: COLORS.light.aboutStatHoverShadow,
-        _dark: COLORS.dark.aboutStatHoverShadow,
-      },
-      aboutGradientBg: {
-        _light: COLORS.light.aboutGradientBg,
-        _dark: COLORS.dark.aboutGradientBg,
+      warning: {
+        _light: COLORS.light.warning,
+        _dark: COLORS.dark.warning,
       },
     },
     bg: {
@@ -94,6 +53,14 @@ const theme = extendTheme({
         _light: COLORS.light.bgCard,
         _dark: COLORS.dark.bgCard,
       },
+      cardElevated: {
+        _light: COLORS.light.cardElevated,
+        _dark: COLORS.dark.cardElevated,
+      },
+      overlay: {
+        _light: COLORS.light.bgOverlay,
+        _dark: COLORS.dark.bgOverlay,
+      },
     },
     text: {
       primary: {
@@ -108,6 +75,10 @@ const theme = extendTheme({
         _light: COLORS.light.textMuted,
         _dark: COLORS.dark.textMuted,
       },
+      inverse: {
+        _light: COLORS.light.textInverse,
+        _dark: COLORS.dark.textInverse,
+      },
     },
     border: {
       primary: {
@@ -118,18 +89,12 @@ const theme = extendTheme({
         _light: COLORS.light.borderSecondary,
         _dark: COLORS.dark.borderSecondary,
       },
-    },
-    shadow: {
-      primary: {
-        _light: COLORS.light.boxShadowPrimary,
-        _dark: COLORS.dark.boxShadowPrimary,
-      },
-      secondary: {
-        _light: COLORS.light.boxShadowSecondary,
-        _dark: COLORS.dark.boxShadowSecondary,
+      accent: {
+        _light: COLORS.light.borderAccent,
+        _dark: COLORS.dark.borderAccent,
       },
     },
-    ui: {
+    interactive: {
       buttonBg: {
         _light: COLORS.light.buttonBg,
         _dark: COLORS.dark.buttonBg,
@@ -138,21 +103,77 @@ const theme = extendTheme({
         _light: COLORS.light.buttonHover,
         _dark: COLORS.dark.buttonHover,
       },
-      cardBg: {
+      buttonActive: {
+        _light: COLORS.light.buttonActive,
+        _dark: COLORS.dark.buttonActive,
+      },
+    },
+    card: {
+      bg: {
         _light: COLORS.light.cardBg,
         _dark: COLORS.dark.cardBg,
       },
-      cardShadow: {
-        _light: COLORS.light.cardShadow,
-        _dark: COLORS.dark.cardShadow,
+      hover: {
+        _light: COLORS.light.cardHover,
+        _dark: COLORS.dark.cardHover,
       },
-      iconBg: {
+    },
+    icon: {
+      bg: {
         _light: COLORS.light.iconBg,
         _dark: COLORS.dark.iconBg,
       },
-      iconShadow: {
-        _light: COLORS.light.iconShadow,
-        _dark: COLORS.dark.iconShadow,
+      hover: {
+        _light: COLORS.light.iconHover,
+        _dark: COLORS.dark.iconHover,
+      },
+    },
+    shadow: {
+      sm: {
+        _light: COLORS.light.shadowSm,
+        _dark: COLORS.dark.shadowSm,
+      },
+      md: {
+        _light: COLORS.light.shadowMd,
+        _dark: COLORS.dark.shadowMd,
+      },
+      lg: {
+        _light: COLORS.light.shadowLg,
+        _dark: COLORS.dark.shadowLg,
+      },
+      xl: {
+        _light: COLORS.light.shadowXl,
+        _dark: COLORS.dark.shadowXl,
+      },
+      primary: {
+        _light: COLORS.light.shadowPrimary,
+        _dark: COLORS.dark.shadowPrimary,
+      },
+      secondary: {
+        _light: COLORS.light.shadowSecondary,
+        _dark: COLORS.dark.shadowSecondary,
+      },
+      accent: {
+        _light: COLORS.light.shadowAccent,
+        _dark: COLORS.dark.shadowAccent,
+      },
+    },
+    gradient: {
+      primary: {
+        _light: COLORS.light.gradientPrimary,
+        _dark: COLORS.dark.gradientPrimary,
+      },
+      background: {
+        _light: COLORS.light.gradientBackground,
+        _dark: COLORS.dark.gradientBackground,
+      },
+      card: {
+        _light: COLORS.light.gradientCard,
+        _dark: COLORS.dark.gradientCard,
+      },
+      overlay: {
+        _light: COLORS.light.gradientOverlay,
+        _dark: COLORS.dark.gradientOverlay,
       },
     },
   },

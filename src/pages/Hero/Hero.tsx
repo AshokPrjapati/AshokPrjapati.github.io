@@ -55,10 +55,10 @@ const Hero: React.FC = () => {
             lineHeight={1.1}
             fontWeight={700}
             fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
-            bgGradient="linear(to-r, primary, secondary, accent)"
+            bgGradient="gradient-primary"
             bgClip="text"
             _hover={{
-              bgGradient: "linear(to-r, secondary, accent, primary)",
+              bgGradient: "gradient-primary",
               transition: "all 0.3s ease",
             }}
           >
@@ -200,7 +200,7 @@ const Hero: React.FC = () => {
             left="20px"
             right="20px"
             bottom="20px"
-            bgGradient="hero-gradient-bg"
+            bgGradient="gradient-bg"
             borderRadius="full"
             filter="blur(1px)"
             opacity={0.7}
@@ -217,7 +217,7 @@ const Hero: React.FC = () => {
             borderRadius="full"
             overflow="hidden"
             bg="bg-card"
-            boxShadow="hero-profile-shadow"
+            boxShadow="shadow-accent"
             p="20px"
             _hover={{
               transform: "scale(1.05)",

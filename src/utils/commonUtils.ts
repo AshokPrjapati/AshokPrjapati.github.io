@@ -10,17 +10,33 @@ export const getResumeDownloadLink = () => {
 
 export const getRootCssVariable = (colorMode?: string) => {
   return {
-    // CSS Custom Properties using the constants
+    // Brand Colors
     "--primary":
       colorMode === "dark" ? COLORS.dark.primary : COLORS.light.primary,
     "--secondary":
       colorMode === "dark" ? COLORS.dark.secondary : COLORS.light.secondary,
+    "--accent": colorMode === "dark" ? COLORS.dark.accent : COLORS.light.accent,
+    "--error": colorMode === "dark" ? COLORS.dark.error : COLORS.light.error,
+    "--success":
+      colorMode === "dark" ? COLORS.dark.success : COLORS.light.success,
+    "--warning":
+      colorMode === "dark" ? COLORS.dark.warning : COLORS.light.warning,
+
+    // Background Colors
     "--bg-primary":
       colorMode === "dark" ? COLORS.dark.bgPrimary : COLORS.light.bgPrimary,
     "--bg-surface":
       colorMode === "dark" ? COLORS.dark.bgSurface : COLORS.light.bgSurface,
     "--bg-card":
       colorMode === "dark" ? COLORS.dark.bgCard : COLORS.light.bgCard,
+    "--bg-elevated":
+      colorMode === "dark"
+        ? COLORS.dark.cardElevated
+        : COLORS.light.cardElevated,
+    "--bg-overlay":
+      colorMode === "dark" ? COLORS.dark.bgOverlay : COLORS.light.bgOverlay,
+
+    // Text Colors
     "--text-primary":
       colorMode === "dark" ? COLORS.dark.textPrimary : COLORS.light.textPrimary,
     "--text-secondary":
@@ -29,6 +45,10 @@ export const getRootCssVariable = (colorMode?: string) => {
         : COLORS.light.textSecondary,
     "--text-muted":
       colorMode === "dark" ? COLORS.dark.textMuted : COLORS.light.textMuted,
+    "--text-inverse":
+      colorMode === "dark" ? COLORS.dark.textInverse : COLORS.light.textInverse,
+
+    // Border Colors
     "--border-primary":
       colorMode === "dark"
         ? COLORS.dark.borderPrimary
@@ -37,70 +57,71 @@ export const getRootCssVariable = (colorMode?: string) => {
       colorMode === "dark"
         ? COLORS.dark.borderSecondary
         : COLORS.light.borderSecondary,
-    "--accent": colorMode === "dark" ? COLORS.dark.accent : COLORS.light.accent,
-    "--error": colorMode === "dark" ? COLORS.dark.error : COLORS.light.error,
-    "--shadow-primary":
+    "--border-accent":
       colorMode === "dark"
-        ? COLORS.dark.boxShadowPrimary
-        : COLORS.light.boxShadowPrimary,
-    "--shadow-secondary":
-      colorMode === "dark"
-        ? COLORS.dark.boxShadowSecondary
-        : COLORS.light.boxShadowSecondary,
-    // Generic UI elements
+        ? COLORS.dark.borderAccent
+        : COLORS.light.borderAccent,
+
+    // Interactive Elements
     "--button-bg":
       colorMode === "dark" ? COLORS.dark.buttonBg : COLORS.light.buttonBg,
     "--button-hover":
       colorMode === "dark" ? COLORS.dark.buttonHover : COLORS.light.buttonHover,
+    "--button-active":
+      colorMode === "dark"
+        ? COLORS.dark.buttonActive
+        : COLORS.light.buttonActive,
+
+    // Card Elements
     "--card-bg":
       colorMode === "dark" ? COLORS.dark.cardBg : COLORS.light.cardBg,
-    "--card-shadow":
-      colorMode === "dark" ? COLORS.dark.cardShadow : COLORS.light.cardShadow,
+    "--card-hover":
+      colorMode === "dark" ? COLORS.dark.cardHover : COLORS.light.cardHover,
+
+    // Icon Elements
     "--icon-bg":
       colorMode === "dark" ? COLORS.dark.iconBg : COLORS.light.iconBg,
-    "--icon-shadow":
-      colorMode === "dark" ? COLORS.dark.iconShadow : COLORS.light.iconShadow,
-    // Gradients
-    "--gradient":
-      colorMode === "dark" ? COLORS.dark.gradient : COLORS.light.gradient,
+    "--icon-hover":
+      colorMode === "dark" ? COLORS.dark.iconHover : COLORS.light.iconHover,
+
+    // Shadow System
+    "--shadow-sm":
+      colorMode === "dark" ? COLORS.dark.shadowSm : COLORS.light.shadowSm,
+    "--shadow-md":
+      colorMode === "dark" ? COLORS.dark.shadowMd : COLORS.light.shadowMd,
+    "--shadow-lg":
+      colorMode === "dark" ? COLORS.dark.shadowLg : COLORS.light.shadowLg,
+    "--shadow-xl":
+      colorMode === "dark" ? COLORS.dark.shadowXl : COLORS.light.shadowXl,
+    "--shadow-primary":
+      colorMode === "dark"
+        ? COLORS.dark.shadowPrimary
+        : COLORS.light.shadowPrimary,
+    "--shadow-secondary":
+      colorMode === "dark"
+        ? COLORS.dark.shadowSecondary
+        : COLORS.light.shadowSecondary,
+    "--shadow-accent":
+      colorMode === "dark"
+        ? COLORS.dark.shadowAccent
+        : COLORS.light.shadowAccent,
+
+    // Gradient System
+    "--gradient-primary":
+      colorMode === "dark"
+        ? COLORS.dark.gradientPrimary
+        : COLORS.light.gradientPrimary,
     "--gradient-bg":
-      colorMode === "dark" ? COLORS.dark.gradientBg : COLORS.light.gradientBg,
-    "--hero-gradient-bg":
       colorMode === "dark"
-        ? COLORS.dark.heroGradientBg
-        : COLORS.light.heroGradientBg,
-    "--hero-profile-shadow":
+        ? COLORS.dark.gradientBackground
+        : COLORS.light.gradientBackground,
+    "--gradient-card":
       colorMode === "dark"
-        ? COLORS.dark.heroProfileShadow
-        : COLORS.light.heroProfileShadow,
-    "--hero-card-shadow":
+        ? COLORS.dark.gradientCard
+        : COLORS.light.gradientCard,
+    "--gradient-overlay":
       colorMode === "dark"
-        ? COLORS.dark.heroCardShadow
-        : COLORS.light.heroCardShadow,
-    // About Section
-    "--about-card-bg":
-      colorMode === "dark" ? COLORS.dark.aboutCardBg : COLORS.light.aboutCardBg,
-    "--about-card-shadow":
-      colorMode === "dark"
-        ? COLORS.dark.aboutCardShadow
-        : COLORS.light.aboutCardShadow,
-    "--about-card-hover-shadow":
-      colorMode === "dark"
-        ? COLORS.dark.aboutCardHoverShadow
-        : COLORS.light.aboutCardHoverShadow,
-    "--about-stat-bg":
-      colorMode === "dark" ? COLORS.dark.aboutStatBg : COLORS.light.aboutStatBg,
-    "--about-stat-shadow":
-      colorMode === "dark"
-        ? COLORS.dark.aboutStatShadow
-        : COLORS.light.aboutStatShadow,
-    "--about-stat-hover-shadow":
-      colorMode === "dark"
-        ? COLORS.dark.aboutStatHoverShadow
-        : COLORS.light.aboutStatHoverShadow,
-    "--about-gradient-bg":
-      colorMode === "dark"
-        ? COLORS.dark.aboutGradientBg
-        : COLORS.light.aboutGradientBg,
+        ? COLORS.dark.gradientOverlay
+        : COLORS.light.gradientOverlay,
   };
 };

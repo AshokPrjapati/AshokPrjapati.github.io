@@ -112,17 +112,17 @@ const About: React.FC = () => {
         {stats.map((stat, index) => (
           <Box
             key={index}
-            bg="about-stat-bg"
+            bg="bg-surface"
             p={6}
             borderRadius="2xl"
             textAlign="center"
             border="1px solid"
             borderColor="border-primary"
-            boxShadow="about-stat-shadow"
+            boxShadow="shadow-lg"
             transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
             _hover={{
               transform: "translateY(-8px)",
-              boxShadow: "about-stat-hover-shadow",
+              boxShadow: "shadow-xl",
               borderColor: stat.color,
             }}
           >
@@ -149,17 +149,17 @@ const About: React.FC = () => {
   const renderProfileCard = () => {
     return (
       <Card
-        bg="about-card-bg"
+        bg="card-bg"
         maxW="500px"
         border="1px solid"
         borderColor="border-primary"
         borderRadius="3xl"
         overflow="hidden"
-        boxShadow="about-card-shadow"
+        boxShadow="shadow-lg"
         transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
         _hover={{
           transform: "translateY(-8px)",
-          boxShadow: "about-card-hover-shadow",
+          boxShadow: "shadow-xl",
           borderColor: "primary",
         }}
       >
