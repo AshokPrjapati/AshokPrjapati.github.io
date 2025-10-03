@@ -31,6 +31,26 @@ const theme = extendTheme({
         _light: COLORS.light.error,
         _dark: COLORS.dark.error,
       },
+      gradient: {
+        _light: COLORS.light.gradient,
+        _dark: COLORS.dark.gradient,
+      },
+      gradientBg: {
+        _light: COLORS.light.gradientBg,
+        _dark: COLORS.dark.gradientBg,
+      },
+      heroGradientBg: {
+        _light: COLORS.light.heroGradientBg,
+        _dark: COLORS.dark.heroGradientBg,
+      },
+      heroProfileShadow: {
+        _light: COLORS.light.heroProfileShadow,
+        _dark: COLORS.dark.heroProfileShadow,
+      },
+      heroCardShadow: {
+        _light: COLORS.light.heroCardShadow,
+        _dark: COLORS.dark.heroCardShadow,
+      },
     },
     bg: {
       primary: {
@@ -78,6 +98,32 @@ const theme = extendTheme({
       secondary: {
         _light: COLORS.light.boxShadowSecondary,
         _dark: COLORS.dark.boxShadowSecondary,
+      },
+    },
+    ui: {
+      buttonBg: {
+        _light: COLORS.light.buttonBg,
+        _dark: COLORS.dark.buttonBg,
+      },
+      buttonHover: {
+        _light: COLORS.light.buttonHover,
+        _dark: COLORS.dark.buttonHover,
+      },
+      cardBg: {
+        _light: COLORS.light.cardBg,
+        _dark: COLORS.dark.cardBg,
+      },
+      cardShadow: {
+        _light: COLORS.light.cardShadow,
+        _dark: COLORS.dark.cardShadow,
+      },
+      iconBg: {
+        _light: COLORS.light.iconBg,
+        _dark: COLORS.dark.iconBg,
+      },
+      iconShadow: {
+        _light: COLORS.light.iconShadow,
+        _dark: COLORS.dark.iconShadow,
       },
     },
   },

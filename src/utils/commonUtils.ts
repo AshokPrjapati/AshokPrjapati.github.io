@@ -47,5 +47,35 @@ export const getRootCssVariable = (colorMode?: string) => {
       colorMode === "dark"
         ? COLORS.dark.boxShadowSecondary
         : COLORS.light.boxShadowSecondary,
+    // Generic UI elements
+    "--button-bg":
+      colorMode === "dark" ? COLORS.dark.buttonBg : COLORS.light.buttonBg,
+    "--button-hover":
+      colorMode === "dark" ? COLORS.dark.buttonHover : COLORS.light.buttonHover,
+    "--card-bg":
+      colorMode === "dark" ? COLORS.dark.cardBg : COLORS.light.cardBg,
+    "--card-shadow":
+      colorMode === "dark" ? COLORS.dark.cardShadow : COLORS.light.cardShadow,
+    "--icon-bg":
+      colorMode === "dark" ? COLORS.dark.iconBg : COLORS.light.iconBg,
+    "--icon-shadow":
+      colorMode === "dark" ? COLORS.dark.iconShadow : COLORS.light.iconShadow,
+    // Gradients
+    "--gradient":
+      colorMode === "dark" ? COLORS.dark.gradient : COLORS.light.gradient,
+    "--gradient-bg":
+      colorMode === "dark" ? COLORS.dark.gradientBg : COLORS.light.gradientBg,
+    "--hero-gradient-bg":
+      colorMode === "dark"
+        ? COLORS.dark.heroGradientBg
+        : COLORS.light.heroGradientBg,
+    "--hero-profile-shadow":
+      colorMode === "dark"
+        ? COLORS.dark.heroProfileShadow
+        : COLORS.light.heroProfileShadow,
+    "--hero-card-shadow":
+      colorMode === "dark"
+        ? COLORS.dark.heroCardShadow
+        : COLORS.light.heroCardShadow,
   };
 };

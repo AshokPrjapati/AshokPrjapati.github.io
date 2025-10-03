@@ -5,6 +5,8 @@ import {
   Link,
   Tooltip,
   useClipboard,
+  Text,
+  VStack,
 } from "@chakra-ui/react";
 import React, { ReactElement } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -21,45 +23,63 @@ const SIcons: React.FC = () => {
     return (
       <IconButton
         aria-label={ariaLabel}
-        bg="inherit"
-        color="secondary"
+        bg="icon-bg"
+        color="text-secondary"
         border="1px solid"
-        borderColor="secondary"
-        size={"lg"}
-        fontWeight={"normal"}
-        px={6}
+        borderColor="border-primary"
+        size="lg"
+        borderRadius="full"
+        boxShadow="icon-shadow"
         icon={icon as ReactElement}
         onClick={handleCopy}
         _hover={{
-          bg: "secondary",
-          color: "text-primary",
+          bg: "primary",
+          color: "white",
+          transform: "translateY(-3px)",
+          boxShadow: "shadow-primary",
+          borderColor: "primary",
         }}
+        _active={{
+          transform: "translateY(-1px)",
+        }}
+        transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
       />
     );
   };
 
   return (
-    <Flex
-      gap={{ base: 4, sm: 6 }}
-      justifyContent={{ base: "center", md: "flex-start" }}
-    >
-      <Link
-        href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
-        isExternal
+    <VStack spacing={4} align={{ base: "center", md: "flex-start" }}>
+      <Text
+        fontSize="sm"
+        color="text-secondary"
+        fontWeight="500"
+        textTransform="uppercase"
+        letterSpacing="wider"
       >
-        {renderIconButton("LinkedIn Profile", <FaLinkedinIn />)}
-      </Link>
-      <Link href="https://github.com/AshokPrjapati" isExternal>
-        {renderIconButton("GitHub Profile", <FaGithub />)}
-      </Link>
-      <Tooltip
-        label={hasCopied ? "Email Copied!" : "Copy Email"}
-        closeOnClick={false}
-        hasArrow
-      >
-        {renderIconButton("Copy Email", <EmailIcon />, onCopy)}
-      </Tooltip>
-    </Flex>
+        Connect with me
+      </Text>
+
+      <Flex gap={4} justifyContent={{ base: "center", md: "flex-start" }}>
+        <Link
+          href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
+          isExternal
+        >
+          {renderIconButton("LinkedIn Profile", <FaLinkedinIn size={20} />)}
+        </Link>
+        <Link href="https://github.com/AshokPrjapati" isExternal>
+          {renderIconButton("GitHub Profile", <FaGithub size={20} />)}
+        </Link>
+        <Tooltip
+          label={hasCopied ? "Email Copied!" : "Copy Email"}
+          closeOnClick={false}
+          hasArrow
+          bg="primary"
+          color="white"
+        >
+          {renderIconButton("Copy Email", <EmailIcon w={5} h={5} />, onCopy)}
+        </Tooltip>
+      </Flex>
+    </VStack>
   );
 };
 

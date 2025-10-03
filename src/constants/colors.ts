@@ -1,9 +1,9 @@
 export const COLORS = {
   light: {
-    primary: "#3b82f6",
-    secondary: "#8b5cf6",
-    boxShadowPrimary: "0 4px 20px 0 rgba(59, 130, 246, 0.15)",
-    boxShadowSecondary: "0 4px 20px 0 rgba(139, 92, 246, 0.15)",
+    primary: "#6366f1",
+    secondary: "#ec4899",
+    boxShadowPrimary: "0 10px 40px 0 rgba(99, 102, 241, 0.2)",
+    boxShadowSecondary: "0 10px 40px 0 rgba(236, 72, 153, 0.2)",
     accent: "#06b6d4",
     error: "#dc2626",
     bgPrimary: "#ffffff",
@@ -14,12 +14,25 @@ export const COLORS = {
     textMuted: "#64748b",
     borderPrimary: "#e2e8f0",
     borderSecondary: "#cbd5e1",
+    // Generic UI elements
+    buttonBg: "#ffffff",
+    buttonHover: "#f8fafc",
+    cardBg: "#ffffff",
+    cardShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
+    iconBg: "#ffffff",
+    iconShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
+    // Gradients
+    gradient: "linear(to-r, #6366f1, #ec4899, #06b6d4)",
+    gradientBg: "linear(135deg, #667eea 0%, #764ba2 100%)",
+    heroGradientBg: "linear(135deg, #667eea 0%, #764ba2 100%)",
+    heroProfileShadow: "0 20px 60px rgba(99, 102, 241, 0.3)",
+    heroCardShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
   },
   dark: {
-    primary: "#60a5fa",
-    secondary: "#a78bfa",
-    boxShadowPrimary: "0 4px 20px 0 rgba(96, 165, 250, 0.25)",
-    boxShadowSecondary: "0 4px 20px 0 rgba(167, 139, 250, 0.25)",
+    primary: "#818cf8",
+    secondary: "#f472b6",
+    boxShadowPrimary: "0 10px 40px 0 rgba(129, 140, 248, 0.3)",
+    boxShadowSecondary: "0 10px 40px 0 rgba(244, 114, 182, 0.3)",
     accent: "#22d3ee",
     error: "#f87171",
     bgPrimary: "#0f1419",
@@ -30,6 +43,19 @@ export const COLORS = {
     textMuted: "#a0aec0",
     borderPrimary: "#4a5568",
     borderSecondary: "#2d3748",
+    // Generic UI elements
+    buttonBg: "#2d3748",
+    buttonHover: "#4a5568",
+    cardBg: "#2d3748",
+    cardShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+    iconBg: "#2d3748",
+    iconShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+    // Gradients
+    gradient: "linear(to-r, #818cf8, #f472b6, #22d3ee)",
+    gradientBg: "linear(135deg, #667eea 0%, #764ba2 100%)",
+    heroGradientBg: "linear(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+    heroProfileShadow: "0 20px 60px rgba(129, 140, 248, 0.4)",
+    heroCardShadow: "0 10px 40px rgba(0, 0, 0, 0.3)",
   },
 };
 
@@ -89,5 +115,51 @@ export const SEMANTIC_COLORS_TOKENS = {
   error: {
     default: "brand.error._light",
     _dark: "brand.error._dark",
+  },
+  // Generic UI elements
+  "button-bg": {
+    default: "ui.buttonBg._light",
+    _dark: "ui.buttonBg._dark",
+  },
+  "button-hover": {
+    default: "ui.buttonHover._light",
+    _dark: "ui.buttonHover._dark",
+  },
+  "card-bg": {
+    default: "ui.cardBg._light",
+    _dark: "ui.cardBg._dark",
+  },
+  "card-shadow": {
+    default: "ui.cardShadow._light",
+    _dark: "ui.cardShadow._dark",
+  },
+  "icon-bg": {
+    default: "ui.iconBg._light",
+    _dark: "ui.iconBg._dark",
+  },
+  "icon-shadow": {
+    default: "ui.iconShadow._light",
+    _dark: "ui.iconShadow._dark",
+  },
+  // Gradients
+  gradient: {
+    default: "brand.gradient._light",
+    _dark: "brand.gradient._dark",
+  },
+  "gradient-bg": {
+    default: "brand.gradientBg._light",
+    _dark: "brand.gradientBg._dark",
+  },
+  "hero-gradient-bg": {
+    default: "brand.heroGradientBg._light",
+    _dark: "brand.heroGradientBg._dark",
+  },
+  "hero-profile-shadow": {
+    default: "brand.heroProfileShadow._light",
+    _dark: "brand.heroProfileShadow._dark",
+  },
+  "hero-card-shadow": {
+    default: "brand.heroCardShadow._light",
+    _dark: "brand.heroCardShadow._dark",
   },
 };
