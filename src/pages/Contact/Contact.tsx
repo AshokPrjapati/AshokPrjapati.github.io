@@ -4,10 +4,8 @@ import emailjs from "emailjs-com";
 import {
   Box,
   Button,
-  Flex,
   FormControl,
   FormLabel,
-  IconButton,
   Input,
   InputGroup,
   InputLeftElement,
@@ -23,30 +21,13 @@ import {
   Heading,
   Card,
   CardBody,
-  CardFooter,
   SimpleGrid,
   Icon,
   Badge,
-  Divider,
 } from "@chakra-ui/react";
-import {
-  BsGithub,
-  BsLinkedin,
-  BsPerson,
-  BsEnvelope,
-  BsPhone,
-  BsDownload,
-  BsGeoAlt,
-  BsClock,
-} from "react-icons/bs";
-import {
-  MdEmail,
-  MdOutlineEmail,
-  MdLocationOn,
-  MdAccessTime,
-} from "react-icons/md";
-import { PhoneIcon } from "@chakra-ui/icons";
-import { FaFilePdf, FaPaperPlane, FaUserTie } from "react-icons/fa";
+import { BsGithub, BsLinkedin, BsPerson, BsPhone } from "react-icons/bs";
+import { MdEmail, MdOutlineEmail, MdLocationOn } from "react-icons/md";
+import { FaFilePdf, FaPaperPlane } from "react-icons/fa";
 
 // ================== Constants & Utils ================== //
 import {
