@@ -105,23 +105,5 @@ export const getRootCssVariable = (colorMode?: string) => {
       colorMode === "dark"
         ? COLORS.dark.shadowAccent
         : COLORS.light.shadowAccent,
-
-    // Gradient System
-    "--gradient-primary":
-      colorMode === "dark"
-        ? COLORS.dark.gradientPrimary
-        : COLORS.light.gradientPrimary,
-    "--gradient-bg":
-      colorMode === "dark"
-        ? COLORS.dark.gradientBackground
-        : COLORS.light.gradientBackground,
-    "--gradient-card":
-      colorMode === "dark"
-        ? COLORS.dark.gradientCard
-        : COLORS.light.gradientCard,
-    "--gradient-overlay":
-      colorMode === "dark"
-        ? COLORS.dark.gradientOverlay
-        : COLORS.light.gradientOverlay,
   };
 };

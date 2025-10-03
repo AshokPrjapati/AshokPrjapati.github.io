@@ -55,10 +55,10 @@ const Hero: React.FC = () => {
             lineHeight={1.1}
             fontWeight={700}
             fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
-            bgGradient="gradient-primary"
+            bgGradient="linear(to-r, primary, secondary, accent)"
             bgClip="text"
             _hover={{
-              bgGradient: "gradient-primary",
+              bgGradient: "linear(to-r, primary, secondary, accent)",
               transition: "all 0.3s ease",
             }}
           >

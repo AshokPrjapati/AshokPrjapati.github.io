@@ -103,13 +103,6 @@ export const COLORS = {
     shadowPrimary: "0 10px 40px rgba(129, 140, 248, 0.3)",
     shadowSecondary: "0 10px 40px rgba(244, 114, 182, 0.3)",
     shadowAccent: "0 20px 60px rgba(129, 140, 248, 0.4)",
-
-    // Gradient System
-    gradientPrimary: "linear(to-r, #818cf8, #f472b6, #22d3ee)",
-    gradientBackground: "linear(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
-    gradientCard: "linear(135deg, #2d3748 0%, #4a5568 100%)",
-    gradientOverlay:
-      "linear(135deg, rgba(129, 140, 248, 0.1) 0%, rgba(244, 114, 182, 0.1) 100%)",
   },
 };
 
@@ -256,23 +249,5 @@ export const SEMANTIC_COLORS_TOKENS = {
   "shadow-accent": {
     default: "shadow.accent._light",
     _dark: "shadow.accent._dark",
-  },
-
-  // Gradient System
-  "gradient-primary": {
-    default: "gradient.primary._light",
-    _dark: "gradient.primary._dark",
-  },
-  "gradient-bg": {
-    default: "gradient.background._light",
-    _dark: "gradient.background._dark",
-  },
-  "gradient-card": {
-    default: "gradient.card._light",
-    _dark: "gradient.card._dark",
-  },
-  "gradient-overlay": {
-    default: "gradient.overlay._light",
-    _dark: "gradient.overlay._dark",
   },
 };

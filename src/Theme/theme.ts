@@ -158,24 +158,6 @@ const theme = extendTheme({
         _dark: COLORS.dark.shadowAccent,
       },
     },
-    gradient: {
-      primary: {
-        _light: COLORS.light.gradientPrimary,
-        _dark: COLORS.dark.gradientPrimary,
-      },
-      background: {
-        _light: COLORS.light.gradientBackground,
-        _dark: COLORS.dark.gradientBackground,
-      },
-      card: {
-        _light: COLORS.light.gradientCard,
-        _dark: COLORS.dark.gradientCard,
-      },
-      overlay: {
-        _light: COLORS.light.gradientOverlay,
-        _dark: COLORS.dark.gradientOverlay,
-      },
-    },
   },
   semanticTokens: {
     colors: SEMANTIC_COLORS_TOKENS,
