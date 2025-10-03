@@ -1,18 +1,6 @@
 const projectData = [
   {
     id: 1,
-    name: "Capsule- Tata 1mg (clone)",
-    src: "./images/projectPreviews/capsule.png",
-    description:
-      "Capsule (Tata 1mg) provides services, including e-pharmacy, diagnostics, e-consultation and health content. You can buy your allopathic, ayurvedic, homeopathic medicines, vitamins & nutrition supplements and other health-related.",
-    techStack:
-      "Tech Stack : React.js | Chakra UI | HTML5 | CSS3 | Javascript | JSON Server",
-    detail: "A Solo project, built in 6 days.",
-    sourceCode: "https://github.com/AshokPrjapati/Capsule-1mg_clone",
-    liveLink: "https://capsule-six.vercel.app",
-  },
-  {
-    id: 2,
     name: "Forum - LinkedIn (clone)",
     src: `./images/projectPreviews/forum.png`,
     description:
@@ -22,6 +10,18 @@ const projectData = [
     detail: "A Collaborative project, built in 5 days by 3 member",
     sourceCode: "https://github.com/Vishwa9011/Forum_App",
     liveLink: "https://forumapp-120fb.web.app",
+  },
+  {
+    id: 2,
+    name: "Capsule- Tata 1mg (clone)",
+    src: "./images/projectPreviews/capsule.png",
+    description:
+      "Capsule (Tata 1mg) provides services, including e-pharmacy, diagnostics, e-consultation and health content. You can buy your allopathic, ayurvedic, homeopathic medicines, vitamins & nutrition supplements and other health-related.",
+    techStack:
+      "Tech Stack : React.js | Chakra UI | HTML5 | CSS3 | Javascript | JSON Server",
+    detail: "A Solo project, built in 6 days.",
+    sourceCode: "https://github.com/AshokPrjapati/Capsule-1mg_clone",
+    liveLink: "https://capsule-six.vercel.app",
   },
   {
     id: 3,
