@@ -250,4 +250,26 @@ export const SEMANTIC_COLORS_TOKENS = {
     default: "shadow.accent._light",
     _dark: "shadow.accent._dark",
   },
+
+  // Skill Category Colors - Reusing existing brand colors
+  "skill-frontend": {
+    default: "brand.primary._light",
+    _dark: "brand.primary._dark",
+  },
+  "skill-backend": {
+    default: "brand.secondary._light",
+    _dark: "brand.secondary._dark",
+  },
+  "skill-tools": {
+    default: "brand.accent._light",
+    _dark: "brand.accent._dark",
+  },
+  "skill-database": {
+    default: "brand.success._light",
+    _dark: "brand.success._dark",
+  },
+  "skill-language": {
+    default: "brand.warning._light",
+    _dark: "brand.warning._dark",
+  },
 };
