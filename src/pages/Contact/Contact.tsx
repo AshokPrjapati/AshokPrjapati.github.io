@@ -215,6 +215,7 @@ export default function Contact() {
           fontWeight={"medium"}
           justifyContent="space-between"
           alignItems={"center"}
+          gap={2}
         >
           <Tooltip
             label={hasCopied ? "Email Copied!" : "Copy Email"}
@@ -229,6 +230,7 @@ export default function Contact() {
           fontWeight={"medium"}
           justifyContent={{ base: "flex-end", md: "flex-start" }}
           alignItems={"center"}
+          gap={2}
         >
           <Tooltip label={"+91 9799191449"} closeOnClick={false} hasArrow>
             <Link href="tel:+91 9799191449">
