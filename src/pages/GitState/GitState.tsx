@@ -3,7 +3,6 @@ import ReactTooltip from "react-tooltip";
 import {
   Image,
   Link,
-  Flex,
   Box,
   Container,
   VStack,
@@ -15,7 +14,6 @@ import {
   SimpleGrid,
   Icon,
   Badge,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import {
   FaGithub,
@@ -78,7 +76,7 @@ function GitState() {
               }}
               username={GITHUB_USERNAME}
               blockSize={20}
-              fontSize={16}
+              fontSize={12}
               blockRadius={5}
               blockMargin={6}
               showWeekdayLabels
@@ -89,6 +87,66 @@ function GitState() {
           </Box>
         </VStack>
       </Card>
+    );
+  };
+
+  const renderCardBody = (
+    title: string,
+    description: string,
+    src: string,
+    icon: any,
+    color: string
+  ) => {
+    return (
+      <CardBody p={6}>
+        <VStack spacing={6}>
+          {/* Header */}
+          <HStack spacing={3} w="100%">
+            <Icon as={icon} w={6} h={6} color={color} />
+            <VStack spacing={1} align="start" flex={1}>
+              <Text fontSize="lg" fontWeight="bold" color="text-primary">
+                {title}
+              </Text>
+              <Text fontSize="sm" color="text-muted">
+                {description}
+              </Text>
+            </VStack>
+            <Badge
+              bg={color}
+              color="white"
+              px={3}
+              py={1}
+              borderRadius="full"
+              fontSize="xs"
+              fontWeight="medium"
+            >
+              Live
+            </Badge>
+          </HStack>
+
+          {/* Stats Image */}
+          <Box
+            w="100%"
+            bg="card-bg"
+            borderRadius="2xl"
+            p={4}
+            border="1px solid"
+            borderColor="border-secondary"
+            overflow="hidden"
+          >
+            <Image
+              src={src}
+              alt={title}
+              w="100%"
+              h="auto"
+              transition="all 0.3s ease"
+              _hover={{
+                transform: "scale(1.02)",
+              }}
+            />
+          </Box>
+        </VStack>
+      </CardBody>
     );
   };
 
@@ -119,55 +177,7 @@ function GitState() {
           borderColor: color,
         }}
       >
-        <CardBody p={6}>
-          <VStack spacing={6}>
-            {/* Header */}
-            <HStack spacing={3} w="100%">
-              <Icon as={icon} w={6} h={6} color={color} />
-              <VStack spacing={1} align="start" flex={1}>
-                <Text fontSize="lg" fontWeight="bold" color="text-primary">
-                  {title}
-                </Text>
-                <Text fontSize="sm" color="text-muted">
-                  {description}
-                </Text>
-              </VStack>
-              <Badge
-                bg={color}
-                color="white"
-                px={3}
-                py={1}
-                borderRadius="full"
-                fontSize="xs"
-                fontWeight="medium"
-              >
-                Live
-              </Badge>
-            </HStack>
-
-            {/* Stats Image */}
-            <Box
-              w="100%"
-              bg="card-bg"
-              borderRadius="2xl"
-              p={4}
-              border="1px solid"
-              borderColor="border-secondary"
-              overflow="hidden"
-            >
-              <Image
-                src={src}
-                alt={title}
-                w="100%"
-                h="auto"
-                transition="all 0.3s ease"
-                _hover={{
-                  transform: "scale(1.02)",
-                }}
-              />
-            </Box>
-          </VStack>
-        </CardBody>
+        {renderCardBody(title, description, src, icon, color)}
       </Card>
     );
   };
@@ -263,7 +273,7 @@ function GitState() {
   };
 
   return (
-    <Container maxW="8xl" py={20}>
+    <Container maxW="8xl" py={10}>
       <SectionHeader label="GitHub Analytics" />
 
       <VStack spacing={16} mt={16}>

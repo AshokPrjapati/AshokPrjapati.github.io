@@ -189,7 +189,7 @@ const TechStacks = () => {
   };
 
   return (
-    <Container maxW="8xl" py={20}>
+    <Container maxW="8xl" py={10}>
       <SectionHeader label="Skills & Technologies" />
 
       <VStack spacing={12} mt={16}>

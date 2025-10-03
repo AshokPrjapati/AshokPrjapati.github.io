@@ -340,7 +340,7 @@ const Projects = () => {
   };
 
   return (
-    <Container maxW="8xl" py={20}>
+    <Container maxW="8xl" py={10}>
       <SectionHeader label="Featured Projects" />
 
       <VStack spacing={16} mt={16}>
