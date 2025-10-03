@@ -24,6 +24,7 @@ const Navbar: React.FC = () => {
           fontFamily="monospace"
           fontWeight={700}
           letterSpacing="wide"
+          userSelect="none"
         >
           <Text color="primary" mr={1}>
             &lt;
