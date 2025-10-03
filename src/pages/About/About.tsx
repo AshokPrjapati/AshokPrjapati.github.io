@@ -12,24 +12,23 @@ import {
   useClipboard,
   Tooltip,
   IconButton,
-  Grid,
-  Stack,
   Icon,
   VStack,
   HStack,
-  Container,
-  Badge,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaDownload, FaPhone } from "react-icons/fa";
-import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
+import { FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
+import { EmailIcon } from "@chakra-ui/icons";
 import SectionHeader from "../../Components/SectionHeader";
-import { PROFILE_EMAIL, RESUME_DRIVE_LINK } from "../../constants/constant";
-import { getResumeDownloadLink } from "../../utils/commonUtils";
 import { ReactComponent as CodingIcon } from "../../images/techIcons/coding.svg";
 import { ReactComponent as DsaIcon } from "../../images/techIcons/dsa.svg";
 import { ReactComponent as ProjectIcon } from "../../images/techIcons/project.svg";
 import { ReactComponent as Github1Icon } from "../../images/techIcons/github1.svg";
+import {
+  LINKEDIN_LINK,
+  PROFILE_EMAIL,
+  GITHUB_LINK,
+} from "../../constants/links";
 
 const About: React.FC = () => {
   const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);
@@ -195,16 +194,8 @@ const About: React.FC = () => {
 
           <CardFooter pt={0} pb={8}>
             <HStack spacing={4} justify="center" w="100%">
-              {renderSocialButton(
-                "GitHub",
-                <FaGithub />,
-                "https://github.com/AshokPrjapati"
-              )}
-              {renderSocialButton(
-                "LinkedIn",
-                <FaLinkedin />,
-                "https://www.linkedin.com/in/ashok-kumar-1778b213b/"
-              )}
+              {renderSocialButton("GitHub", <FaGithub />, GITHUB_LINK)}
+              {renderSocialButton("LinkedIn", <FaLinkedin />, LINKEDIN_LINK)}
               {renderSocialButton("Email", <EmailIcon />, undefined, onCopy)}
               {renderSocialButton("Phone", <FaPhone />, "tel:+919799191449")}
             </HStack>

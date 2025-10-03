@@ -17,7 +17,7 @@ import Typewriter from "typewriter-effect";
 import { ArrowForwardIcon, DownloadIcon } from "@chakra-ui/icons";
 import SIcons from "./SIcons";
 import { getResumeDownloadLink } from "../../utils/commonUtils";
-import { RESUME_DRIVE_LINK } from "../../constants/constant";
+import { RESUME_DRIVE_LINK } from "../../constants/links";
 
 const Hero: React.FC = () => {
   const renderTypeWriterText = () => {

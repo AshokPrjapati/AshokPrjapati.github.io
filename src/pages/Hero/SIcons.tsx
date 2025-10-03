@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React, { ReactElement } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { PROFILE_EMAIL } from "../../constants/constant";
+import { GITHUB_LINK, PROFILE_EMAIL } from "../../constants/links";
 
 const SIcons: React.FC = () => {
   const { hasCopied, onCopy } = useClipboard(PROFILE_EMAIL);
@@ -60,13 +60,10 @@ const SIcons: React.FC = () => {
       </Text>
 
       <Flex gap={4} justifyContent={{ base: "center", md: "flex-start" }}>
-        <Link
-          href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
-          isExternal
-        >
+        <Link href="" isExternal>
           {renderIconButton("LinkedIn Profile", <FaLinkedinIn size={20} />)}
         </Link>
-        <Link href="https://github.com/AshokPrjapati" isExternal>
+        <Link href={GITHUB_LINK} isExternal>
           {renderIconButton("GitHub Profile", <FaGithub size={20} />)}
         </Link>
         <Tooltip

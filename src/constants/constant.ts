@@ -1,3 +1,5 @@
+import { GITHUB_USERNAME } from "./links";
+
 export const enum ModuleName {
   HERO = "Hero",
   ABOUT = "About",
@@ -41,12 +43,5 @@ export const MODULES_DATA = [
   },
 ];
 
-export const RESUME_DRIVE_LINK =
-  "https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing";
-
-export const gitRepoLanguagesStates =
-  "https://github-readme-stats.vercel.app/api/top-langs/?username=AshokPrjapati&theme=transparent&show_icons=true&langs_count=8";
-export const gitContributeStates =
-  "https://github-readme-streak-stats.herokuapp.com?user=AshokPrjapati&theme=transparent&border_radius=5.8&mode=daily&show_icons=true";
-
-export const PROFILE_EMAIL = "ashok.prjapati97@gmail.com";
+export const gitRepoLanguagesStates = `https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_USERNAME}&theme=transparent&show_icons=true&langs_count=8`;
+export const gitContributeStates = `https://github-readme-streak-stats.herokuapp.com?user=${GITHUB_USERNAME}&theme=transparent&border_radius=5.8&mode=daily&show_icons=true`;

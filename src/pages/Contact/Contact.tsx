@@ -32,7 +32,12 @@ import { FaFilePdf } from "react-icons/fa";
 // ================== Interfaces & Types ================= //
 
 // ================== Constants & Utils ================== //
-import { PROFILE_EMAIL } from "../../constants/constant";
+import {
+  GITHUB_LINK,
+  LINKEDIN_LINK,
+  PROFILE_EMAIL,
+  RESUME_DRIVE_LINK,
+} from "../../constants/links";
 
 // ================== Services =========================== //
 
@@ -246,20 +251,17 @@ export default function Contact() {
   const renderInfoButtons = () => {
     return (
       <Flex align="center" justify="space-around" alignItems={"center"}>
-        <Link href="https://github.com/AshokPrjapati" isExternal>
+        <Link href={GITHUB_LINK} isExternal>
           {renderInfoIconButton("github", <BsGithub />)}
         </Link>
 
-        <Link
-          href="https://www.linkedin.com/in/ashok-kumar-1778b213b/"
-          isExternal
-        >
+        <Link href={LINKEDIN_LINK} isExternal>
           {renderInfoIconButton("linkedin", <BsLinkedin size="28px" />)}
         </Link>
 
         <Tooltip label={"Resume"} closeOnClick={false} hasArrow>
           <Link
-            href="https://drive.google.com/file/d/1P27IWs5s4X1JBKLqUAMapYS6an5D_wvH/view?usp=sharing"
+            href={RESUME_DRIVE_LINK}
             isExternal
             onClick={() => {
               const downloadLink = getResumeDownloadLink();
