@@ -27,9 +27,9 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
     fontWeight: "500",
   };
 
-  const renderNavButton = (label: string) => {
+  const renderNavButton = (label: string, onClick?: () => void) => {
     return (
-      <Button {...commonButtonCss} onClick={toggle}>
+      <Button {...commonButtonCss} onClick={onClick}>
         {label}
       </Button>
     );
@@ -39,6 +39,13 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
     module: ModuleItem,
     idx: number
   ): JSX.Element => {
+    const handleClick = () => {
+      // Close mobile menu immediately
+      if (toggle) {
+        toggle();
+      }
+    };
+
     return (
       <Link
         className=""
@@ -46,9 +53,10 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
         to={module.path}
         spy={true}
         smooth={true}
-        offset={0}
-        duration={750}
+        offset={-70}
+        duration={500}
         key={idx}
+        onClick={handleClick}
       >
         {renderNavButton(module.text)}
       </Link>
@@ -94,7 +102,9 @@ const NavButton: React.FC<TabOptProps> = ({ toggle }) => {
       m="auto"
       borderRadius="lg"
     >
-      {MODULES_DATA.map((module, index) => renderModuleWithLink(module, index))}
+      {MODULES_DATA.map((module: ModuleItem, index: number) =>
+        renderModuleWithLink(module, index)
+      )}
       {renderResumeButton()}
       {renderThemeToggleButton()}
     </Flex>

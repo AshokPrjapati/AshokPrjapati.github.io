@@ -88,7 +88,6 @@ const theme = extendTheme({
     global: (props: any) => ({
       ":root": getRootCssVariable(props.colorMode),
       html: {
-        scrollBehavior: "smooth",
         fontSize: "16px",
       },
       body: {
