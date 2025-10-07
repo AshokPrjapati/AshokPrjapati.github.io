@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7ef9c383.css",
-    "main.js": "/static/js/main.d9a74d97.js",
+    "main.js": "/static/js/main.5230e19f.js",
     "static/media/netlify.svg": "/static/media/netlify.d200367f1c3d919db9fe1f0c475166f9.svg",
     "static/media/react.svg": "/static/media/react.32171c6742c34a25621dd17119180adf.svg",
     "static/media/node-js.svg": "/static/media/node-js.c118f470ee8e54346c80dedd36741d3e.svg",
@@ -28,10 +28,10 @@
     "static/media/next.svg": "/static/media/next.6916ac590521af6cd93ceace028a0e2b.svg",
     "static/media/vercel.svg": "/static/media/vercel.79fe387e0486dc322d209e2598c2e834.svg",
     "main.7ef9c383.css.map": "/static/css/main.7ef9c383.css.map",
-    "main.d9a74d97.js.map": "/static/js/main.d9a74d97.js.map"
+    "main.5230e19f.js.map": "/static/js/main.5230e19f.js.map"
   },
   "entrypoints": [
     "static/css/main.7ef9c383.css",
-    "static/js/main.d9a74d97.js"
+    "static/js/main.5230e19f.js"
   ]
 }
